@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        color: #bbb;
+        font-size: 18px;
+      }
+
+      .portfolio-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      .portfolio-card {
+        display: block;
+        background: white;
+        color: #222;
+        text-decoration: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .portfolio-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .portfolio-image {
+        height: 180px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        overflow: hidden;
+      }
+
+      .portfolio-image > img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .portfolio-content {
+        padding: 22px;
+      }
+
+      .portfolio-content h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+
+      .portfolio-content p {
+        color: #666;
+        font-size: 15px;
+      }
+
+      .view-project {
+        display: inline-block;
+        margin-top: 15px;
+        color: #667eea;
+        font-weight: bold;
+      }
+
+      footer {
+        text-align: center;
+        padding: 30px;
+        background: #111;
+        color: #aaa;
+        margin-top: 60px;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 32px;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <p>Explore my projects and creative work</p>
+    </header>
+
+    <main class="portfolio-container">
+      <div class="portfolio-grid">
+        <!-- Portfolio 01 -->
+        <a href="bottle.html" class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="/images/port-01.png" alt="" />Portfolio TheofilusS
+          </div>
+          <div class="portfolio-content">
+            <h2>Mini E-commerce</h2>
+            <p>A modern and responsive website design project.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 02 -->
+        <a href="portfolio-02.html" class="portfolio-card">
+          <div class="portfolio-image">02</div>
+          <div class="portfolio-content">
+            <h2>Brand Identity</h2>
+            <p>A complete visual identity and branding project.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 03 -->
+        <a href="portfolio-03.html" class="portfolio-card">
+          <div class="portfolio-image">03</div>
+          <div class="portfolio-content">
+            <h2>E-Commerce Website</h2>
+            <p>An online shopping experience with a clean interface.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 04 -->
+        <a href="portfolio-04.html" class="portfolio-card">
+          <div class="portfolio-image">04</div>
+          <div class="portfolio-content">
+            <h2>Mobile App Design</h2>
+            <p>A user-friendly mobile application interface.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 05 -->
+        <a href="portfolio-05.html" class="portfolio-card">
+          <div class="portfolio-image">05</div>
+          <div class="portfolio-content">
+            <h2>Dashboard UI</h2>
+            <p>A professional dashboard and data visualization project.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 06 -->
+        <a href="portfolio-06.html" class="portfolio-card">
+          <div class="portfolio-image">06</div>
+          <div class="portfolio-content">
+            <h2>Photography</h2>
+            <p>A curated collection of photography and visual work.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 07 -->
+        <a href="portfolio-07.html" class="portfolio-card">
+          <div class="portfolio-image">07</div>
+          <div class="portfolio-content">
+            <h2>Graphic Design</h2>
+            <p>Creative graphic design and promotional materials.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 08 -->
+        <a href="portfolio-08.html" class="portfolio-card">
+          <div class="portfolio-image">08</div>
+          <div class="portfolio-content">
+            <h2>Landing Page</h2>
+            <p>A conversion-focused landing page design.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 09 -->
+        <a href="portfolio-09.html" class="portfolio-card">
+          <div class="portfolio-image">09</div>
+          <div class="portfolio-content">
+            <h2>Social Media Design</h2>
+            <p>A collection of social media graphics and campaigns.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 10 -->
+        <a href="portfolio-10.html" class="portfolio-card">
+          <div class="portfolio-image">10</div>
+          <div class="portfolio-content">
+            <h2>Web Application</h2>
+            <p>A functional web application with an intuitive interface.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 11 -->
+        <a href="portfolio-11.html" class="portfolio-card">
+          <div class="portfolio-image">11</div>
+          <div class="portfolio-content">
+            <h2>Logo Design</h2>
+            <p>A collection of unique and memorable logo concepts.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 12 -->
+        <a href="portfolio-12.html" class="portfolio-card">
+          <div class="portfolio-image">12</div>
+          <div class="portfolio-content">
+            <h2>UI/UX Case Study</h2>
+            <p>A detailed UI/UX design process and case study.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+
+        <!-- Portfolio 13 -->
+        <a href="portfolio-13.html" class="portfolio-card">
+          <div class="portfolio-image">13</div>
+          <div class="portfolio-content">
+            <h2>Creative Project</h2>
+            <p>An experimental creative project showcasing my skills.</p>
+            <span class="view-project">View Project →</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
