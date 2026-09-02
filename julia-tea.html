@@ -1,0 +1,2753 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Rosé & Crumb — Artisan Tea & Bake House"
+    />
+
+    <title>Rosé & Crumb — Artisan Tea & Bake House</title>
+
+    <!-- =====================================================
+     GOOGLE FONTS
+====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =====================================================
+       01. VARIABLES
+    ====================================================== */
+
+      :root {
+        --pink: #d86f8c;
+        --pink-dark: #923d59;
+        --pink-light: #f6c7d4;
+
+        --blush: #fce7ec;
+        --cream: #fff9f5;
+
+        --burgundy: #64263c;
+        --lavender: #ded6e9;
+
+        --brown: #493238;
+        --muted: #927a82;
+
+        --white: #ffffff;
+
+        --serif: "Bodoni Moda", serif;
+        --editorial: "Cormorant Garamond", serif;
+        --sans: "DM Sans", sans-serif;
+      }
+
+      /* =====================================================
+       02. RESET
+    ====================================================== */
+
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+
+        color: var(--brown);
+
+        font-family: var(--sans);
+
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: var(--pink);
+
+        color: var(--white);
+      }
+
+      img {
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+
+        text-decoration: none;
+      }
+
+      button,
+      input {
+        font-family: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      /* =====================================================
+       03. NAVIGATION
+    ====================================================== */
+
+      .navbar {
+        position: sticky;
+
+        top: 0;
+
+        z-index: 100;
+
+        height: 82px;
+
+        padding: 0 5vw;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        background: rgba(255, 249, 245, 0.95);
+
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid rgba(100, 38, 60, 0.1);
+      }
+
+      .logo {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .logo-symbol {
+        width: 37px;
+
+        height: 37px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        font-family: var(--editorial);
+
+        font-size: 22px;
+
+        font-style: italic;
+      }
+
+      .logo-text {
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: 20px;
+
+        letter-spacing: -0.05em;
+      }
+
+      .logo-text span {
+        color: var(--pink);
+      }
+
+      .nav-links {
+        display: flex;
+
+        align-items: center;
+
+        gap: 30px;
+      }
+
+      .nav-links a {
+        color: var(--burgundy);
+
+        font-size: 9px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+
+        transition: 0.25s;
+      }
+
+      .nav-links a:hover {
+        color: var(--pink);
+      }
+
+      .nav-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .cart {
+        position: relative;
+
+        width: 42px;
+
+        height: 42px;
+
+        border: 1px solid rgba(100, 38, 60, 0.18);
+
+        border-radius: 50%;
+
+        background: transparent;
+
+        color: var(--burgundy);
+
+        font-size: 17px;
+      }
+
+      .cart-count {
+        position: absolute;
+
+        top: -2px;
+
+        right: -2px;
+
+        width: 16px;
+
+        height: 16px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        font-size: 7px;
+
+        font-weight: 700;
+      }
+
+      .menu-btn {
+        display: none;
+
+        width: 42px;
+
+        height: 42px;
+
+        border: 0;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        font-size: 17px;
+      }
+
+      /* =====================================================
+       04. MOBILE MENU
+    ====================================================== */
+
+      .mobile-menu {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        transform: translateY(-100%);
+
+        transition: 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+      }
+
+      .mobile-links {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+      }
+
+      .mobile-links a {
+        font-family: var(--serif);
+
+        font-size: 48px;
+      }
+
+      /* =====================================================
+       05. HERO
+    ====================================================== */
+
+      .hero {
+        min-height: 790px;
+
+        padding: 80px 7vw;
+
+        display: grid;
+
+        grid-template-columns: 46% 54%;
+
+        background: var(--blush);
+
+        overflow: hidden;
+      }
+
+      .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        position: relative;
+
+        z-index: 2;
+      }
+
+      .eyebrow {
+        color: var(--pink-dark);
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.18em;
+      }
+
+      .hero-title {
+        margin-top: 25px;
+
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(75px, 9vw, 145px);
+
+        font-weight: 400;
+
+        line-height: 0.75;
+
+        letter-spacing: -0.08em;
+      }
+
+      .hero-title em {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+
+        font-size: 1.08em;
+      }
+
+      .hero-description {
+        max-width: 380px;
+
+        margin-top: 38px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+
+        line-height: 1.9;
+      }
+
+      /* =====================================================
+       06. HERO BUTTONS
+    ====================================================== */
+
+      .hero-buttons {
+        display: flex;
+
+        gap: 9px;
+
+        flex-wrap: wrap;
+
+        margin-top: 30px;
+      }
+
+      .hero-btn {
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 15px 21px;
+
+        border: 1px solid transparent;
+
+        background: var(--burgundy);
+
+        color: var(--white);
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        transition: 0.3s;
+      }
+
+      .hero-btn:hover {
+        background: var(--pink);
+
+        transform: translateY(-3px);
+      }
+
+      .hero-btn.outline {
+        background: transparent;
+
+        border-color: var(--pink);
+
+        color: var(--pink-dark);
+      }
+
+      .hero-btn.outline:hover {
+        background: var(--pink);
+
+        color: var(--white);
+      }
+
+      .hero-note {
+        display: flex;
+
+        align-items: center;
+
+        gap: 14px;
+
+        margin-top: 50px;
+
+        color: var(--pink-dark);
+
+        font-family: var(--editorial);
+
+        font-size: 18px;
+
+        font-style: italic;
+      }
+
+      .hero-note::before {
+        content: "";
+
+        width: 38px;
+
+        height: 1px;
+
+        background: var(--pink);
+      }
+
+      /* =====================================================
+       07. HERO VISUAL
+    ====================================================== */
+
+      .hero-visual {
+        min-height: 600px;
+
+        position: relative;
+      }
+
+      .hero-main-image {
+        position: absolute;
+
+        top: 5%;
+
+        right: 7%;
+
+        width: 68%;
+
+        height: 77%;
+
+        overflow: hidden;
+
+        border-radius: 48% 48% 5px 5px;
+
+        transform: rotate(3deg);
+
+        box-shadow: 0 30px 80px rgba(100, 38, 60, 0.14);
+      }
+
+      .hero-main-image img {
+        transition: 1s;
+      }
+
+      .hero:hover .hero-main-image img {
+        transform: scale(1.06);
+      }
+
+      .hero-small-image {
+        position: absolute;
+
+        left: 4%;
+
+        bottom: 5%;
+
+        width: 36%;
+
+        height: 39%;
+
+        overflow: hidden;
+
+        border: 10px solid var(--blush);
+
+        transform: rotate(-7deg);
+
+        z-index: 3;
+      }
+
+      .hero-circle {
+        position: absolute;
+
+        right: -45px;
+
+        bottom: 20px;
+
+        z-index: 4;
+
+        width: 210px;
+
+        height: 210px;
+
+        padding: 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        border-radius: 50%;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        transform: rotate(-12deg);
+      }
+
+      .hero-circle p {
+        font-family: var(--editorial);
+
+        font-size: 23px;
+
+        line-height: 1;
+      }
+
+      .hero-circle span {
+        display: block;
+
+        margin-top: 10px;
+
+        font-family: var(--sans);
+
+        font-size: 7px;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      /* =====================================================
+       08. MARQUEE
+    ====================================================== */
+
+      .marquee {
+        height: 58px;
+
+        display: flex;
+
+        align-items: center;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        background: var(--burgundy);
+
+        color: var(--pink-light);
+      }
+
+      .marquee-track {
+        display: flex;
+
+        gap: 35px;
+
+        animation: marquee 25s linear infinite;
+      }
+
+      .marquee-item {
+        font-family: var(--editorial);
+
+        font-size: 20px;
+
+        font-style: italic;
+      }
+
+      .marquee-dot {
+        color: var(--pink);
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* =====================================================
+       09. STORY
+    ====================================================== */
+
+      .story {
+        padding: 150px 8vw;
+
+        display: grid;
+
+        grid-template-columns: 35% 65%;
+
+        gap: 100px;
+      }
+
+      .story-left {
+        display: flex;
+
+        flex-direction: column;
+      }
+
+      .vertical-text {
+        writing-mode: vertical-rl;
+
+        color: var(--pink-dark);
+
+        font-size: 8px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.2em;
+      }
+
+      .story-number {
+        margin-top: 45px;
+
+        color: var(--pink-light);
+
+        font-family: var(--serif);
+
+        font-size: 150px;
+
+        line-height: 0.7;
+      }
+
+      .story-right {
+        padding-top: 20px;
+      }
+
+      .story-kicker {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+
+        font-size: 25px;
+
+        font-style: italic;
+      }
+
+      .story-title {
+        margin: 18px 0 35px;
+
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(55px, 6vw, 90px);
+
+        font-weight: 400;
+
+        line-height: 0.85;
+
+        letter-spacing: -0.07em;
+      }
+
+      .story-title span {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+
+        font-style: italic;
+      }
+
+      .story-copy {
+        max-width: 500px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+
+        line-height: 2;
+      }
+
+      /* =====================================================
+       10. MENU
+    ====================================================== */
+
+      .menu-section {
+        padding: 120px 7vw;
+
+        background: #f8dce4;
+      }
+
+      .menu-header {
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: space-between;
+
+        margin-bottom: 45px;
+      }
+
+      .menu-title {
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(65px, 8vw, 110px);
+
+        font-weight: 400;
+
+        line-height: 0.75;
+
+        letter-spacing: -0.08em;
+      }
+
+      .menu-title em {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+      }
+
+      .menu-header p {
+        max-width: 280px;
+
+        color: var(--muted);
+
+        font-size: 9px;
+
+        line-height: 1.8;
+      }
+
+      /* =====================================================
+       11. FILTER
+    ====================================================== */
+
+      .filters {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+
+        margin-bottom: 35px;
+      }
+
+      .filter {
+        padding: 10px 16px;
+
+        border: 1px solid rgba(100, 38, 60, 0.2);
+
+        background: transparent;
+
+        color: var(--burgundy);
+
+        font-size: 7px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+
+        transition: 0.25s;
+      }
+
+      .filter:hover,
+      .filter.active {
+        background: var(--burgundy);
+
+        color: var(--white);
+      }
+
+      /* =====================================================
+       12. PRODUCT GRID
+    ====================================================== */
+
+      .product-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 16px;
+      }
+
+      .product-card {
+        padding: 10px 10px 20px;
+
+        background: var(--cream);
+
+        transition: 0.4s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .product-card.hidden {
+        display: none;
+      }
+
+      .product-image {
+        height: 330px;
+
+        overflow: hidden;
+
+        position: relative;
+      }
+
+      .product-image img {
+        transition: 0.6s;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.06);
+      }
+
+      .product-tag {
+        position: absolute;
+
+        top: 10px;
+
+        left: 10px;
+
+        z-index: 2;
+
+        padding: 7px 9px;
+
+        background: var(--pink);
+
+        color: var(--white);
+
+        font-size: 6px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+      }
+
+      .product-info {
+        padding: 17px 8px 0;
+      }
+
+      .product-info h3 {
+        color: var(--burgundy);
+
+        font-family: var(--editorial);
+
+        font-size: 24px;
+
+        font-weight: 500;
+      }
+
+      .product-info p {
+        margin-top: 4px;
+
+        color: var(--muted);
+
+        font-size: 7px;
+
+        line-height: 1.5;
+      }
+
+      .product-bottom {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        margin-top: 15px;
+      }
+
+      .price {
+        color: var(--pink-dark);
+
+        font-size: 9px;
+
+        font-weight: 700;
+      }
+
+      .add-cart {
+        width: 31px;
+
+        height: 31px;
+
+        border: 1px solid var(--pink);
+
+        border-radius: 50%;
+
+        background: transparent;
+
+        color: var(--pink-dark);
+
+        transition: 0.25s;
+      }
+
+      .add-cart:hover {
+        background: var(--pink);
+
+        color: var(--white);
+      }
+
+      /* =====================================================
+       13. DELIVERY
+    ====================================================== */
+
+      .delivery-banner {
+        margin-top: 70px;
+
+        padding: 28px 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 30px;
+
+        background: var(--burgundy);
+
+        color: var(--white);
+      }
+
+      .delivery-content h3 {
+        font-family: var(--editorial);
+
+        font-size: 29px;
+
+        font-weight: 500;
+      }
+
+      .delivery-content p {
+        margin-top: 5px;
+
+        color: #d8bbc5;
+
+        font-size: 8px;
+
+        line-height: 1.7;
+      }
+
+      .delivery-btn {
+        flex-shrink: 0;
+
+        padding: 14px 20px;
+
+        background: var(--pink-light);
+
+        color: var(--burgundy);
+
+        font-size: 7px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+
+        transition: 0.3s;
+      }
+
+      .delivery-btn:hover {
+        background: var(--white);
+
+        transform: translateY(-2px);
+      }
+
+      /* =====================================================
+       14. TEA SECTION
+    ====================================================== */
+
+      .tea {
+        padding: 150px 7vw;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 100px;
+
+        align-items: center;
+      }
+
+      .tea-visual {
+        height: 600px;
+
+        position: relative;
+      }
+
+      .tea-image {
+        width: 78%;
+
+        height: 86%;
+
+        margin-left: 8%;
+
+        overflow: hidden;
+
+        border-radius: 50% 50% 0 0;
+      }
+
+      .tea-image img {
+        transition: 0.8s;
+      }
+
+      .tea-visual:hover img {
+        transform: scale(1.05);
+      }
+
+      .tea-badge {
+        position: absolute;
+
+        right: 0;
+
+        bottom: 25px;
+
+        width: 145px;
+
+        height: 145px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        border: 1px solid var(--pink);
+
+        border-radius: 50%;
+
+        background: var(--cream);
+
+        transform: rotate(10deg);
+      }
+
+      .tea-badge span {
+        color: var(--pink-dark);
+
+        font-family: var(--editorial);
+
+        font-size: 20px;
+
+        line-height: 1;
+      }
+
+      .tea-kicker {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+
+        font-size: 25px;
+
+        font-style: italic;
+      }
+
+      .tea-title {
+        margin: 15px 0 30px;
+
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 6vw, 95px);
+
+        font-weight: 400;
+
+        line-height: 0.82;
+
+        letter-spacing: -0.08em;
+      }
+
+      .tea-title span {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+      }
+
+      .tea-description {
+        max-width: 500px;
+
+        margin-bottom: 30px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+
+        line-height: 2;
+      }
+
+      .tea-selector {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 7px;
+      }
+
+      .tea-option {
+        padding: 11px 15px;
+
+        border: 1px solid rgba(100, 38, 60, 0.2);
+
+        background: transparent;
+
+        color: var(--burgundy);
+
+        font-size: 7px;
+
+        transition: 0.25s;
+      }
+
+      .tea-option.active,
+      .tea-option:hover {
+        border-color: var(--pink);
+
+        background: var(--pink);
+
+        color: var(--white);
+      }
+
+      .tea-result {
+        margin-top: 25px;
+
+        padding: 18px;
+
+        border-left: 3px solid var(--pink);
+
+        background: var(--blush);
+
+        color: var(--burgundy);
+
+        font-family: var(--editorial);
+
+        font-size: 19px;
+      }
+
+      /* =====================================================
+       15. MANIFESTO
+    ====================================================== */
+
+      .manifesto {
+        min-height: 600px;
+
+        padding: 100px 7vw;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        background: var(--burgundy);
+
+        color: var(--cream);
+      }
+
+      .manifesto-inner {
+        max-width: 950px;
+      }
+
+      .manifesto-small {
+        color: var(--pink-light);
+
+        font-size: 8px;
+
+        letter-spacing: 0.2em;
+
+        text-transform: uppercase;
+      }
+
+      .manifesto h2 {
+        margin: 25px 0;
+
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 8vw, 120px);
+
+        font-weight: 400;
+
+        line-height: 0.8;
+
+        letter-spacing: -0.08em;
+      }
+
+      .manifesto h2 em {
+        color: var(--pink-light);
+
+        font-family: var(--editorial);
+      }
+
+      .manifesto p {
+        max-width: 520px;
+
+        margin: auto;
+
+        color: #d8bbc5;
+
+        font-size: 10px;
+
+        line-height: 1.9;
+      }
+
+      /* =====================================================
+       16. SOCIAL
+    ====================================================== */
+
+      .social {
+        padding: 130px 7vw;
+
+        background: var(--lavender);
+      }
+
+      .social-header {
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: space-between;
+
+        margin-bottom: 40px;
+      }
+
+      .social-header h2 {
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(55px, 6vw, 90px);
+
+        font-weight: 400;
+
+        line-height: 0.8;
+
+        letter-spacing: -0.07em;
+      }
+
+      .social-header h2 span {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+
+        font-style: italic;
+      }
+
+      .social-link {
+        color: var(--pink-dark);
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+      }
+
+      .social-grid {
+        display: grid;
+
+        grid-template-columns: repeat(5, 1fr);
+
+        gap: 10px;
+      }
+
+      .social-item {
+        height: 260px;
+
+        overflow: hidden;
+      }
+
+      .social-item img {
+        transition: 0.7s;
+      }
+
+      .social-item:hover img {
+        transform: scale(1.07);
+      }
+
+      /* =====================================================
+       17. NEWSLETTER
+    ====================================================== */
+
+      .newsletter {
+        padding: 130px 7vw;
+
+        text-align: center;
+
+        background: var(--blush);
+      }
+
+      .newsletter h2 {
+        color: var(--burgundy);
+
+        font-family: var(--serif);
+
+        font-size: clamp(55px, 7vw, 95px);
+
+        font-weight: 400;
+
+        line-height: 0.8;
+
+        letter-spacing: -0.07em;
+      }
+
+      .newsletter h2 em {
+        color: var(--pink);
+
+        font-family: var(--editorial);
+      }
+
+      .newsletter p {
+        max-width: 430px;
+
+        margin: 25px auto 30px;
+
+        color: var(--muted);
+
+        font-size: 9px;
+
+        line-height: 1.8;
+      }
+
+      .newsletter-form {
+        max-width: 420px;
+
+        margin: auto;
+
+        display: flex;
+
+        border-bottom: 1px solid var(--pink-dark);
+      }
+
+      .newsletter-form input {
+        flex: 1;
+
+        height: 45px;
+
+        border: 0;
+
+        outline: none;
+
+        background: transparent;
+
+        color: var(--burgundy);
+
+        font-size: 9px;
+      }
+
+      .newsletter-form button {
+        border: 0;
+
+        background: transparent;
+
+        color: var(--pink-dark);
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      /* =====================================================
+       18. FOOTER
+    ====================================================== */
+
+      footer {
+        padding: 75px 7vw 25px;
+
+        background: var(--burgundy);
+
+        color: var(--cream);
+      }
+
+      .footer-main {
+        display: grid;
+
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+
+        gap: 50px;
+
+        padding-bottom: 70px;
+      }
+
+      .footer-logo {
+        color: var(--white);
+
+        font-family: var(--serif);
+
+        font-size: 43px;
+
+        letter-spacing: -0.06em;
+      }
+
+      .footer-logo span {
+        color: var(--pink-light);
+      }
+
+      .footer-description {
+        max-width: 310px;
+
+        margin-top: 15px;
+
+        color: #cdb2bc;
+
+        font-size: 9px;
+
+        line-height: 1.8;
+      }
+
+      .footer-column h4 {
+        margin-bottom: 18px;
+
+        color: var(--pink-light);
+
+        font-size: 7px;
+
+        letter-spacing: 0.15em;
+
+        text-transform: uppercase;
+      }
+
+      .footer-column a,
+      .footer-column p {
+        display: block;
+
+        margin-bottom: 11px;
+
+        color: #d7c0c8;
+
+        font-size: 8px;
+      }
+
+      .footer-bottom {
+        padding-top: 20px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        border-top: 1px solid rgba(247, 201, 213, 0.15);
+
+        color: #a88a96;
+
+        font-size: 7px;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      /* =====================================================
+       19. WHATSAPP
+    ====================================================== */
+
+      .whatsapp-floating {
+        position: fixed;
+
+        right: 25px;
+
+        bottom: 25px;
+
+        z-index: 200;
+
+        width: 55px;
+
+        height: 55px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #25d366;
+
+        color: var(--white);
+
+        font-size: 22px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        transition: 0.3s;
+      }
+
+      .whatsapp-floating:hover {
+        transform: scale(1.08);
+      }
+
+      /* =====================================================
+       20. RESPONSIVE
+    ====================================================== */
+
+      @media (max-width: 1000px) {
+        .nav-links {
+          display: none;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-visual {
+          margin-top: 60px;
+        }
+
+        .story {
+          grid-template-columns: 1fr;
+
+          gap: 50px;
+        }
+
+        .story-left {
+          flex-direction: row;
+
+          align-items: center;
+
+          gap: 30px;
+        }
+
+        .story-number {
+          margin: 0;
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .tea {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .navbar {
+          height: 72px;
+
+          padding: 0 6vw;
+        }
+
+        .logo-text {
+          font-size: 17px;
+        }
+
+        .hero {
+          padding: 70px 6vw 60px;
+
+          min-height: auto;
+        }
+
+        .hero-title {
+          font-size: 20vw;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .hero-btn {
+          width: 100%;
+        }
+
+        .hero-visual {
+          min-height: 420px;
+        }
+
+        .hero-main-image {
+          width: 73%;
+
+          height: 75%;
+
+          right: 3%;
+        }
+
+        .hero-small-image {
+          width: 42%;
+
+          height: 37%;
+
+          left: 0;
+        }
+
+        .hero-circle {
+          width: 130px;
+
+          height: 130px;
+
+          right: -10px;
+
+          bottom: 10px;
+
+          padding: 20px;
+        }
+
+        .hero-circle p {
+          font-size: 17px;
+        }
+
+        .story {
+          padding: 100px 6vw;
+        }
+
+        .story-left {
+          display: block;
+        }
+
+        .story-number {
+          margin-top: 30px;
+
+          font-size: 110px;
+        }
+
+        .story-title {
+          font-size: 18vw;
+        }
+
+        .menu-section {
+          padding: 100px 6vw;
+        }
+
+        .menu-header {
+          display: block;
+        }
+
+        .menu-title {
+          margin-bottom: 30px;
+
+          font-size: 18vw;
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr 1fr;
+
+          gap: 8px;
+        }
+
+        .product-image {
+          height: 230px;
+        }
+
+        .product-info h3 {
+          font-size: 20px;
+        }
+
+        .delivery-banner {
+          display: block;
+
+          padding: 25px;
+        }
+
+        .delivery-btn {
+          display: block;
+
+          width: 100%;
+
+          margin-top: 20px;
+
+          text-align: center;
+        }
+
+        .tea {
+          padding: 100px 6vw;
+
+          gap: 60px;
+        }
+
+        .tea-visual {
+          height: 420px;
+        }
+
+        .tea-title {
+          font-size: 18vw;
+        }
+
+        .manifesto {
+          min-height: 500px;
+        }
+
+        .manifesto h2 {
+          font-size: 17vw;
+        }
+
+        .social {
+          padding: 100px 6vw;
+        }
+
+        .social-header {
+          display: block;
+        }
+
+        .social-header h2 {
+          margin-bottom: 25px;
+
+          font-size: 17vw;
+        }
+
+        .social-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .social-item {
+          height: 220px;
+        }
+
+        .social-item:last-child {
+          display: none;
+        }
+
+        .newsletter {
+          padding: 100px 6vw;
+        }
+
+        .newsletter h2 {
+          font-size: 17vw;
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+        }
+
+        .footer-bottom {
+          display: block;
+
+          line-height: 2;
+        }
+
+        .whatsapp-floating {
+          right: 18px;
+
+          bottom: 18px;
+
+          width: 50px;
+
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+    <header class="navbar">
+      <a href="#" class="logo">
+        <div class="logo-symbol">r</div>
+
+        <div class="logo-text">rosé <span>&</span> crumb</div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#story"> Our Story </a>
+
+        <a href="#menu"> Menu </a>
+
+        <a href="#tea"> Tea </a>
+
+        <a href="#journal"> Journal </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart" aria-label="Order cart">
+          ♡
+
+          <span class="cart-count"> 0 </span>
+        </button>
+
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <!-- =====================================================
+     MOBILE MENU
+====================================================== -->
+
+    <div class="mobile-menu">
+      <nav class="mobile-links">
+        <a href="#story"> Our Story </a>
+
+        <a href="#menu"> Menu </a>
+
+        <a href="#tea"> Tea </a>
+
+        <a href="#journal"> Journal </a>
+      </nav>
+    </div>
+
+    <!-- =====================================================
+     HERO
+====================================================== -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow"> Artisan Tea · Bake House </span>
+
+          <h1 class="hero-title">
+            Soft
+
+            <br />
+
+            things.
+
+            <br />
+
+            <em> Sweet moments. </em>
+          </h1>
+
+          <p class="hero-description">
+            A little pink corner for beautiful teas, handmade pastries and slow
+            afternoons.
+
+            <br /><br />
+
+            Baked every morning. Steeped with intention.
+          </p>
+
+          <div class="hero-buttons">
+            <!-- RESERVATION WHATSAPP -->
+
+            <a
+              href="https://wa.me/6281234567890?text=Hi%20Ros%C3%A9%20%26%20Crumb!%20I%20would%20like%20to%20make%20a%20table%20reservation.%0A%0AName%3A%0ADate%3A%0ATime%3A%0ANumber%20of%20Guests%3A"
+              target="_blank"
+              rel="noopener"
+              class="hero-btn"
+            >
+              ◉ Reserve a Table
+            </a>
+
+            <a href="#menu" class="hero-btn outline"> Explore Menu → </a>
+          </div>
+
+          <div class="hero-note">Made for your softest days.</div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-main-image">
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=90"
+              alt="Strawberry cake"
+            />
+          </div>
+
+          <div class="hero-small-image">
+            <img
+              src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=700&q=90"
+              alt="Fresh pastries"
+            />
+          </div>
+
+          <div class="hero-circle">
+            <p>
+              baked
+              <br />
+              with love
+
+              <span> every single morning </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MARQUEE
+    ====================================================== -->
+
+      <div class="marquee">
+        <div class="marquee-track">
+          <span class="marquee-item"> delicate things </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> slow mornings </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> artisan tea </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> fresh from the oven </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> delicate things </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> slow mornings </span>
+
+          <span class="marquee-dot"> ✿ </span>
+
+          <span class="marquee-item"> artisan tea </span>
+        </div>
+      </div>
+
+      <!-- =====================================================
+         STORY
+    ====================================================== -->
+
+      <section class="story" id="story">
+        <div class="story-left">
+          <div class="vertical-text">A love letter to slow living</div>
+
+          <div class="story-number">01</div>
+        </div>
+
+        <div class="story-right">
+          <div class="story-kicker">Welcome to Rosé & Crumb</div>
+
+          <h2 class="story-title">
+            Pretty food
+
+            <br />
+
+            for <span>pretty days.</span>
+          </h2>
+
+          <p class="story-copy">
+            Rosé & Crumb began with a simple idea — that everyday rituals
+            deserve to feel special.
+
+            <br /><br />
+
+            We make small-batch pastries, delicate cakes and carefully selected
+            teas for women who enjoy life's quieter pleasures.
+
+            <br /><br />
+
+            No rush. No fuss. Just something lovely waiting for you.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MENU
+    ====================================================== -->
+
+      <section class="menu-section" id="menu">
+        <div class="menu-header">
+          <div>
+            <span class="eyebrow"> From the counter </span>
+
+            <h2 class="menu-title">
+              Sweet
+
+              <br />
+
+              <em>little things.</em>
+            </h2>
+          </div>
+
+          <p>
+            Our pastry case changes with the seasons, moods and whatever looks
+            irresistible that morning.
+          </p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">Everything</button>
+
+          <button class="filter" data-filter="cake">Cakes</button>
+
+          <button class="filter" data-filter="pastry">Pastries</button>
+
+          <button class="filter" data-filter="cookie">Cookies</button>
+
+          <button class="filter" data-filter="tea">Tea</button>
+        </div>
+
+        <!-- =================================================
+             PRODUCTS
+        ================================================== -->
+
+        <div class="product-grid">
+          <!-- PRODUCT 01 -->
+
+          <article class="product-card" data-category="cake">
+            <div class="product-image">
+              <span class="product-tag"> Best Seller </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=90"
+                alt="Strawberry Cloud Cake"
+              />
+            </div>
+
+            <div class="product-info">
+              <h3>Strawberry Cloud</h3>
+
+              <p>Vanilla sponge · strawberry compote · rose cream</p>
+
+              <div class="product-bottom">
+                <span class="price"> Rp 68K </span>
+
+                <button
+                  class="add-cart"
+                  data-name="Strawberry Cloud"
+                  data-price="Rp 68K"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 02 -->
+
+          <article class="product-card" data-category="pastry">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=90"
+                alt="Rose Croissant"
+              />
+            </div>
+
+            <div class="product-info">
+              <h3>Rose Croissant</h3>
+
+              <p>French butter · rose sugar · flaky layers</p>
+
+              <div class="product-bottom">
+                <span class="price"> Rp 32K </span>
+
+                <button
+                  class="add-cart"
+                  data-name="Rose Croissant"
+                  data-price="Rp 32K"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 03 -->
+
+          <article class="product-card" data-category="cookie">
+            <div class="product-image">
+              <span class="product-tag"> New </span>
+
+              <img
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=90"
+                alt="Blush Cookie"
+              />
+            </div>
+
+            <div class="product-info">
+              <h3>Blush Cookie</h3>
+
+              <p>White chocolate · raspberry · sea salt</p>
+
+              <div class="product-bottom">
+                <span class="price"> Rp 25K </span>
+
+                <button
+                  class="add-cart"
+                  data-name="Blush Cookie"
+                  data-price="Rp 25K"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCT 04 -->
+
+          <article class="product-card" data-category="tea">
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=800&q=90"
+                alt="Rose Earl Grey"
+              />
+            </div>
+
+            <div class="product-info">
+              <h3>Rose Earl Grey</h3>
+
+              <p>Black tea · rose petals · bergamot</p>
+
+              <div class="product-bottom">
+                <span class="price"> Rp 42K </span>
+
+                <button
+                  class="add-cart"
+                  data-name="Rose Earl Grey"
+                  data-price="Rp 42K"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- =================================================
+             DELIVERY CTA
+        ================================================== -->
+
+        <div class="delivery-banner">
+          <div class="delivery-content">
+            <h3>Craving something lovely?</h3>
+
+            <p>
+              Can't make it to us?
+
+              <br />
+
+              We'll bring the little things to you.
+            </p>
+          </div>
+
+          <a
+            class="delivery-btn"
+            href="https://wa.me/6281234567890?text=Hi%20Ros%C3%A9%20%26%20Crumb!%20I%20would%20like%20to%20order%20for%20delivery.%0A%0AName%3A%0AOrder%3A%0AAddress%3A"
+            target="_blank"
+            rel="noopener"
+          >
+            Order Delivery via WhatsApp →
+          </a>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         TEA
+    ====================================================== -->
+
+      <section class="tea" id="tea">
+        <div class="tea-visual">
+          <div class="tea-image">
+            <img
+              src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=90"
+              alt="Artisan tea"
+            />
+          </div>
+
+          <div class="tea-badge">
+            <span>
+              Steep
+              <br />
+              slowly.
+              <br />
+              ♡
+            </span>
+          </div>
+        </div>
+
+        <div class="tea-content">
+          <div class="tea-kicker">Find your cup</div>
+
+          <h2 class="tea-title">
+            Tea,
+
+            <br />
+
+            but make it
+
+            <span> personal. </span>
+          </h2>
+
+          <p class="tea-description">
+            Every tea has a mood.
+
+            <br /><br />
+
+            Choose what you're feeling today and we'll recommend a little cup of
+            happiness.
+          </p>
+
+          <div class="tea-selector">
+            <button class="tea-option active" data-tea="soft">
+              I want something soft
+            </button>
+
+            <button class="tea-option" data-tea="fresh">
+              I need something fresh
+            </button>
+
+            <button class="tea-option" data-tea="bold">
+              Give me something bold
+            </button>
+          </div>
+
+          <div class="tea-result" id="teaResult">
+            Try our Rose Earl Grey with strawberry cream cake.
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         MANIFESTO
+    ====================================================== -->
+
+      <section class="manifesto">
+        <div class="manifesto-inner">
+          <span class="manifesto-small"> Our little philosophy </span>
+
+          <h2>
+            Life is too short
+
+            <br />
+
+            for <em>ordinary tea.</em>
+          </h2>
+
+          <p>
+            Wear the dress. Order the cake. Take the afternoon off.
+
+            <br />
+
+            Romanticise the little things.
+          </p>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         SOCIAL
+    ====================================================== -->
+
+      <section class="social" id="journal">
+        <div class="social-header">
+          <h2>
+            Seen
+
+            <span> around. </span>
+          </h2>
+
+          <a href="#" class="social-link"> @roseandcrumb ↗ </a>
+        </div>
+
+        <div class="social-grid">
+          <div class="social-item">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=90"
+              alt="Tea"
+            />
+          </div>
+
+          <div class="social-item">
+            <img
+              src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=90"
+              alt="Pastry"
+            />
+          </div>
+
+          <div class="social-item">
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=90"
+              alt="Cake"
+            />
+          </div>
+
+          <div class="social-item">
+            <img
+              src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=90"
+              alt="Tea cup"
+            />
+          </div>
+
+          <div class="social-item">
+            <img
+              src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=90"
+              alt="Cookies"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+      <section class="newsletter">
+        <h2>
+          A little note
+
+          <br />
+
+          <em>from us.</em>
+        </h2>
+
+        <p>
+          Seasonal menus, new pastries, tea recommendations and occasional
+          reasons to treat yourself.
+        </p>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required />
+
+          <button type="submit">Join us →</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+====================================================== -->
+
+    <footer>
+      <div class="footer-main">
+        <div>
+          <div class="footer-logo">rosé <span>&</span> crumb</div>
+
+          <p class="footer-description">
+            Artisan tea, handmade pastries and a tiny reminder to slow down.
+
+            <br /><br />
+
+            Made with butter, flowers and very good intentions.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+
+          <a href="#story"> Our Story </a>
+
+          <a href="#menu"> Menu </a>
+
+          <a href="#tea"> Tea </a>
+
+          <a href="#journal"> Journal </a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit</h4>
+
+          <p>18 Rose Lane</p>
+
+          <p>Jakarta, Indonesia</p>
+
+          <p>+62 812 8888 8899</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Hours</h4>
+
+          <p>Tue — Sun</p>
+
+          <p>08:00 — 21:00</p>
+
+          <p>Monday — Rest day</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 Rosé & Crumb </span>
+
+        <span> Made for slow afternoons </span>
+
+        <span> Instagram ↗ </span>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+     FLOATING WHATSAPP
+====================================================== -->
+
+    <a
+      class="whatsapp-floating"
+      href="https://wa.me/6281234567890?text=Hi%20Ros%C3%A9%20%26%20Crumb!%20I%20have%20a%20question."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat with Rosé & Crumb"
+    >
+      ◉
+    </a>
+
+    <!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+    <script>
+      /* =====================================================
+       01. CONFIGURATION
+    ====================================================== */
+
+      const WHATSAPP_NUMBER = "6281234567890";
+
+      /* =====================================================
+       02. CART STATE
+    ====================================================== */
+
+      let cartItems = [];
+
+      /* =====================================================
+       03. DOM ELEMENTS
+    ====================================================== */
+
+      const cartButton = document.querySelector(".cart");
+
+      const cartCounter = document.querySelector(".cart-count");
+
+      const addCartButtons = document.querySelectorAll(".add-cart");
+
+      const filterButtons = document.querySelectorAll(".filter");
+
+      const productCards = document.querySelectorAll(".product-card");
+
+      /* =====================================================
+       04. UPDATE CART COUNTER
+    ====================================================== */
+
+      function updateCartCounter() {
+        const totalQuantity = cartItems.reduce(
+          (total, item) => total + item.quantity,
+          0,
+        );
+
+        cartCounter.textContent = totalQuantity;
+      }
+
+      /* =====================================================
+       05. ADD PRODUCT
+    ====================================================== */
+
+      function addProduct(button) {
+        const productName = button.dataset.name;
+
+        const productPrice = button.dataset.price;
+
+        /*
+         * Check whether the product
+         * already exists in cart.
+         */
+
+        const existingProduct = cartItems.find(
+          (item) => item.name === productName,
+        );
+
+        /*
+         * If product exists,
+         * increase quantity.
+         */
+
+        if (existingProduct) {
+          existingProduct.quantity++;
+        } else {
+          /*
+           * Otherwise create new item.
+           */
+          cartItems.push({
+            name: productName,
+
+            price: productPrice,
+
+            quantity: 1,
+          });
+        }
+
+        updateCartCounter();
+
+        /*
+         * Button feedback
+         */
+
+        button.textContent = "✓";
+
+        button.style.background = "var(--pink)";
+
+        button.style.color = "white";
+
+        setTimeout(() => {
+          button.textContent = "+";
+
+          button.style.background = "";
+
+          button.style.color = "";
+        }, 800);
+      }
+
+      /* =====================================================
+       06. ADD CART EVENTS
+    ====================================================== */
+
+      addCartButtons.forEach((button) => {
+        button.addEventListener("click", () => addProduct(button));
+      });
+
+      /* =====================================================
+       07. FILTER PRODUCTS
+    ====================================================== */
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          /*
+           * Remove active state
+           */
+
+          filterButtons.forEach((item) => item.classList.remove("active"));
+
+          /*
+           * Add active state
+           */
+
+          button.classList.add("active");
+
+          /*
+           * Get selected category
+           */
+
+          const selectedCategory = button.dataset.filter;
+
+          /*
+           * Filter products
+           */
+
+          productCards.forEach((card) => {
+            const productCategory = card.dataset.category;
+
+            if (
+              selectedCategory === "all" ||
+              selectedCategory === productCategory
+            ) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
+      });
+
+      /* =====================================================
+       08. CREATE WHATSAPP ORDER
+    ====================================================== */
+
+      function createWhatsAppOrder() {
+        /*
+         * Empty cart
+         */
+
+        if (cartItems.length === 0) {
+          return `
+
+
+Hi Rosé & Crumb! 👋
+
+I would like to place an order.
+
+Name:
+Phone:
+Order:
+Delivery Address:
+
+Thank you! ♡
+`.trim();
+        }
+
+        /*
+         * Product list
+         */
+
+        let productList = "";
+
+        cartItems.forEach((item, index) => {
+          productList += `${index + 1}. ${item.name} x${item.quantity} — ${item.price}\n`;
+        });
+
+        /*
+         * Final WhatsApp message
+         */
+
+        return `
+
+
+Hi Rosé & Crumb! 👋
+
+I would like to order:
+
+${productList}
+Name:
+Phone:
+Delivery Address:
+
+Thank you! ♡
+`.trim();
+      }
+
+      /* =====================================================
+       09. CART → WHATSAPP
+    ====================================================== */
+
+      cartButton.addEventListener("click", () => {
+        const message = createWhatsAppOrder();
+
+        const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappURL, "_blank");
+      });
+
+      /* =====================================================
+       10. TEA RECOMMENDATION
+    ====================================================== */
+
+      const teaOptions = document.querySelectorAll(".tea-option");
+
+      const teaResult = document.querySelector("#teaResult");
+
+      const teaRecommendations = {
+        soft: "Try our Rose Earl Grey with strawberry cream cake.",
+
+        fresh: "Try our Jasmine Green Tea with lemon raspberry tart.",
+
+        bold: "Try our Smoked Oolong with dark chocolate croissant.",
+      };
+
+      teaOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          teaOptions.forEach((item) => item.classList.remove("active"));
+
+          option.classList.add("active");
+
+          const mood = option.dataset.tea;
+
+          teaResult.textContent = teaRecommendations[mood];
+        });
+      });
+
+      /* =====================================================
+       11. MOBILE MENU
+    ====================================================== */
+
+      const menuButton = document.querySelector(".menu-btn");
+
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      const mobileMenuLinks = document.querySelectorAll(".mobile-links a");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      /* =====================================================
+       12. NEWSLETTER
+    ====================================================== */
+
+      const newsletterForm = document.querySelector("#newsletterForm");
+
+      newsletterForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const button = newsletterForm.querySelector("button");
+
+        const input = newsletterForm.querySelector("input");
+
+        input.value = "";
+
+        button.textContent = "You're on the list ♡";
+
+        setTimeout(() => {
+          button.textContent = "Join us →";
+        }, 2500);
+      });
+    </script>
+  </body>
+</html>

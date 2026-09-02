@@ -1,0 +1,1532 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bottle: {
+            50: "#f5f8f7",
+            100: "#e6efed",
+            500: "#527a78",
+            600: "#426866",
+            700: "#355654",
+            900: "#1d3332",
+          },
+        },
+      },
+    },
+  };
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- NAVBAR -->
+<header
+  class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100"
+>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <div
+          class="w-9 h-9 rounded-full bg-bottle-600 text-white flex items-center justify-center font-bold"
+        >
+          B
+        </div>
+
+        <span class="text-xl font-bold tracking-tight text-gray-900">
+          BOTTLE<span class="text-bottle-600">LY</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav
+        class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600"
+      >
+        <a href="#home" class="hover:text-bottle-600 transition">Home</a>
+        <a href="#shop" class="hover:text-bottle-600 transition">Shop</a>
+        <a href="#collections" class="hover:text-bottle-600 transition"
+          >Collections</a
+        >
+        <a href="#about" class="hover:text-bottle-600 transition">About</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <button
+          id="searchToggle"
+          class="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition"
+        >
+          🔍
+        </button>
+
+        <!-- Cart -->
+        <button
+          id="cartButton"
+          class="relative w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center transition"
+        >
+          🛒
+
+          <span
+            id="cartCount"
+            class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-bottle-600 text-white text-[10px] flex items-center justify-center hidden"
+          >
+            0
+          </span>
+        </button>
+
+        <!-- Mobile menu -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden w-10 h-10 flex items-center justify-center text-xl"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="searchBox" class="hidden pb-4">
+      <div class="relative">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search bottles..."
+          class="w-full bg-gray-100 rounded-xl px-5 py-3 text-sm outline-none focus:ring-2 focus:ring-bottle-500"
+        />
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 py-5">
+      <nav class="flex flex-col gap-4 text-sm font-medium">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="pt-20 bg-bottle-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="min-h-[650px] grid lg:grid-cols-2 items-center gap-12 py-16">
+      <!-- Text -->
+      <div>
+        <span
+          class="inline-block px-4 py-2 bg-white rounded-full text-xs font-semibold tracking-wide text-bottle-600 mb-6"
+        >
+          NEW COLLECTION 2026
+        </span>
+
+        <h1
+          class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-tight text-gray-900"
+        >
+          Hydrate
+          <span class="text-bottle-600 italic">beautifully.</span>
+        </h1>
+
+        <p class="mt-6 max-w-lg text-gray-600 text-lg leading-relaxed">
+          Everyday bottles designed to keep your drinks at the perfect
+          temperature while making your daily routine a little more beautiful.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="#shop"
+            class="px-7 py-4 bg-bottle-600 text-white rounded-full font-semibold hover:bg-bottle-700 transition"
+          >
+            Shop Collection
+          </a>
+
+          <a
+            href="#collections"
+            class="px-7 py-4 border border-gray-300 rounded-full font-semibold hover:bg-white transition"
+          >
+            Explore More
+          </a>
+        </div>
+
+        <div class="mt-10 flex items-center gap-8 text-sm">
+          <div>
+            <strong class="block text-xl">10K+</strong>
+            <span class="text-gray-500">Happy Customers</span>
+          </div>
+
+          <div class="w-px h-10 bg-gray-300"></div>
+
+          <div>
+            <strong class="block text-xl">4.9/5</strong>
+            <span class="text-gray-500">Customer Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="relative">
+        <div
+          class="absolute inset-0 bg-bottle-100 rounded-[3rem] rotate-3"
+        ></div>
+
+        <img
+          src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80"
+          alt="Premium water bottle"
+          class="relative w-full h-[520px] object-cover rounded-[3rem] shadow-xl"
+        />
+
+        <div
+          class="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-lg"
+        >
+          <span class="text-xs text-gray-500">BEST SELLER</span>
+          <h3 class="font-semibold mt-1">Classic Insulated Bottle</h3>
+          <p class="text-bottle-600 font-bold mt-1">Rp 349.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="flex gap-4 items-center">
+        <span class="text-2xl">🚚</span>
+        <div>
+          <h4 class="font-semibold text-sm">Free Shipping</h4>
+          <p class="text-xs text-gray-500">For orders over Rp500K</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-center">
+        <span class="text-2xl">🛡️</span>
+        <div>
+          <h4 class="font-semibold text-sm">1 Year Warranty</h4>
+          <p class="text-xs text-gray-500">Quality guaranteed</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-center">
+        <span class="text-2xl">♻️</span>
+        <div>
+          <h4 class="font-semibold text-sm">Eco Friendly</h4>
+          <p class="text-xs text-gray-500">Reusable & sustainable</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-center">
+        <span class="text-2xl">💳</span>
+        <div>
+          <h4 class="font-semibold text-sm">Secure Payment</h4>
+          <p class="text-xs text-gray-500">100% secure checkout</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div
+      class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12"
+    >
+      <div>
+        <span
+          class="text-sm font-semibold text-bottle-600 uppercase tracking-widest"
+        >
+          Our Products
+        </span>
+
+        <h2 class="font-serif text-4xl lg:text-5xl mt-3">
+          Find your perfect bottle
+        </h2>
+
+        <p class="text-gray-500 mt-4 max-w-xl">
+          From everyday hydration to outdoor adventures, find a bottle made for
+          your lifestyle.
+        </p>
+      </div>
+
+      <!-- Categories -->
+      <div class="flex flex-wrap gap-2">
+        <button
+          class="category-btn active px-5 py-2.5 rounded-full text-sm"
+          data-category="all"
+        >
+          All
+        </button>
+
+        <button
+          class="category-btn px-5 py-2.5 rounded-full text-sm"
+          data-category="tumbler"
+        >
+          Tumblers
+        </button>
+
+        <button
+          class="category-btn px-5 py-2.5 rounded-full text-sm"
+          data-category="bottle"
+        >
+          Bottles
+        </button>
+
+        <button
+          class="category-btn px-5 py-2.5 rounded-full text-sm"
+          data-category="kids"
+        >
+          Kids
+        </button>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div
+      id="productGrid"
+      class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+    ></div>
+
+    <!-- Empty -->
+    <div id="emptyState" class="hidden text-center py-20">
+      <div class="text-5xl mb-4">🔎</div>
+      <h3 class="text-xl font-semibold">No products found</h3>
+      <p class="text-gray-500 mt-2">Try another search or category.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections" class="py-24 bg-bottle-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span
+        class="text-sm font-semibold text-bottle-600 uppercase tracking-widest"
+      >
+        Shop By Lifestyle
+      </span>
+
+      <h2 class="font-serif text-4xl lg:text-5xl mt-3">
+        Made for every moment
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="group relative h-[420px] overflow-hidden rounded-3xl">
+        <img
+          src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+          alt="Outdoor collection"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-8 left-8 text-white">
+          <p class="text-sm opacity-80">COLLECTION 01</p>
+          <h3 class="font-serif text-3xl mt-1">Adventure</h3>
+          <a href="#shop" class="inline-block mt-4 underline text-sm">
+            Shop Collection →
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative h-[420px] overflow-hidden rounded-3xl">
+        <img
+          src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+          alt="Everyday collection"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-8 left-8 text-white">
+          <p class="text-sm opacity-80">COLLECTION 02</p>
+          <h3 class="font-serif text-3xl mt-1">Everyday</h3>
+          <a href="#shop" class="inline-block mt-4 underline text-sm">
+            Shop Collection →
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative h-[420px] overflow-hidden rounded-3xl">
+        <img
+          src="https://images.unsplash.com/photo-1601598851547-4302969d6c44?auto=format&fit=crop&w=800&q=80"
+          class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+          alt="Kids collection"
+        />
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+        ></div>
+
+        <div class="absolute bottom-8 left-8 text-white">
+          <p class="text-sm opacity-80">COLLECTION 03</p>
+          <h3 class="font-serif text-3xl mt-1">Little Ones</h3>
+          <a href="#shop" class="inline-block mt-4 underline text-sm">
+            Shop Collection →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="py-24 bg-bottle-700 text-white">
+  <div class="max-w-4xl mx-auto px-5 text-center">
+    <span class="text-sm uppercase tracking-widest opacity-70">
+      Special Offer
+    </span>
+
+    <h2 class="font-serif text-4xl lg:text-6xl mt-4">
+      Stay hydrated.
+      <br />
+      Save 15%.
+    </h2>
+
+    <p class="mt-6 text-white/70 max-w-lg mx-auto">
+      Get 15% off your first order and discover your new everyday hydration
+      companion.
+    </p>
+
+    <a
+      href="#shop"
+      class="inline-block mt-8 px-8 py-4 bg-white text-bottle-700 rounded-full font-semibold hover:bg-gray-100 transition"
+    >
+      Shop Now
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span
+          class="text-sm font-semibold text-bottle-600 uppercase tracking-widest"
+        >
+          Our Philosophy
+        </span>
+
+        <h2 class="font-serif text-4xl lg:text-5xl mt-4">
+          Better hydration,
+          <br />
+          better everyday.
+        </h2>
+
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          We believe a water bottle should be more than something you carry
+          around. It should be functional, beautiful, durable and designed to
+          become part of your everyday life.
+        </p>
+
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          That's why every BOTTLELY product is carefully selected with quality,
+          sustainability and timeless design in mind.
+        </p>
+
+        <a href="#" class="inline-block mt-8 text-bottle-600 font-semibold">
+          Learn More →
+        </a>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=1000&q=80"
+          alt="Bottle lifestyle"
+          class="rounded-[3rem] w-full h-[500px] object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="py-20 bg-gray-100">
+  <div class="max-w-3xl mx-auto px-5 text-center">
+    <h2 class="font-serif text-4xl">Get 10% off your first order</h2>
+
+    <p class="text-gray-500 mt-4">
+      Join our newsletter for new collections, special offers and hydration
+      tips.
+    </p>
+
+    <form
+      id="newsletterForm"
+      class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
+    >
+      <input
+        type="email"
+        required
+        placeholder="Your email address"
+        class="flex-1 px-5 py-4 rounded-full bg-white outline-none focus:ring-2 focus:ring-bottle-500"
+      />
+
+      <button
+        class="px-7 py-4 rounded-full bg-bottle-600 text-white font-semibold hover:bg-bottle-700 transition"
+      >
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-950 text-white">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <h3 class="text-xl font-bold">
+          BOTTLE<span class="text-bottle-500">LY</span>
+        </h3>
+
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">
+          Beautiful bottles for better everyday hydration.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Shop</h4>
+        <div class="space-y-3 text-sm text-gray-400">
+          <a href="#shop" class="block hover:text-white">All Products</a>
+          <a href="#shop" class="block hover:text-white">Tumblers</a>
+          <a href="#shop" class="block hover:text-white">Bottles</a>
+          <a href="#shop" class="block hover:text-white">Kids</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Information</h4>
+        <div class="space-y-3 text-sm text-gray-400">
+          <a href="#about" class="block hover:text-white">About Us</a>
+          <a href="#" class="block hover:text-white">Shipping</a>
+          <a href="#" class="block hover:text-white">Returns</a>
+          <a href="#" class="block hover:text-white">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Follow Us</h4>
+        <div class="flex gap-3">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center"
+            >IG</a
+          >
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center"
+            >FB</a
+          >
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center"
+            >TT</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-gray-500">
+      © 2026 BOTTLELY. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div
+  id="productModal"
+  class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-5"
+>
+  <div
+    class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+  >
+    <button
+      id="closeModal"
+      class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white shadow flex items-center justify-center"
+    >
+      ✕
+    </button>
+
+    <div class="grid md:grid-cols-2">
+      <img
+        id="modalImage"
+        src=""
+        class="w-full h-[400px] md:h-full object-cover"
+        alt=""
+      />
+
+      <div class="p-8 lg:p-12">
+        <span
+          id="modalCategory"
+          class="text-xs uppercase tracking-widest text-bottle-600 font-semibold"
+        ></span>
+
+        <h2 id="modalName" class="font-serif text-4xl mt-3"></h2>
+
+        <p id="modalPrice" class="text-xl font-bold text-bottle-600 mt-4"></p>
+
+        <p id="modalDescription" class="text-gray-500 leading-relaxed mt-6"></p>
+
+        <div class="mt-8">
+          <label class="text-sm font-semibold"> Quantity </label>
+
+          <div class="flex items-center gap-3 mt-3">
+            <button id="modalMinus" class="w-10 h-10 border rounded-full">
+              −
+            </button>
+
+            <span id="modalQuantity" class="w-8 text-center"> 1 </span>
+
+            <button id="modalPlus" class="w-10 h-10 border rounded-full">
+              +
+            </button>
+          </div>
+        </div>
+
+        <button
+          id="modalAddCart"
+          class="w-full mt-8 py-4 bg-bottle-600 text-white rounded-full font-semibold hover:bg-bottle-700 transition"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div id="cartOverlay" class="fixed inset-0 z-50 bg-black/40 hidden"></div>
+
+<aside
+  id="cartDrawer"
+  class="fixed top-0 right-0 z-[60] h-full w-full sm:max-w-md bg-white translate-x-full transition-transform duration-300"
+>
+  <div class="h-full flex flex-col">
+    <div class="flex items-center justify-between px-6 py-5 border-b">
+      <h2 class="text-xl font-semibold">Your Cart</h2>
+
+      <button id="closeCart" class="w-10 h-10 rounded-full hover:bg-gray-100">
+        ✕
+      </button>
+    </div>
+
+    <div id="cartItems" class="flex-1 overflow-y-auto p-6"></div>
+
+    <div class="border-t p-6">
+      <div class="flex justify-between text-lg font-semibold">
+        <span>Total</span>
+        <span id="cartTotal">Rp 0</span>
+      </div>
+
+      <button
+        id="checkoutButton"
+        class="w-full mt-5 py-4 rounded-full bg-bottle-600 text-white font-semibold hover:bg-bottle-700"
+      >
+        Checkout
+      </button>
+
+      <p class="text-xs text-gray-400 text-center mt-3">
+        Checkout is for demonstration purposes.
+      </p>
+    </div>
+  </div>
+</aside>
+
+<!-- Toast -->
+<div
+  id="toast"
+  class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[70] bg-gray-900 text-white px-6 py-3 rounded-full text-sm opacity-0 pointer-events-none transition"
+></div>
+
+<script>
+      ```javascript
+  const products = [
+    {
+      id: 1,
+      name: "Classic Insulated Bottle",
+      category: "bottle",
+      price: 349000,
+      image:
+        "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=80",
+      description:
+        "A timeless stainless-steel bottle designed to keep your drinks cold for up to 24 hours and hot for up to 12 hours."
+    },
+
+    {
+      id: 2,
+      name: "Minimal Tumbler",
+      category: "tumbler",
+      price: 299000,
+      image:
+        "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&w=700&q=80",
+      description:
+        "A sleek everyday tumbler with a comfortable grip and spill-resistant lid."
+    },
+
+    {
+      id: 3,
+      name: "Daily Essential Bottle",
+      category: "bottle",
+      price: 249000,
+      image:
+        "https://images.unsplash.com/photo-1560023907-a56e03bb3a0d?auto=format&fit=crop&w=700&q=80",
+      description:
+        "Lightweight and durable, this bottle is perfect for work, school and everyday activities."
+    },
+
+    {
+      id: 4,
+      name: "Travel Tumbler",
+      category: "tumbler",
+      price: 399000,
+      image:
+        "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80",
+      description:
+        "A premium travel tumbler designed for commuters and busy days."
+    },
+
+    {
+      id: 5,
+      name: "Sport Hydration Bottle",
+      category: "bottle",
+      price: 279000,
+      image:
+        "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=700&q=80",
+      description:
+        "Built for active lifestyles with a lightweight body and easy-carry design."
+    },
+
+    {
+      id: 6,
+      name: "Mini Kids Bottle",
+      category: "kids",
+      price: 189000,
+      image:
+        "https://images.unsplash.com/photo-1601598851547-4302969d6c44?auto=format&fit=crop&w=700&q=80",
+      description:
+        "A compact and colorful bottle designed especially for little ones."
+    },
+
+    {
+      id: 7,
+      name: "Premium Steel Bottle",
+      category: "bottle",
+      price: 459000,
+      image:
+        "https://images.unsplash.com/photo-1550505095-81378a674395?auto=format&fit=crop&w=700&q=80",
+      description:
+        "Premium double-wall stainless steel bottle with superior temperature retention."
+    },
+
+    {
+      id: 8,
+      name: "Classic Kids Tumbler",
+      category: "kids",
+      price: 219000,
+      image:
+        "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=80",
+      description:
+        "A simple and practical tumbler made for school days and family adventures."
+    }
+  ];
+
+
+  let cart = [];
+
+  let currentCategory = "all";
+  let currentSearch = "";
+
+  let selectedProduct = null;
+  let modalQuantity = 1;
+
+
+  /* =========================
+     FORMAT PRICE
+  ========================= */
+
+  function formatPrice(price) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0
+    }).format(price);
+  }
+
+
+  /* =========================
+     RENDER PRODUCTS
+  ========================= */
+
+  function renderProducts() {
+
+    const grid = document.getElementById("productGrid");
+    const emptyState = document.getElementById("emptyState");
+
+    const filteredProducts = products.filter(product => {
+
+      const categoryMatch =
+        currentCategory === "all" ||
+        product.category === currentCategory;
+
+      const searchMatch =
+        product.name
+          .toLowerCase()
+          .includes(currentSearch.toLowerCase());
+
+      return categoryMatch && searchMatch;
+    });
+
+
+    grid.innerHTML = "";
+
+
+    if (filteredProducts.length === 0) {
+      emptyState.classList.remove("hidden");
+      return;
+    }
+
+    emptyState.classList.add("hidden");
+
+
+    filteredProducts.forEach(product => {
+
+      const card = document.createElement("div");
+
+      card.className =
+        "product-card group cursor-pointer";
+
+
+      card.innerHTML = `
+        <div class="relative overflow-hidden rounded-2xl bg-gray-100">
+
+          <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-image w-full h-[300px] object-cover"
+          >
+
+          <button
+            class="quick-add absolute bottom-4 right-4 w-11 h-11 rounded-full bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+            data-id="${product.id}"
+          >
+            +
+          </button>
+
+        </div>
+
+        <div class="mt-4">
+
+          <p class="text-xs uppercase tracking-wider text-gray-400">
+            ${product.category}
+          </p>
+
+          <h3 class="font-semibold mt-1">
+            ${product.name}
+          </h3>
+
+          <p class="text-bottle-600 font-semibold mt-2">
+            ${formatPrice(product.price)}
+          </p>
+
+        </div>
+      `;
+
+
+      card.addEventListener("click", () => {
+        openProductModal(product.id);
+      });
+
+
+      const quickAdd = card.querySelector(".quick-add");
+
+      quickAdd.addEventListener("click", event => {
+
+        event.stopPropagation();
+
+        addToCart(product.id);
+
+      });
+
+
+      grid.appendChild(card);
+
+    });
+
+  }
+
+
+  /* =========================
+     CATEGORY FILTER
+  ========================= */
+
+  document.querySelectorAll(".category-btn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      document
+        .querySelectorAll(".category-btn")
+        .forEach(btn => btn.classList.remove("active"));
+
+      button.classList.add("active");
+
+      currentCategory = button.dataset.category;
+
+      renderProducts();
+
+    });
+
+  });
+
+
+  /* =========================
+     SEARCH
+  ========================= */
+
+  const searchToggle = document.getElementById("searchToggle");
+  const searchBox = document.getElementById("searchBox");
+  const searchInput = document.getElementById("searchInput");
+
+
+  searchToggle.addEventListener("click", () => {
+
+    searchBox.classList.toggle("hidden");
+
+    if (!searchBox.classList.contains("hidden")) {
+      searchInput.focus();
+    }
+
+  });
+
+
+  searchInput.addEventListener("input", event => {
+
+    currentSearch = event.target.value;
+
+    renderProducts();
+
+  });
+
+
+  /* =========================
+     PRODUCT MODAL
+  ========================= */
+
+  function openProductModal(id) {
+
+    selectedProduct = products.find(product => product.id === id);
+
+    if (!selectedProduct) return;
+
+
+    modalQuantity = 1;
+
+    document.getElementById("modalImage").src =
+      selectedProduct.image;
+
+    document.getElementById("modalCategory").textContent =
+      selectedProduct.category;
+
+    document.getElementById("modalName").textContent =
+      selectedProduct.name;
+
+    document.getElementById("modalPrice").textContent =
+      formatPrice(selectedProduct.price);
+
+    document.getElementById("modalDescription").textContent =
+      selectedProduct.description;
+
+    document.getElementById("modalQuantity").textContent =
+      modalQuantity;
+
+
+    const modal = document.getElementById("productModal");
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    document.body.style.overflow = "hidden";
+
+  }
+
+
+  function closeProductModal() {
+
+    const modal = document.getElementById("productModal");
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  document
+    .getElementById("closeModal")
+    .addEventListener("click", closeProductModal);
+
+
+  document
+    .getElementById("productModal")
+    .addEventListener("click", event => {
+
+      if (event.target.id === "productModal") {
+        closeProductModal();
+      }
+
+    });
+
+
+  /* Modal Quantity */
+
+  document.getElementById("modalPlus").addEventListener("click", () => {
+
+    modalQuantity++;
+
+    document.getElementById("modalQuantity").textContent =
+      modalQuantity;
+
+  });
+
+
+  document.getElementById("modalMinus").addEventListener("click", () => {
+
+    if (modalQuantity > 1) {
+      modalQuantity--;
+    }
+
+    document.getElementById("modalQuantity").textContent =
+      modalQuantity;
+
+  });
+
+
+  /* Modal Add */
+
+  document
+    .getElementById("modalAddCart")
+    .addEventListener("click", () => {
+
+      if (!selectedProduct) return;
+
+      addToCart(
+        selectedProduct.id,
+        modalQuantity
+      );
+
+      closeProductModal();
+
+    });
+
+
+  /* =========================
+     CART
+  ========================= */
+
+  function addToCart(id, quantity = 1) {
+
+    const product = products.find(item => item.id === id);
+
+    if (!product) return;
+
+
+    const existing = cart.find(item => item.id === id);
+
+
+    if (existing) {
+
+      existing.quantity += quantity;
+
+    } else {
+
+      cart.push({
+        ...product,
+        quantity
+      });
+
+    }
+
+
+    updateCart();
+
+    showToast(`${product.name} added to cart`);
+
+  }
+
+
+  function updateCart() {
+
+    renderCart();
+
+    const count = cart.reduce(
+      (total, item) => total + item.quantity,
+      0
+    );
+
+    const cartCount =
+      document.getElementById("cartCount");
+
+
+    cartCount.textContent = count;
+
+
+    if (count > 0) {
+      cartCount.classList.remove("hidden");
+    } else {
+      cartCount.classList.add("hidden");
+    }
+
+  }
+
+
+  function renderCart() {
+
+    const cartItems =
+      document.getElementById("cartItems");
+
+    const cartTotal =
+      document.getElementById("cartTotal");
+
+
+    if (cart.length === 0) {
+
+      cartItems.innerHTML = `
+        <div class="h-full flex flex-col items-center justify-center text-center">
+
+          <div class="text-5xl mb-5">
+            🛒
+          </div>
+
+          <h3 class="font-semibold text-lg">
+            Your cart is empty
+          </h3>
+
+          <p class="text-gray-500 text-sm mt-2">
+            Add something you love.
+          </p>
+
+        </div>
+      `;
+
+      cartTotal.textContent =
+        formatPrice(0);
+
+      return;
+    }
+
+
+    cartItems.innerHTML = "";
+
+
+    cart.forEach(item => {
+
+      const element = document.createElement("div");
+
+      element.className =
+        "flex gap-4 py-5 border-b";
+
+      element.innerHTML = `
+
+        <img
+          src="${item.image}"
+          class="w-20 h-20 object-cover rounded-xl"
+        >
+
+        <div class="flex-1">
+
+          <h4 class="font-semibold text-sm">
+            ${item.name}
+          </h4>
+
+          <p class="text-bottle-600 font-semibold text-sm mt-1">
+            ${formatPrice(item.price)}
+          </p>
+
+          <div class="flex items-center gap-3 mt-3">
+
+            <button
+              class="cart-minus w-7 h-7 rounded-full border"
+              data-id="${item.id}"
+            >
+              −
+            </button>
+
+            <span class="text-sm">
+              ${item.quantity}
+            </span>
+
+            <button
+              class="cart-plus w-7 h-7 rounded-full border"
+              data-id="${item.id}"
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+        <button
+          class="cart-remove text-gray-400 hover:text-red-500"
+          data-id="${item.id}"
+        >
+          ✕
+        </button>
+
+      `;
+
+
+      cartItems.appendChild(element);
+
+    });
+
+
+    const total = cart.reduce(
+      (sum, item) =>
+        sum + item.price * item.quantity,
+      0
+    );
+
+
+    cartTotal.textContent =
+      formatPrice(total);
+
+
+    addCartEvents();
+
+  }
+
+
+  /* =========================
+     CART EVENTS
+  ========================= */
+
+  function addCartEvents() {
+
+    document.querySelectorAll(".cart-plus")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const id = Number(button.dataset.id);
+
+          const item = cart.find(
+            item => item.id === id
+          );
+
+          if (item) {
+            item.quantity++;
+          }
+
+          updateCart();
+
+        });
+
+      });
+
+
+    document.querySelectorAll(".cart-minus")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const id = Number(button.dataset.id);
+
+          const item = cart.find(
+            item => item.id === id
+          );
+
+          if (!item) return;
+
+
+          item.quantity--;
+
+
+          if (item.quantity <= 0) {
+
+            cart = cart.filter(
+              item => item.id !== id
+            );
+
+          }
+
+
+          updateCart();
+
+        });
+
+      });
+
+
+    document.querySelectorAll(".cart-remove")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const id = Number(button.dataset.id);
+
+          cart = cart.filter(
+            item => item.id !== id
+          );
+
+          updateCart();
+
+        });
+
+      });
+
+  }
+
+
+  /* =========================
+     CART DRAWER
+  ========================= */
+
+  const cartDrawer =
+    document.getElementById("cartDrawer");
+
+  const cartOverlay =
+    document.getElementById("cartOverlay");
+
+
+  function openCart() {
+
+    cartOverlay.classList.remove("hidden");
+
+    cartDrawer.classList.remove(
+      "translate-x-full"
+    );
+
+    document.body.style.overflow = "hidden";
+
+  }
+
+
+  function closeCart() {
+
+    cartOverlay.classList.add("hidden");
+
+    cartDrawer.classList.add(
+      "translate-x-full"
+    );
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  document
+    .getElementById("cartButton")
+    .addEventListener("click", openCart);
+
+
+  document
+    .getElementById("closeCart")
+    .addEventListener("click", closeCart);
+
+
+  cartOverlay.addEventListener(
+    "click",
+    closeCart
+  );
+
+
+  /* =========================
+     MOBILE MENU
+  ========================= */
+
+  const mobileMenuButton =
+    document.getElementById("mobileMenuButton");
+
+  const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+  mobileMenuButton.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("hidden");
+
+  });
+
+
+  document
+    .querySelectorAll("#mobileMenu a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        mobileMenu.classList.add("hidden");
+
+      });
+
+    });
+
+
+  /* =========================
+     NEWSLETTER
+  ========================= */
+
+  document
+    .getElementById("newsletterForm")
+    .addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      showToast(
+        "Thank you! You're now subscribed."
+      );
+
+      event.target.reset();
+
+    });
+
+
+  /* =========================
+     CHECKOUT
+  ========================= */
+
+  document
+    .getElementById("checkoutButton")
+    .addEventListener("click", () => {
+
+      if (cart.length === 0) {
+
+        showToast("Your cart is empty.");
+
+        return;
+
+      }
+
+
+      showToast(
+        "Checkout demo — thank you for shopping!"
+      );
+
+    });
+
+
+  /* =========================
+     TOAST
+  ========================= */
+
+  function showToast(message) {
+
+    const toast =
+      document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+      toast.classList.remove("show");
+
+    }, 2500);
+
+  }
+
+
+  /* =========================
+     INITIALIZE
+  ========================= */
+
+  renderProducts();
+
+  updateCart();
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+    color: #171717;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+
+  /* Category Buttons */
+
+  .category-btn {
+    background: #f3f4f6;
+    color: #4b5563;
+    transition: all 0.2s ease;
+  }
+
+  .category-btn:hover {
+    background: #e5e7eb;
+  }
+
+  .category-btn.active {
+    background: #527a78;
+    color: white;
+  }
+
+  /* Product Card */
+
+  .product-card {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Product Image */
+
+  .product-image {
+    transition: transform 0.6s ease;
+  }
+
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+
+  /* Modal */
+
+  #productModal {
+    transition: opacity 0.2s ease;
+  }
+
+  /* Cart */
+
+  #cartDrawer {
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Toast */
+
+  #toast.show {
+    opacity: 1;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 640px) {
+    .font-serif {
+      letter-spacing: -0.02em;
+    }
+  }
+</style>

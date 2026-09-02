@@ -1,0 +1,2103 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FORMA — Interior Architecture</title>
+
+    <meta
+      name="description"
+      content="FORMA is an independent interior architecture studio creating expressive spaces through material, light and form."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ==================================================
+       DESIGN SYSTEM
+    ================================================== */
+
+      :root {
+        --green: #173f35;
+        --green-dark: #0d2b25;
+
+        --ivory: #f3efe5;
+        --cream: #e8e1d2;
+
+        --terracotta: #c96f4a;
+        --blue: #7d9a98;
+
+        --black: #151918;
+        --white: #ffffff;
+
+        --muted: #6e746f;
+
+        --serif: "DM Serif Display", serif;
+        --sans: "Manrope", sans-serif;
+
+        --border: rgba(21, 25, 24, 0.16);
+      }
+
+      /* ==================================================
+       RESET
+    ================================================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--ivory);
+        color: var(--black);
+
+        font-family: var(--sans);
+
+        overflow-x: hidden;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: inherit;
+      }
+
+      /* ==================================================
+       HEADER
+    ================================================== */
+
+      .header {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        padding: 28px 5vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 100;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 13px;
+        font-weight: 700;
+
+        letter-spacing: 0.16em;
+      }
+
+      .logo-mark {
+        width: 25px;
+        height: 25px;
+
+        border: 1px solid currentColor;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: var(--serif);
+
+        font-size: 15px;
+      }
+
+      .nav {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav a {
+        position: relative;
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+      }
+
+      .nav a::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: -7px;
+
+        width: 0;
+        height: 1px;
+
+        background: currentColor;
+
+        transition: 0.3s ease;
+      }
+
+      .nav a:hover::after {
+        width: 100%;
+      }
+
+      .header-number {
+        font-size: 10px;
+
+        color: var(--muted);
+
+        letter-spacing: 0.1em;
+      }
+
+      /* ==================================================
+       MENU
+    ================================================== */
+
+      .menu-button {
+        display: none;
+
+        border: 0;
+        background: transparent;
+
+        width: 35px;
+        height: 30px;
+
+        cursor: pointer;
+
+        position: relative;
+
+        z-index: 200;
+      }
+
+      .menu-button span {
+        position: absolute;
+
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background: currentColor;
+
+        transition: 0.3s ease;
+      }
+
+      .menu-button span:first-child {
+        top: 9px;
+      }
+
+      .menu-button span:last-child {
+        top: 18px;
+      }
+
+      .menu-button.active span:first-child {
+        top: 14px;
+        transform: rotate(45deg);
+      }
+
+      .menu-button.active span:last-child {
+        top: 14px;
+        transform: rotate(-45deg);
+      }
+
+      /* ==================================================
+       MOBILE NAV
+    ================================================== */
+
+      .mobile-nav {
+        position: fixed;
+
+        inset: 0;
+
+        background: var(--green);
+
+        color: var(--ivory);
+
+        z-index: 150;
+
+        display: flex;
+        align-items: center;
+
+        padding: 10vw;
+
+        transform: translateX(100%);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+      }
+
+      .mobile-nav.active {
+        transform: translateX(0);
+      }
+
+      .mobile-links {
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+      }
+
+      .mobile-links a {
+        font-family: var(--serif);
+
+        font-size: 17vw;
+
+        line-height: 0.82;
+      }
+
+      .mobile-meta {
+        margin-top: 60px;
+
+        font-size: 10px;
+
+        line-height: 1.8;
+
+        color: #9bb0a9;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+      }
+
+      /* ==================================================
+       HERO
+    ================================================== */
+
+      .hero {
+        min-height: 100vh;
+
+        background: var(--green);
+
+        color: var(--ivory);
+
+        position: relative;
+
+        padding: 150px 5vw 60px;
+
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        display: grid;
+
+        grid-template-columns: 42% 58%;
+
+        min-height: calc(100vh - 210px);
+      }
+
+      .hero-left {
+        position: relative;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        padding: 40px 0 0 4vw;
+
+        z-index: 2;
+      }
+
+      .hero-kicker {
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.18em;
+
+        color: #aabdb5;
+      }
+
+      .hero-title {
+        font-family: var(--serif);
+
+        font-size: clamp(90px, 12vw, 190px);
+
+        font-weight: 400;
+
+        line-height: 0.72;
+
+        letter-spacing: -0.05em;
+      }
+
+      .hero-title span {
+        display: block;
+      }
+
+      .hero-title .outline {
+        color: transparent;
+
+        -webkit-text-stroke: 1px var(--ivory);
+
+        margin-left: 4vw;
+      }
+
+      .hero-description {
+        max-width: 310px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+
+        color: #aabdb5;
+      }
+
+      .hero-right {
+        position: relative;
+
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: center;
+      }
+
+      .hero-image {
+        width: 76%;
+        height: 78vh;
+
+        position: relative;
+
+        overflow: hidden;
+      }
+
+      .hero-image img {
+        transition: transform 1.2s ease;
+      }
+
+      .hero:hover .hero-image img {
+        transform: scale(1.04);
+      }
+
+      .hero-image::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        pointer-events: none;
+      }
+
+      .hero-orange {
+        position: absolute;
+
+        right: 0;
+        bottom: 10%;
+
+        width: 140px;
+        height: 140px;
+
+        background: var(--terracotta);
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        color: var(--black);
+
+        font-size: 10px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+
+        text-align: center;
+
+        z-index: 4;
+
+        animation: float 5s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      .hero-side {
+        position: absolute;
+
+        left: 5vw;
+        bottom: 65px;
+
+        font-size: 9px;
+
+        color: #809a92;
+
+        writing-mode: vertical-rl;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+      }
+
+      .hero-scroll {
+        position: absolute;
+
+        right: 5vw;
+        bottom: 55px;
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        color: #809a92;
+      }
+
+      /* ==================================================
+       INTRO
+    ================================================== */
+
+      .intro {
+        padding: 180px 8vw;
+
+        display: grid;
+
+        grid-template-columns: 25% 75%;
+
+        background: var(--ivory);
+      }
+
+      .label {
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.15em;
+
+        color: var(--muted);
+      }
+
+      .intro-content {
+        max-width: 1000px;
+      }
+
+      .intro-title {
+        font-family: var(--serif);
+
+        font-size: clamp(55px, 7vw, 105px);
+
+        line-height: 0.95;
+
+        font-weight: 400;
+
+        letter-spacing: -0.04em;
+      }
+
+      .intro-title em {
+        color: var(--terracotta);
+
+        font-weight: 400;
+      }
+
+      .intro-bottom {
+        margin-top: 90px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+      }
+
+      .intro-copy {
+        max-width: 390px;
+
+        color: var(--muted);
+
+        font-size: 12px;
+
+        line-height: 1.9;
+      }
+
+      .intro-stat {
+        font-family: var(--serif);
+
+        font-size: 70px;
+
+        line-height: 0.8;
+
+        color: var(--green);
+      }
+
+      .intro-stat small {
+        display: block;
+
+        font-family: var(--sans);
+
+        font-size: 9px;
+
+        color: var(--muted);
+
+        margin-top: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+      }
+
+      /* ==================================================
+       MARQUEE
+    ================================================== */
+
+      .marquee {
+        overflow: hidden;
+
+        background: var(--terracotta);
+
+        color: var(--green);
+
+        padding: 25px 0;
+
+        white-space: nowrap;
+      }
+
+      .marquee-track {
+        display: inline-flex;
+
+        gap: 50px;
+
+        animation: marquee 22s linear infinite;
+      }
+
+      .marquee span {
+        font-family: var(--serif);
+
+        font-size: 35px;
+
+        font-style: italic;
+      }
+
+      .marquee-dot {
+        font-family: var(--sans) !important;
+
+        font-style: normal !important;
+
+        font-size: 20px !important;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ==================================================
+       PROJECTS
+    ================================================== */
+
+      .projects {
+        background: var(--cream);
+
+        padding: 150px 5vw 180px;
+      }
+
+      .projects-top {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        margin-bottom: 100px;
+      }
+
+      .projects-heading {
+        font-family: var(--serif);
+
+        font-size: clamp(70px, 10vw, 145px);
+
+        line-height: 0.75;
+
+        font-weight: 400;
+
+        letter-spacing: -0.05em;
+      }
+
+      .projects-heading em {
+        color: var(--green);
+
+        margin-left: 8vw;
+      }
+
+      .projects-intro {
+        width: 260px;
+
+        font-size: 11px;
+
+        color: var(--muted);
+
+        line-height: 1.8;
+      }
+
+      /* ==================================================
+       PROJECT GRID
+    ================================================== */
+
+      .project-grid {
+        display: grid;
+
+        grid-template-columns: repeat(12, 1fr);
+
+        gap: 30px;
+        row-gap: 150px;
+      }
+
+      .project {
+        position: relative;
+      }
+
+      .project:nth-child(1) {
+        grid-column: 1 / 8;
+      }
+
+      .project:nth-child(2) {
+        grid-column: 9 / 13;
+
+        margin-top: 180px;
+      }
+
+      .project:nth-child(3) {
+        grid-column: 2 / 7;
+      }
+
+      .project:nth-child(4) {
+        grid-column: 8 / 13;
+
+        margin-top: 100px;
+      }
+
+      .project-image {
+        position: relative;
+
+        overflow: hidden;
+
+        background: #ddd;
+      }
+
+      .project:nth-child(1) .project-image {
+        height: 620px;
+      }
+
+      .project:nth-child(2) .project-image {
+        height: 500px;
+      }
+
+      .project:nth-child(3) .project-image {
+        height: 580px;
+      }
+
+      .project:nth-child(4) .project-image {
+        height: 620px;
+      }
+
+      .project-image img {
+        transition: transform 0.8s ease;
+      }
+
+      .project:hover .project-image img {
+        transform: scale(1.05);
+      }
+
+      .project-number {
+        position: absolute;
+
+        top: 20px;
+        left: 20px;
+
+        width: 42px;
+        height: 42px;
+
+        background: var(--ivory);
+
+        color: var(--green);
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        font-size: 9px;
+
+        z-index: 2;
+      }
+
+      .project-info {
+        padding-top: 18px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        border-top: 1px solid var(--border);
+
+        margin-top: 15px;
+      }
+
+      .project-name {
+        font-family: var(--serif);
+
+        font-size: 24px;
+
+        font-weight: 400;
+      }
+
+      .project-meta {
+        margin-top: 5px;
+
+        font-size: 9px;
+
+        color: var(--muted);
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+      }
+
+      .project-year {
+        font-size: 9px;
+
+        color: var(--muted);
+      }
+
+      /* ==================================================
+       PHILOSOPHY
+    ================================================== */
+
+      .philosophy {
+        background: var(--green);
+
+        color: var(--ivory);
+
+        padding: 170px 8vw;
+
+        position: relative;
+
+        overflow: hidden;
+      }
+
+      .philosophy::before {
+        content: "FORM";
+
+        position: absolute;
+
+        right: -50px;
+        top: -100px;
+
+        font-family: var(--serif);
+
+        font-size: 35vw;
+
+        line-height: 1;
+
+        color: rgba(255, 255, 255, 0.025);
+      }
+
+      .philosophy-header {
+        display: flex;
+
+        justify-content: space-between;
+      }
+
+      .philosophy .label {
+        color: #91a69e;
+      }
+
+      .philosophy-title {
+        margin-top: 100px;
+
+        max-width: 1100px;
+
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 8vw, 120px);
+
+        line-height: 0.9;
+
+        font-weight: 400;
+
+        position: relative;
+
+        z-index: 2;
+      }
+
+      .philosophy-title em {
+        color: var(--terracotta);
+
+        font-weight: 400;
+      }
+
+      .philosophy-bottom {
+        margin-top: 120px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 100px;
+
+        position: relative;
+
+        z-index: 2;
+      }
+
+      .philosophy-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+        padding-top: 25px;
+      }
+
+      .philosophy-item span {
+        color: #91a69e;
+
+        font-size: 9px;
+      }
+
+      .philosophy-item h3 {
+        font-family: var(--serif);
+
+        font-size: 35px;
+
+        font-weight: 400;
+
+        margin: 35px 0 20px;
+      }
+
+      .philosophy-item p {
+        max-width: 370px;
+
+        color: #aabdb5;
+
+        font-size: 11px;
+
+        line-height: 1.9;
+      }
+
+      /* ==================================================
+       MATERIAL SECTION
+    ================================================== */
+
+      .material {
+        display: grid;
+
+        grid-template-columns: 45% 55%;
+
+        min-height: 750px;
+      }
+
+      .material-content {
+        padding: 130px 8vw;
+
+        background: var(--blue);
+
+        color: var(--green);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+      }
+
+      .material-title {
+        font-family: var(--serif);
+
+        font-size: clamp(70px, 9vw, 135px);
+
+        line-height: 0.75;
+
+        font-weight: 400;
+
+        margin: 80px 0;
+      }
+
+      .material-title em {
+        display: block;
+
+        margin-left: 5vw;
+
+        font-weight: 400;
+      }
+
+      .material-copy {
+        max-width: 370px;
+
+        font-size: 11px;
+
+        line-height: 1.9;
+      }
+
+      .material-list {
+        margin-top: 50px;
+
+        padding-top: 20px;
+
+        border-top: 1px solid rgba(23, 63, 53, 0.25);
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+      }
+
+      .material-list span {
+        padding: 8px 14px;
+
+        border: 1px solid rgba(23, 63, 53, 0.3);
+
+        border-radius: 100px;
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+      }
+
+      .material-image {
+        min-height: 750px;
+      }
+
+      /* ==================================================
+       SERVICES
+    ================================================== */
+
+      .services {
+        padding: 160px 8vw;
+
+        background: var(--ivory);
+      }
+
+      .services-heading {
+        display: grid;
+
+        grid-template-columns: 25% 75%;
+
+        margin-bottom: 100px;
+      }
+
+      .services-title {
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 8vw, 120px);
+
+        font-weight: 400;
+
+        line-height: 0.8;
+
+        letter-spacing: -0.04em;
+      }
+
+      .services-list {
+        border-top: 1px solid var(--border);
+      }
+
+      .service {
+        display: grid;
+
+        grid-template-columns: 70px 1fr 120px;
+
+        align-items: center;
+
+        padding: 30px 0;
+
+        border-bottom: 1px solid var(--border);
+
+        transition: 0.3s ease;
+      }
+
+      .service:hover {
+        padding-left: 15px;
+
+        color: var(--terracotta);
+      }
+
+      .service-number {
+        font-size: 9px;
+
+        color: var(--muted);
+      }
+
+      .service h3 {
+        font-family: var(--serif);
+
+        font-size: 32px;
+
+        font-weight: 400;
+      }
+
+      .service-description {
+        font-size: 9px;
+
+        color: var(--muted);
+
+        text-align: right;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+      }
+
+      /* ==================================================
+       CONTACT
+    ================================================== */
+
+      .contact {
+        background: var(--terracotta);
+
+        color: var(--green);
+
+        padding: 160px 8vw 80px;
+
+        min-height: 750px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+      }
+
+      .contact-top {
+        display: flex;
+
+        justify-content: space-between;
+      }
+
+      .contact-title {
+        font-family: var(--serif);
+
+        font-size: clamp(80px, 12vw, 180px);
+
+        line-height: 0.7;
+
+        font-weight: 400;
+
+        letter-spacing: -0.06em;
+
+        max-width: 1100px;
+      }
+
+      .contact-title em {
+        display: block;
+
+        margin-left: 10vw;
+
+        font-weight: 400;
+      }
+
+      .contact-bottom {
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: space-between;
+      }
+
+      .contact-email {
+        font-family: var(--serif);
+
+        font-size: 30px;
+
+        border-bottom: 1px solid var(--green);
+
+        padding-bottom: 8px;
+      }
+
+      .contact-meta {
+        font-size: 9px;
+
+        line-height: 1.8;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.08em;
+      }
+
+      /* ==================================================
+       FOOTER
+    ================================================== */
+
+      .footer {
+        background: var(--green);
+
+        color: var(--ivory);
+
+        padding: 35px 5vw;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+      }
+
+      .footer p {
+        font-size: 9px;
+
+        color: #849a92;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+      }
+
+      /* ==================================================
+       SCROLL REVEAL
+    ================================================== */
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+
+      .js-enabled .reveal {
+        opacity: 0;
+
+        transform: translateY(35px);
+
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .js-enabled .reveal.visible {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* ==================================================
+       TABLET
+    ================================================== */
+
+      @media (max-width: 1000px) {
+        .nav,
+        .header-number {
+          display: none;
+        }
+
+        .menu-button {
+          display: block;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-left {
+          padding: 40px 0 80px;
+        }
+
+        .hero-title {
+          margin: 100px 0;
+        }
+
+        .hero-right {
+          min-height: 600px;
+        }
+
+        .hero-image {
+          width: 80%;
+          height: 65vh;
+        }
+
+        .intro,
+        .services-heading {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+
+        .project-grid {
+          display: block;
+        }
+
+        .project {
+          margin: 0 0 100px !important;
+        }
+
+        .project-image {
+          height: 600px !important;
+        }
+
+        .material {
+          grid-template-columns: 1fr;
+        }
+
+        .material-content {
+          min-height: 650px;
+        }
+
+        .material-image {
+          min-height: 600px;
+        }
+
+        .service {
+          grid-template-columns: 50px 1fr 100px;
+        }
+      }
+
+      /* ==================================================
+       MOBILE
+    ================================================== */
+
+      @media (max-width: 600px) {
+        .header {
+          padding: 22px 6vw;
+        }
+
+        .hero {
+          padding: 120px 6vw 50px;
+        }
+
+        .hero-left {
+          padding-left: 0;
+        }
+
+        .hero-title {
+          font-size: 25vw;
+
+          margin: 100px 0 70px;
+        }
+
+        .hero-title .outline {
+          margin-left: 8vw;
+        }
+
+        .hero-right {
+          min-height: 500px;
+        }
+
+        .hero-image {
+          width: 88%;
+
+          height: 60vh;
+
+          min-height: 400px;
+        }
+
+        .hero-orange {
+          width: 100px;
+          height: 100px;
+
+          font-size: 8px;
+        }
+
+        .hero-side {
+          display: none;
+        }
+
+        .hero-scroll {
+          right: 6vw;
+        }
+
+        .intro {
+          padding: 120px 7vw;
+        }
+
+        .intro-title {
+          font-size: 16vw;
+        }
+
+        .intro-bottom {
+          display: block;
+
+          margin-top: 60px;
+        }
+
+        .intro-stat {
+          margin-top: 50px;
+        }
+
+        .projects {
+          padding: 110px 6vw 120px;
+        }
+
+        .projects-top {
+          display: block;
+
+          margin-bottom: 80px;
+        }
+
+        .projects-heading {
+          font-size: 20vw;
+
+          margin-top: 60px;
+        }
+
+        .projects-heading em {
+          margin-left: 12vw;
+        }
+
+        .projects-intro {
+          margin-top: 60px;
+        }
+
+        .project-image {
+          height: 500px !important;
+        }
+
+        .project-name {
+          font-size: 22px;
+        }
+
+        .philosophy {
+          padding: 120px 7vw;
+        }
+
+        .philosophy-title {
+          font-size: 17vw;
+
+          margin-top: 80px;
+        }
+
+        .philosophy-bottom {
+          grid-template-columns: 1fr;
+
+          gap: 60px;
+
+          margin-top: 90px;
+        }
+
+        .material-content {
+          padding: 100px 7vw;
+        }
+
+        .material-title {
+          font-size: 20vw;
+
+          margin: 70px 0;
+        }
+
+        .material-image {
+          min-height: 500px;
+        }
+
+        .services {
+          padding: 120px 7vw;
+        }
+
+        .services-title {
+          font-size: 18vw;
+        }
+
+        .service {
+          grid-template-columns: 35px 1fr;
+
+          gap: 10px;
+        }
+
+        .service h3 {
+          font-size: 27px;
+        }
+
+        .service-description {
+          display: none;
+        }
+
+        .contact {
+          padding: 120px 7vw 60px;
+
+          min-height: 700px;
+        }
+
+        .contact-title {
+          font-size: 21vw;
+        }
+
+        .contact-title em {
+          margin-left: 8vw;
+        }
+
+        .contact-bottom {
+          display: block;
+        }
+
+        .contact-email {
+          display: inline-block;
+
+          font-size: 22px;
+
+          margin-bottom: 50px;
+        }
+
+        .footer {
+          display: block;
+
+          padding: 35px 7vw;
+        }
+
+        .footer p {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==================================================
+     HEADER
+================================================== -->
+
+    <header class="header">
+      <a href="#" class="logo">
+        <span class="logo-mark">F</span>
+
+        FORMA
+      </a>
+
+      <nav class="nav">
+        <a href="#studio">Studio</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <span class="header-number"> 01 / 26 </span>
+
+      <button class="menu-button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- ==================================================
+     MOBILE NAV
+================================================== -->
+
+    <div class="mobile-nav">
+      <div class="mobile-links">
+        <a href="#studio">Studio</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#contact">Contact</a>
+
+        <div class="mobile-meta">
+          Jakarta · Indonesia<br />
+
+          hello@forma.studio<br />
+
+          +62 21 0000 0000
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================================================
+     HERO
+================================================== -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-left">
+            <span class="hero-kicker">
+              Interior Architecture<br />
+              & Spatial Design
+            </span>
+
+            <h1 class="hero-title">
+              <span>Good</span>
+
+              <span class="outline"> spaces </span>
+
+              <span>matter.</span>
+            </h1>
+
+            <p class="hero-description">
+              FORMA is an independent interior architecture studio creating
+              expressive spaces for living, working and gathering.
+            </p>
+          </div>
+
+          <div class="hero-right">
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85"
+                alt="FORMA interior architecture project"
+              />
+            </div>
+
+            <div class="hero-orange">
+              Scroll<br />
+              to explore
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-side">Jakarta / Bali / Singapore</div>
+
+        <div class="hero-scroll">↓ Scroll</div>
+      </section>
+
+      <!-- ==================================================
+         INTRO
+    ================================================== -->
+
+      <section class="intro reveal" id="studio">
+        <div class="label">01 — Studio</div>
+
+        <div class="intro-content">
+          <h2 class="intro-title">
+            We don't decorate
+            <em>rooms.</em>
+
+            We create
+            <em>atmospheres.</em>
+          </h2>
+
+          <div class="intro-bottom">
+            <p class="intro-copy">
+              From private residences to hospitality environments, our work
+              explores the relationship between people and the spaces around
+              them.
+
+              <br /><br />
+
+              Every project begins with one question: how should this place make
+              you feel?
+            </p>
+
+            <div class="intro-stat">
+              18
+
+              <small> completed projects </small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+         MARQUEE
+    ================================================== -->
+
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>Architecture</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Material</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Light</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Form</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Atmosphere</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Architecture</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Material</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Light</span>
+
+          <span class="marquee-dot">✦</span>
+
+          <span>Form</span>
+
+          <span class="marquee-dot">✦</span>
+        </div>
+      </div>
+
+      <!-- ==================================================
+         PROJECTS
+    ================================================== -->
+
+      <section class="projects" id="projects">
+        <div class="projects-top reveal">
+          <h2 class="projects-heading">
+            Selected
+
+            <em>work.</em>
+          </h2>
+
+          <p class="projects-intro">
+            A collection of spaces shaped by proportion, material and the people
+            who inhabit them.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <!-- PROJECT 01 -->
+
+          <article class="project reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85"
+                alt="House in Kemang"
+              />
+
+              <span class="project-number"> 01 </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">House in Kemang</h3>
+
+                <p class="project-meta">Residential · Jakarta</p>
+              </div>
+
+              <span class="project-year"> 2026 </span>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+
+          <article class="project reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
+                alt="Villa Nusa"
+              />
+
+              <span class="project-number"> 02 </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">Villa Nusa</h3>
+
+                <p class="project-meta">Hospitality · Bali</p>
+              </div>
+
+              <span class="project-year"> 2025 </span>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+
+          <article class="project reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+                alt="Mori Apartment"
+              />
+
+              <span class="project-number"> 03 </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">Mori Apartment</h3>
+
+                <p class="project-meta">Residential · Bandung</p>
+              </div>
+
+              <span class="project-year"> 2025 </span>
+            </div>
+          </article>
+
+          <!-- PROJECT 04 -->
+
+          <article class="project reveal">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1400&q=85"
+                alt="Sora Restaurant"
+              />
+
+              <span class="project-number"> 04 </span>
+            </div>
+
+            <div class="project-info">
+              <div>
+                <h3 class="project-name">Sora Restaurant</h3>
+
+                <p class="project-meta">Hospitality · Surabaya</p>
+              </div>
+
+              <span class="project-year"> 2024 </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================================================
+         PHILOSOPHY
+    ================================================== -->
+
+      <section class="philosophy">
+        <div class="philosophy-header">
+          <span class="label"> 02 — Philosophy </span>
+
+          <span class="label"> Less, but better. </span>
+        </div>
+
+        <h2 class="philosophy-title reveal">
+          The best interiors are not the loudest. They are the ones that feel
+          <em>right.</em>
+        </h2>
+
+        <div class="philosophy-bottom">
+          <div class="philosophy-item reveal">
+            <span>01 / MATERIAL</span>
+
+            <h3>Touch matters.</h3>
+
+            <p>
+              We work with honest materials, natural textures and surfaces that
+              become richer with time.
+            </p>
+          </div>
+
+          <div class="philosophy-item reveal">
+            <span>02 / LIGHT</span>
+
+            <h3>Light changes everything.</h3>
+
+            <p>
+              We carefully choreograph natural and artificial light to create
+              atmosphere throughout the day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+         MATERIAL
+    ================================================== -->
+
+      <section class="material">
+        <div class="material-content reveal">
+          <span class="label"> Material Study / 04 </span>
+
+          <h2 class="material-title">
+            Raw.
+
+            <em>Warm.</em>
+
+            Honest.
+          </h2>
+
+          <p class="material-copy">
+            Our material palette is intentionally restrained. Stone, timber,
+            linen, metal and plaster are combined to create spaces with depth
+            without visual noise.
+          </p>
+
+          <div class="material-list">
+            <span>Travertine</span>
+
+            <span>Oak</span>
+
+            <span>Linen</span>
+
+            <span>Plaster</span>
+
+            <span>Brushed Metal</span>
+          </div>
+        </div>
+
+        <div class="material-image">
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85"
+            alt="Natural interior materials"
+          />
+        </div>
+      </section>
+
+      <!-- ==================================================
+         SERVICES
+    ================================================== -->
+
+      <section class="services" id="services">
+        <div class="services-heading reveal">
+          <span class="label"> 03 — Capabilities </span>
+
+          <h2 class="services-title">
+            What we
+            <br />
+            do.
+          </h2>
+        </div>
+
+        <div class="services-list">
+          <div class="service reveal">
+            <span class="service-number"> 01 </span>
+
+            <h3>Interior Architecture</h3>
+
+            <span class="service-description"> Concept / Detail / Build </span>
+          </div>
+
+          <div class="service reveal">
+            <span class="service-number"> 02 </span>
+
+            <h3>Residential Design</h3>
+
+            <span class="service-description">
+              Houses / Apartments / Villas
+            </span>
+          </div>
+
+          <div class="service reveal">
+            <span class="service-number"> 03 </span>
+
+            <h3>Hospitality</h3>
+
+            <span class="service-description">
+              Hotels / Restaurants / Cafés
+            </span>
+          </div>
+
+          <div class="service reveal">
+            <span class="service-number"> 04 </span>
+
+            <h3>Styling & Art Direction</h3>
+
+            <span class="service-description">
+              Objects / Photography / Styling
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================
+         CONTACT
+    ================================================== -->
+
+      <section class="contact" id="contact">
+        <div class="contact-top">
+          <span class="label"> 04 — Start a project </span>
+
+          <span class="label"> 2026 </span>
+        </div>
+
+        <h2 class="contact-title reveal">
+          Have a space?
+
+          <em>Let's talk.</em>
+        </h2>
+
+        <div class="contact-bottom">
+          <a href="mailto:hello@forma.studio" class="contact-email">
+            hello@forma.studio ↗
+          </a>
+
+          <div class="contact-meta">
+            Jakarta, Indonesia<br />
+
+            Bali, Indonesia<br />
+
+            Available for selected projects
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================================================
+     FOOTER
+================================================== -->
+
+    <footer class="footer">
+      <div class="logo">
+        <span class="logo-mark">F</span>
+
+        FORMA
+      </div>
+
+      <p>Interior Architecture · 2026</p>
+    </footer>
+
+    <!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+    <script>
+      /* ==================================================
+       ENABLE JS
+    ================================================== */
+
+      document.documentElement.classList.add("js-enabled");
+
+      /* ==================================================
+       MOBILE MENU
+    ================================================== */
+
+      const menuButton = document.querySelector(".menu-button");
+
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      const mobileLinks = document.querySelectorAll(".mobile-links a");
+
+      if (menuButton && mobileNav) {
+        menuButton.addEventListener("click", () => {
+          menuButton.classList.toggle("active");
+
+          mobileNav.classList.toggle("active");
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            menuButton.classList.remove("active");
+
+            mobileNav.classList.remove("active");
+          });
+        });
+      }
+
+      /* ==================================================
+       ESC CLOSE
+    ================================================== */
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          menuButton.classList.remove("active");
+
+          mobileNav.classList.remove("active");
+        }
+      });
+
+      /* ==================================================
+       SCROLL REVEAL
+    ================================================== */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+
+          {
+            threshold: 0.08,
+          },
+        );
+
+        revealElements.forEach((element) => {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+
+      /* ==================================================
+       SIMPLE IMAGE PARALLAX
+    ================================================== */
+
+      const images = document.querySelectorAll(".project-image img");
+
+      let ticking = false;
+
+      function updateParallax() {
+        images.forEach((image) => {
+          const container = image.parentElement;
+
+          const rect = container.getBoundingClientRect();
+
+          const viewport = window.innerHeight;
+
+          const center = rect.top + rect.height / 2;
+
+          const distance = center - viewport / 2;
+
+          const movement = distance * -0.015;
+
+          image.style.transform = `translateY(${movement}px) scale(1.04)`;
+        });
+
+        ticking = false;
+      }
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+
+          ticking = true;
+        }
+      });
+
+      /* ==================================================
+       SMOOTH ANCHOR OFFSET
+    ================================================== */
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (event) {
+          const target = document.querySelector(this.getAttribute("href"));
+
+          if (!target) return;
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

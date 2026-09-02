@@ -1,0 +1,2663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PULSE — Marketing Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a href="#" class="brand">
+          <span class="brand-icon"> P </span>
+
+          PULSE
+        </a>
+
+        <button class="sidebar-close" id="sidebarClose">×</button>
+      </div>
+
+      <!-- MAIN NAVIGATION -->
+
+      <nav class="sidebar-nav">
+        <span class="nav-label"> Overview </span>
+
+        <a href="#overview" class="nav-item active">
+          <span class="nav-icon"> ◈ </span>
+
+          Dashboard
+        </a>
+
+        <a href="#campaigns" class="nav-item">
+          <span class="nav-icon"> ◇ </span>
+
+          Campaigns
+        </a>
+
+        <a href="#analytics" class="nav-item">
+          <span class="nav-icon"> ◫ </span>
+
+          Analytics
+        </a>
+
+        <span class="nav-label nav-label-space"> Channels </span>
+
+        <a href="#social" class="nav-item">
+          <span class="nav-icon"> ◎ </span>
+
+          Social Media
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"> ⌁ </span>
+
+          Paid Ads
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"> ◌ </span>
+
+          SEO
+        </a>
+
+        <span class="nav-label nav-label-space"> Management </span>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"> ◉ </span>
+
+          Audience
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon"> ⚙ </span>
+
+          Settings
+        </a>
+      </nav>
+
+      <!-- SIDEBAR BOTTOM -->
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <span class="upgrade-icon"> ✦ </span>
+
+          <strong> Unlock more insights </strong>
+
+          <p>Get deeper analytics and advanced reporting.</p>
+
+          <button>Upgrade plan →</button>
+        </div>
+
+        <div class="user-profile">
+          <div class="avatar">TC</div>
+
+          <div class="user-info">
+            <strong> Theo Chandra </strong>
+
+            <span> Marketing Manager </span>
+          </div>
+
+          <span class="user-more"> ··· </span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- =====================================================
+     MAIN
+===================================================== -->
+
+    <main class="main">
+      <!-- =================================================
+         HEADER
+    ================================================= -->
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-button" id="mobileMenuButton">☰</button>
+
+          <div>
+            <span class="page-label"> Workspace </span>
+
+            <h1>Marketing Overview</h1>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <!-- DATE -->
+
+          <div class="date-picker">
+            <span> 01 Aug — 31 Aug 2026 </span>
+
+            <span> ▾ </span>
+          </div>
+
+          <!-- NOTIFICATION -->
+
+          <button class="icon-button">
+            ♢
+
+            <span class="notification-dot"></span>
+          </button>
+
+          <!-- PROFILE -->
+
+          <div class="top-profile">
+            <div class="avatar small">TC</div>
+
+            <span> Theo </span>
+
+            <span class="profile-arrow"> ▾ </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================================
+         CONTENT
+    ================================================= -->
+
+      <div class="dashboard-content">
+        <!-- =================================================
+             WELCOME
+        ================================================= -->
+
+        <section class="welcome-section">
+          <div>
+            <h2>
+              Good morning, Theo
+              <span>✦</span>
+            </h2>
+
+            <p>
+              Here's what's happening with your marketing performance this
+              month.
+            </p>
+          </div>
+
+          <button class="export-button" id="exportButton">
+            <span> ↓ </span>
+
+            Export report
+          </button>
+        </section>
+
+        <!-- =================================================
+             KPI CARDS
+        ================================================= -->
+
+        <section class="kpi-grid" id="overview">
+          <!-- REVENUE -->
+
+          <article class="kpi-card">
+            <div class="kpi-header">
+              <span> Revenue </span>
+
+              <button>···</button>
+            </div>
+
+            <div class="kpi-value">
+              <strong> Rp 482.6M </strong>
+
+              <span class="positive"> +18.4% </span>
+            </div>
+
+            <p>vs. Rp 407.5M last month</p>
+
+            <div class="mini-chart">
+              <span style="height: 35%"></span>
+              <span style="height: 45%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 55%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 65%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 75%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 88%"></span>
+            </div>
+          </article>
+
+          <!-- ROAS -->
+
+          <article class="kpi-card">
+            <div class="kpi-header">
+              <span> ROAS </span>
+
+              <button>···</button>
+            </div>
+
+            <div class="kpi-value">
+              <strong> 4.82x </strong>
+
+              <span class="positive"> +12.7% </span>
+            </div>
+
+            <p>vs. 4.27x last month</p>
+
+            <div class="progress-chart">
+              <div class="progress-ring" style="--progress: 78%">
+                <span> 78% </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CONVERSIONS -->
+
+          <article class="kpi-card">
+            <div class="kpi-header">
+              <span> Conversions </span>
+
+              <button>···</button>
+            </div>
+
+            <div class="kpi-value">
+              <strong> 8,492 </strong>
+
+              <span class="positive"> +24.8% </span>
+            </div>
+
+            <p>vs. 6,802 last month</p>
+
+            <div class="conversion-bars">
+              <span style="height: 30%"></span>
+              <span style="height: 45%"></span>
+              <span style="height: 38%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 55%"></span>
+              <span style="height: 78%"></span>
+              <span style="height: 70%"></span>
+            </div>
+          </article>
+
+          <!-- CAC -->
+
+          <article class="kpi-card">
+            <div class="kpi-header">
+              <span> CAC </span>
+
+              <button>···</button>
+            </div>
+
+            <div class="kpi-value">
+              <strong> Rp 56.8K </strong>
+
+              <span class="negative"> -8.2% </span>
+            </div>
+
+            <p>Lower is better</p>
+
+            <div class="cac-line">
+              <svg viewBox="0 0 300 70" preserveAspectRatio="none">
+                <polyline
+                  points="0,25 35,35 70,28 105,45 140,38 175,50 210,42 245,55 280,48 300,58"
+                />
+              </svg>
+            </div>
+          </article>
+        </section>
+
+        <!-- =================================================
+             MAIN ANALYTICS
+        ================================================= -->
+
+        <section class="analytics-grid" id="analytics">
+          <!-- PERFORMANCE CHART -->
+
+          <article class="dashboard-card performance-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-label"> Performance </span>
+
+                <h3>Revenue overview</h3>
+              </div>
+
+              <div class="chart-controls">
+                <button class="chart-filter active" data-period="30">
+                  30D
+                </button>
+
+                <button class="chart-filter" data-period="90">90D</button>
+
+                <button class="chart-filter" data-period="365">1Y</button>
+              </div>
+            </div>
+
+            <div class="chart-summary">
+              <strong> Rp 482.6M </strong>
+
+              <span class="positive"> +18.4% </span>
+            </div>
+
+            <div class="line-chart">
+              <div class="chart-y">
+                <span> 500M </span>
+
+                <span> 400M </span>
+
+                <span> 300M </span>
+
+                <span> 200M </span>
+
+                <span> 100M </span>
+
+                <span> 0 </span>
+              </div>
+
+              <div class="chart-area">
+                <div class="chart-grid-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <svg
+                  viewBox="0 0 900 300"
+                  preserveAspectRatio="none"
+                  class="revenue-svg"
+                >
+                  <defs>
+                    <linearGradient
+                      id="chartGradient"
+                      x1="0"
+                      x2="0"
+                      y1="0"
+                      y2="1"
+                    >
+                      <stop offset="0%" stop-opacity=".15" />
+
+                      <stop offset="100%" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    class="chart-fill"
+                    d="
+                                M0,230
+                                C70,210 100,220 140,190
+                                C180,160 210,185 260,170
+                                C310,155 330,120 380,135
+                                C430,150 450,110 500,105
+                                C550,100 580,130 620,95
+                                C660,60 700,100 740,70
+                                C780,40 820,65 860,35
+                                C875,25 890,30 900,15
+                                L900,300
+                                L0,300
+                                Z
+                                "
+                  />
+
+                  <path
+                    class="chart-line"
+                    d="
+                                M0,230
+                                C70,210 100,220 140,190
+                                C180,160 210,185 260,170
+                                C310,155 330,120 380,135
+                                C430,150 450,110 500,105
+                                C550,100 580,130 620,95
+                                C660,60 700,100 740,70
+                                C780,40 820,65 860,35
+                                C875,25 890,30 900,15
+                                "
+                  />
+
+                  <circle cx="900" cy="15" r="6" class="chart-dot" />
+                </svg>
+
+                <div class="chart-x">
+                  <span>Aug 01</span>
+                  <span>Aug 07</span>
+                  <span>Aug 14</span>
+                  <span>Aug 21</span>
+                  <span>Aug 31</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TRAFFIC -->
+
+          <article class="dashboard-card traffic-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-label"> Acquisition </span>
+
+                <h3>Traffic sources</h3>
+              </div>
+
+              <button class="more-button">···</button>
+            </div>
+
+            <div class="donut-wrapper">
+              <div class="donut">
+                <div class="donut-center">
+                  <strong> 84.2K </strong>
+
+                  <span> Visitors </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="traffic-list">
+              <div class="traffic-item">
+                <div class="traffic-name">
+                  <span class="traffic-dot search"></span>
+
+                  Organic Search
+                </div>
+
+                <strong> 42.8% </strong>
+              </div>
+
+              <div class="traffic-item">
+                <div class="traffic-name">
+                  <span class="traffic-dot social"></span>
+
+                  Social Media
+                </div>
+
+                <strong> 28.4% </strong>
+              </div>
+
+              <div class="traffic-item">
+                <div class="traffic-name">
+                  <span class="traffic-dot paid"></span>
+
+                  Paid Ads
+                </div>
+
+                <strong> 18.7% </strong>
+              </div>
+
+              <div class="traffic-item">
+                <div class="traffic-name">
+                  <span class="traffic-dot referral"></span>
+
+                  Referral
+                </div>
+
+                <strong> 10.1% </strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- =================================================
+             CAMPAIGNS
+        ================================================= -->
+
+        <section class="campaign-section" id="campaigns">
+          <div class="dashboard-card campaign-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-label"> Campaign performance </span>
+
+                <h3>Active campaigns</h3>
+              </div>
+
+              <button class="view-all">View all →</button>
+            </div>
+
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Campaign</th>
+
+                    <th>Channel</th>
+
+                    <th>Status</th>
+
+                    <th>Spend</th>
+
+                    <th>Revenue</th>
+
+                    <th>ROAS</th>
+
+                    <th>Conversion</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="campaign-name">
+                        <div class="campaign-avatar meta">M</div>
+
+                        <div>
+                          <strong> Summer Sale 2026 </strong>
+
+                          <span> Meta Ads </span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>Meta</td>
+
+                    <td>
+                      <span class="status active"> Active </span>
+                    </td>
+
+                    <td>Rp 24.8M</td>
+
+                    <td>Rp 128.4M</td>
+
+                    <td>
+                      <strong> 5.18x </strong>
+                    </td>
+
+                    <td>2,184</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="campaign-name">
+                        <div class="campaign-avatar google">G</div>
+
+                        <div>
+                          <strong> Search — Brand </strong>
+
+                          <span> Google Ads </span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>Google</td>
+
+                    <td>
+                      <span class="status active"> Active </span>
+                    </td>
+
+                    <td>Rp 18.2M</td>
+
+                    <td>Rp 92.7M</td>
+
+                    <td>
+                      <strong> 5.09x </strong>
+                    </td>
+
+                    <td>1,628</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="campaign-name">
+                        <div class="campaign-avatar tiktok">T</div>
+
+                        <div>
+                          <strong> New Collection </strong>
+
+                          <span> TikTok Ads </span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>TikTok</td>
+
+                    <td>
+                      <span class="status active"> Active </span>
+                    </td>
+
+                    <td>Rp 12.6M</td>
+
+                    <td>Rp 48.2M</td>
+
+                    <td>
+                      <strong> 3.82x </strong>
+                    </td>
+
+                    <td>1,084</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="campaign-name">
+                        <div class="campaign-avatar email">E</div>
+
+                        <div>
+                          <strong> August Newsletter </strong>
+
+                          <span> Email Marketing </span>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>Email</td>
+
+                    <td>
+                      <span class="status paused"> Paused </span>
+                    </td>
+
+                    <td>Rp 2.8M</td>
+
+                    <td>Rp 18.6M</td>
+
+                    <td>
+                      <strong> 6.64x </strong>
+                    </td>
+
+                    <td>892</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================
+             SOCIAL MEDIA
+        ================================================= -->
+
+        <section class="bottom-grid" id="social">
+          <!-- SOCIAL PERFORMANCE -->
+
+          <article class="dashboard-card social-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-label"> Social media </span>
+
+                <h3>Audience growth</h3>
+              </div>
+
+              <button class="more-button">···</button>
+            </div>
+
+            <div class="social-total">
+              <strong> 248.6K </strong>
+
+              <span class="positive"> +14.2% </span>
+
+              <p>Total followers</p>
+            </div>
+
+            <div class="social-chart">
+              <div class="social-bar instagram">
+                <span style="height: 78%"></span>
+              </div>
+
+              <div class="social-bar tiktok">
+                <span style="height: 92%"></span>
+              </div>
+
+              <div class="social-bar facebook">
+                <span style="height: 52%"></span>
+              </div>
+
+              <div class="social-bar youtube">
+                <span style="height: 64%"></span>
+              </div>
+
+              <div class="social-bar linkedin">
+                <span style="height: 35%"></span>
+              </div>
+            </div>
+
+            <div class="social-labels">
+              <span> Instagram </span>
+
+              <span> TikTok </span>
+
+              <span> Facebook </span>
+
+              <span> YouTube </span>
+
+              <span> LinkedIn </span>
+            </div>
+          </article>
+
+          <!-- RECENT ACTIVITY -->
+
+          <article class="dashboard-card activity-card">
+            <div class="card-heading">
+              <div>
+                <span class="card-label"> Activity </span>
+
+                <h3>Recent updates</h3>
+              </div>
+            </div>
+
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-icon">✓</div>
+
+                <div>
+                  <strong> Campaign launched </strong>
+
+                  <p>Summer Sale 2026 is now live.</p>
+
+                  <span> 12 minutes ago </span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">↑</div>
+
+                <div>
+                  <strong> ROAS increased </strong>
+
+                  <p>Meta Ads reached 5.18x ROAS.</p>
+
+                  <span> 1 hour ago </span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">+</div>
+
+                <div>
+                  <strong> New audience segment </strong>
+
+                  <p>8,420 users added to retargeting.</p>
+
+                  <span> 3 hours ago </span>
+                </div>
+              </div>
+
+              <div class="activity-item">
+                <div class="activity-icon">$</div>
+
+                <div>
+                  <strong> Budget updated </strong>
+
+                  <p>Monthly ad budget increased.</p>
+
+                  <span> Yesterday </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- =================================================
+             FOOTER
+        ================================================= -->
+
+        <footer class="dashboard-footer">
+          <span> © 2026 PULSE Analytics </span>
+
+          <div>
+            <a href="#"> Help Center </a>
+
+            <a href="#"> Privacy </a>
+
+            <a href="#"> Terms </a>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+  /* =====================================================
+   PULSE MARKETING DASHBOARD
+   VANILLA CSS
+===================================================== */
+
+  /* ================= VARIABLES ================= */
+
+  :root {
+    --bg: #f6f6f3;
+    --surface: #ffffff;
+    --surface-soft: #f1f1ed;
+
+    --text: #171717;
+    --text-soft: #70706c;
+    --text-light: #999993;
+
+    --border: #e5e5df;
+
+    --accent: #171717;
+
+    --green: #3c8b62;
+    --green-soft: #e8f4ed;
+
+    --red: #c85c5c;
+    --red-soft: #faeaea;
+
+    --sidebar-width: 250px;
+
+    --radius: 12px;
+  }
+
+  /* ================= RESET ================= */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "DM Sans", sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+  }
+
+  button,
+  input,
+  select {
+    font-family: inherit;
+  }
+
+  button {
+    border: 0;
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* ================= SIDEBAR ================= */
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: var(--sidebar-width);
+
+    height: 100vh;
+
+    background: var(--surface);
+
+    border-right: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 1000;
+  }
+
+  .sidebar-top {
+    height: 78px;
+
+    padding: 0 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+  }
+
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--text);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+  }
+
+  .sidebar-close {
+    display: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    color: var(--text-soft);
+  }
+
+  /* ================= SIDEBAR NAV ================= */
+
+  .sidebar-nav {
+    padding: 10px 12px;
+
+    flex: 1;
+
+    overflow-y: auto;
+  }
+
+  .nav-label {
+    display: block;
+
+    padding: 12px 12px 7px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: var(--text-light);
+  }
+
+  .nav-label-space {
+    margin-top: 18px;
+  }
+
+  .nav-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 12px;
+
+    margin: 2px 0;
+
+    border-radius: 7px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .nav-item:hover {
+    background: var(--surface-soft);
+
+    color: var(--text);
+  }
+
+  .nav-item.active {
+    background: #eeeeeb;
+
+    color: var(--text);
+
+    font-weight: 600;
+  }
+
+  .nav-icon {
+    width: 18px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #888883;
+  }
+
+  .nav-item.active .nav-icon {
+    color: var(--text);
+  }
+
+  /* ================= SIDEBAR BOTTOM ================= */
+
+  .sidebar-bottom {
+    padding: 15px;
+  }
+
+  .upgrade-card {
+    background: #f2f2ed;
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+  }
+
+  .upgrade-icon {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--text);
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    margin-bottom: 12px;
+  }
+
+  .upgrade-card strong {
+    display: block;
+
+    font-size: 11px;
+  }
+
+  .upgrade-card p {
+    font-size: 10px;
+
+    color: var(--text-soft);
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+  }
+
+  .upgrade-card button {
+    margin-top: 12px;
+
+    background: transparent;
+
+    font-size: 10px;
+
+    font-weight: 600;
+  }
+
+  .user-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 7px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #ddd;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 600;
+  }
+
+  .avatar.small {
+    width: 30px;
+    height: 30px;
+
+    background: #e1e1dc;
+  }
+
+  .user-info {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+  }
+
+  .user-info strong {
+    font-size: 10px;
+  }
+
+  .user-info span {
+    font-size: 8px;
+
+    color: var(--text-light);
+  }
+
+  .user-more {
+    color: var(--text-light);
+
+    font-size: 13px;
+  }
+
+  /* ================= MAIN ================= */
+
+  .main {
+    margin-left: var(--sidebar-width);
+
+    min-height: 100vh;
+  }
+
+  /* ================= TOPBAR ================= */
+
+  .topbar {
+    height: 78px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+  }
+
+  .topbar-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .page-label {
+    display: block;
+
+    font-size: 9px;
+
+    color: var(--text-light);
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+  }
+
+  .topbar h1 {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+  }
+
+  .topbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .date-picker {
+    height: 34px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 10px;
+
+    color: var(--text-soft);
+
+    background: var(--surface);
+  }
+
+  .icon-button {
+    width: 34px;
+    height: 34px;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    position: relative;
+
+    color: var(--text-soft);
+  }
+
+  .notification-dot {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: #333;
+
+    border-radius: 50%;
+
+    top: 7px;
+    right: 7px;
+  }
+
+  .top-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 10px;
+  }
+
+  .profile-arrow {
+    color: var(--text-light);
+  }
+
+  .mobile-menu-button {
+    display: none;
+
+    background: transparent;
+
+    font-size: 20px;
+  }
+
+  /* ================= CONTENT ================= */
+
+  .dashboard-content {
+    padding: 35px;
+
+    max-width: 1700px;
+
+    margin: auto;
+  }
+
+  /* ================= WELCOME ================= */
+
+  .welcome-section {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 25px;
+  }
+
+  .welcome-section h2 {
+    font-size: 22px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.7px;
+  }
+
+  .welcome-section h2 span {
+    font-size: 14px;
+
+    margin-left: 3px;
+  }
+
+  .welcome-section p {
+    color: var(--text-soft);
+
+    font-size: 11px;
+
+    margin-top: 4px;
+  }
+
+  .export-button {
+    background: var(--text);
+
+    color: white;
+
+    height: 35px;
+
+    padding: 0 15px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .export-button:hover {
+    background: #333;
+  }
+
+  /* ================= KPI ================= */
+
+  .kpi-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+  }
+
+  .kpi-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 18px;
+
+    min-height: 190px;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .kpi-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+  }
+
+  .kpi-header button {
+    background: transparent;
+
+    color: var(--text-light);
+
+    letter-spacing: 2px;
+  }
+
+  .kpi-value {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+  }
+
+  .kpi-value strong {
+    font-size: 24px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+  }
+
+  .positive {
+    color: var(--green);
+
+    background: var(--green-soft);
+
+    padding: 3px 6px;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+  }
+
+  .negative {
+    color: var(--red);
+
+    background: var(--red-soft);
+
+    padding: 3px 6px;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+  }
+
+  .kpi-card > p {
+    color: var(--text-light);
+
+    font-size: 9px;
+
+    margin-top: 5px;
+  }
+
+  /* ================= MINI CHART ================= */
+
+  .mini-chart {
+    height: 55px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 5px;
+  }
+
+  .mini-chart span {
+    flex: 1;
+
+    background: #dcdcd6;
+
+    border-radius: 2px 2px 0 0;
+
+    transition:
+      height 0.5s ease,
+      background 0.2s ease;
+  }
+
+  .mini-chart span:hover {
+    background: #777;
+  }
+
+  /* ================= PROGRESS RING ================= */
+
+  .progress-chart {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 5px;
+  }
+
+  .progress-ring {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(#222 var(--progress), #e7e7e2 var(--progress));
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+  }
+
+  .progress-ring::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border-radius: 50%;
+
+    background: white;
+  }
+
+  .progress-ring span {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 11px;
+
+    font-weight: 600;
+  }
+
+  /* ================= CONVERSION ================= */
+
+  .conversion-bars {
+    height: 55px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 7px;
+  }
+
+  .conversion-bars span {
+    flex: 1;
+
+    background: #d9d9d3;
+
+    border-radius: 3px 3px 0 0;
+  }
+
+  /* ================= CAC ================= */
+
+  .cac-line {
+    margin-top: 22px;
+
+    height: 50px;
+  }
+
+  .cac-line svg {
+    width: 100%;
+
+    height: 100%;
+  }
+
+  .cac-line polyline {
+    fill: none;
+
+    stroke: #555;
+
+    stroke-width: 2;
+  }
+
+  /* ================= ANALYTICS ================= */
+
+  .analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+      1.7fr
+      1fr;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+  }
+
+  .dashboard-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 20px;
+  }
+
+  .card-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+  }
+
+  .card-label {
+    display: block;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: var(--text-light);
+
+    margin-bottom: 4px;
+  }
+
+  .card-heading h3 {
+    font-size: 14px;
+
+    font-weight: 600;
+  }
+
+  .more-button {
+    background: transparent;
+
+    color: var(--text-light);
+
+    letter-spacing: 2px;
+  }
+
+  .chart-controls {
+    display: flex;
+
+    border: 1px solid var(--border);
+
+    border-radius: 5px;
+
+    overflow: hidden;
+  }
+
+  .chart-filter {
+    background: white;
+
+    padding: 5px 9px;
+
+    font-size: 8px;
+
+    color: var(--text-light);
+
+    border-right: 1px solid var(--border);
+  }
+
+  .chart-filter:last-child {
+    border-right: 0;
+  }
+
+  .chart-filter.active {
+    background: #eeeeeb;
+
+    color: var(--text);
+
+    font-weight: 600;
+  }
+
+  .chart-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+  }
+
+  .chart-summary strong {
+    font-size: 23px;
+
+    letter-spacing: -1px;
+  }
+
+  /* ================= LINE CHART ================= */
+
+  .line-chart {
+    display: flex;
+
+    margin-top: 15px;
+
+    height: 260px;
+  }
+
+  .chart-y {
+    width: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 5px 0 25px;
+
+    font-size: 8px;
+
+    color: var(--text-light);
+
+    text-align: right;
+
+    padding-right: 10px;
+  }
+
+  .chart-area {
+    flex: 1;
+
+    position: relative;
+  }
+
+  .chart-grid-lines {
+    position: absolute;
+
+    inset: 0 0 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+
+  .chart-grid-lines span {
+    border-top: 1px dashed #e8e8e3;
+
+    width: 100%;
+  }
+
+  .revenue-svg {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    height: calc(100% - 25px);
+  }
+
+  .chart-fill {
+    fill: url(#chartGradient);
+  }
+
+  .chart-line {
+    fill: none;
+
+    stroke: #222;
+
+    stroke-width: 2.5;
+  }
+
+  .chart-dot {
+    fill: #222;
+  }
+
+  .chart-x {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--text-light);
+
+    font-size: 8px;
+  }
+
+  /* ================= DONUT ================= */
+
+  .donut-wrapper {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 20px 0;
+  }
+
+  .donut {
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+      #222 0 42.8%,
+      #777 42.8% 71.2%,
+      #aaa 71.2% 89.9%,
+      #ddd 89.9% 100%
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .donut::before {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: white;
+  }
+
+  .donut {
+    position: relative;
+  }
+
+  .donut-center {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .donut-center strong {
+    font-size: 20px;
+
+    letter-spacing: -1px;
+  }
+
+  .donut-center span {
+    font-size: 8px;
+
+    color: var(--text-light);
+
+    margin-top: 2px;
+  }
+
+  /* ================= TRAFFIC LIST ================= */
+
+  .traffic-list {
+    border-top: 1px solid var(--border);
+  }
+
+  .traffic-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .traffic-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 10px;
+
+    color: var(--text-soft);
+  }
+
+  .traffic-item strong {
+    font-size: 10px;
+  }
+
+  .traffic-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #222;
+  }
+
+  .traffic-dot.social {
+    background: #777;
+  }
+
+  .traffic-dot.paid {
+    background: #aaa;
+  }
+
+  .traffic-dot.referral {
+    background: #ccc;
+  }
+
+  /* ================= CAMPAIGNS ================= */
+
+  .campaign-section {
+    margin-bottom: 15px;
+  }
+
+  .view-all {
+    background: transparent;
+
+    font-size: 9px;
+
+    color: var(--text-soft);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+  }
+
+  th {
+    text-align: left;
+
+    padding: 10px 8px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+  }
+
+  td {
+    padding: 13px 8px;
+
+    border-bottom: 1px solid #eeeeea;
+
+    font-size: 9px;
+
+    color: var(--text-soft);
+  }
+
+  tbody tr:hover {
+    background: #fafaf8;
+  }
+
+  .campaign-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  .campaign-avatar {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+  }
+
+  .campaign-avatar.meta {
+    background: #e9e9e5;
+  }
+
+  .campaign-avatar.google {
+    background: #e2e2dd;
+  }
+
+  .campaign-avatar.tiktok {
+    background: #dcdcd7;
+  }
+
+  .campaign-avatar.email {
+    background: #ededeb;
+  }
+
+  .campaign-name div:last-child {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .campaign-name strong {
+    color: var(--text);
+
+    font-size: 10px;
+
+    font-weight: 600;
+  }
+
+  .campaign-name span {
+    color: var(--text-light);
+
+    font-size: 8px;
+
+    margin-top: 2px;
+  }
+
+  .status {
+    display: inline-flex;
+
+    padding: 4px 7px;
+
+    border-radius: 4px;
+
+    font-size: 7px;
+
+    font-weight: 600;
+  }
+
+  .status.active {
+    color: var(--green);
+
+    background: var(--green-soft);
+  }
+
+  .status.paused {
+    color: #777;
+
+    background: #eeeeeb;
+  }
+
+  td strong {
+    color: var(--text);
+  }
+
+  /* ================= BOTTOM GRID ================= */
+
+  .bottom-grid {
+    display: grid;
+
+    grid-template-columns:
+      1.1fr
+      0.9fr;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+  }
+
+  /* ================= SOCIAL ================= */
+
+  .social-total {
+    margin-top: 25px;
+  }
+
+  .social-total strong {
+    font-size: 28px;
+
+    letter-spacing: -1px;
+  }
+
+  .social-total .positive {
+    margin-left: 8px;
+  }
+
+  .social-total p {
+    color: var(--text-light);
+
+    font-size: 9px;
+
+    margin-top: 2px;
+  }
+
+  .social-chart {
+    height: 150px;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .social-bar {
+    width: 12%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+  }
+
+  .social-bar span {
+    width: 100%;
+
+    background: #dcdcd7;
+
+    border-radius: 4px 4px 0 0;
+
+    transition:
+      height 0.5s ease,
+      background 0.2s ease;
+  }
+
+  .social-bar:hover span {
+    background: #555;
+  }
+
+  .social-labels {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 10px;
+  }
+
+  .social-labels span {
+    width: 18%;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    color: var(--text-light);
+  }
+
+  /* ================= ACTIVITY ================= */
+
+  .activity-list {
+    margin-top: 20px;
+  }
+
+  .activity-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .activity-item:last-child {
+    border-bottom: 0;
+  }
+
+  .activity-icon {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eeeeeb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+  }
+
+  .activity-item strong {
+    font-size: 10px;
+  }
+
+  .activity-item p {
+    font-size: 9px;
+
+    color: var(--text-soft);
+
+    margin-top: 2px;
+  }
+
+  .activity-item span {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 7px;
+
+    margin-top: 3px;
+  }
+
+  /* ================= FOOTER ================= */
+
+  .dashboard-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    font-size: 8px;
+  }
+
+  .dashboard-footer div {
+    display: flex;
+
+    gap: 20px;
+  }
+
+  /* ================= MOBILE OVERLAY ================= */
+
+  .sidebar-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    z-index: 900;
+  }
+
+  /* =====================================================
+   TABLET
+===================================================== */
+
+  @media (max-width: 1200px) {
+    .kpi-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* =====================================================
+   MOBILE
+===================================================== */
+
+  @media (max-width: 768px) {
+    :root {
+      --sidebar-width: 250px;
+    }
+
+    .sidebar {
+      transform: translateX(-100%);
+
+      transition: transform 0.3s ease;
+
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .sidebar.active {
+      transform: translateX(0);
+    }
+
+    .sidebar-close {
+      display: block;
+    }
+
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    .main {
+      margin-left: 0;
+    }
+
+    .topbar {
+      padding: 0 18px;
+
+      height: 70px;
+    }
+
+    .mobile-menu-button {
+      display: block;
+    }
+
+    .topbar-right {
+      gap: 7px;
+    }
+
+    .date-picker {
+      display: none;
+    }
+
+    .top-profile > span:not(.profile-arrow) {
+      display: none;
+    }
+
+    .dashboard-content {
+      padding: 22px 18px;
+    }
+
+    .welcome-section {
+      display: block;
+    }
+
+    .export-button {
+      margin-top: 18px;
+    }
+
+    .kpi-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .kpi-card {
+      min-height: 175px;
+    }
+
+    .bottom-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .chart-heading {
+      display: block;
+    }
+
+    .line-chart {
+      height: 220px;
+    }
+
+    .chart-controls {
+      margin-top: 15px;
+
+      width: fit-content;
+    }
+
+    .dashboard-footer {
+      display: block;
+    }
+
+    .dashboard-footer div {
+      margin-top: 10px;
+    }
+  }
+
+  /* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+  @media (max-width: 480px) {
+    .topbar h1 {
+      font-size: 14px;
+    }
+
+    .welcome-section h2 {
+      font-size: 19px;
+    }
+
+    .kpi-value strong {
+      font-size: 22px;
+    }
+
+    .dashboard-card {
+      padding: 15px;
+    }
+
+    .line-chart {
+      height: 190px;
+    }
+
+    .chart-y {
+      width: 40px;
+
+      font-size: 7px;
+    }
+
+    .donut {
+      width: 135px;
+      height: 135px;
+    }
+
+    .donut::before {
+      width: 95px;
+      height: 95px;
+    }
+
+    .social-labels span {
+      font-size: 6px;
+    }
+  }
+</style>
+<script>
+  /* =====================================================
+   PULSE MARKETING DASHBOARD
+   VANILLA JAVASCRIPT
+===================================================== */
+
+  /* =====================================================
+   MOBILE SIDEBAR
+===================================================== */
+
+  const sidebar = document.querySelector("#sidebar");
+
+  const mobileMenuButton = document.querySelector("#mobileMenuButton");
+
+  const sidebarClose = document.querySelector("#sidebarClose");
+
+  const sidebarOverlay = document.querySelector("#sidebarOverlay");
+
+  function openSidebar() {
+    sidebar.classList.add("active");
+
+    sidebarOverlay.classList.add("active");
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove("active");
+
+    sidebarOverlay.classList.remove("active");
+  }
+
+  mobileMenuButton.addEventListener("click", openSidebar);
+
+  sidebarClose.addEventListener("click", closeSidebar);
+
+  sidebarOverlay.addEventListener("click", closeSidebar);
+
+  /* =====================================================
+   ACTIVE NAVIGATION
+===================================================== */
+
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navItems.forEach((nav) => {
+        nav.classList.remove("active");
+      });
+
+      item.classList.add("active");
+
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
+  });
+
+  /* =====================================================
+   CHART FILTER
+===================================================== */
+
+  const chartFilters = document.querySelectorAll(".chart-filter");
+
+  chartFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      chartFilters.forEach((filter) => {
+        filter.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      updateChart(button.dataset.period);
+    });
+  });
+
+  function updateChart(period) {
+    const chartLine = document.querySelector(".chart-line");
+
+    const chartFill = document.querySelector(".chart-fill");
+
+    const paths = {
+      30: `
+        M0,230
+        C70,210 100,220 140,190
+        C180,160 210,185 260,170
+        C310,155 330,120 380,135
+        C430,150 450,110 500,105
+        C550,100 580,130 620,95
+        C660,60 700,100 740,70
+        C780,40 820,65 860,35
+        C875,25 890,30 900,15
+        `,
+
+      90: `
+        M0,250
+        C80,235 120,210 170,220
+        C230,235 260,170 320,180
+        C380,190 410,125 470,145
+        C530,165 570,110 630,120
+        C700,130 730,80 780,95
+        C830,105 860,55 900,40
+        `,
+
+      365: `
+        M0,260
+        C80,245 120,255 170,215
+        C230,170 260,220 320,190
+        C380,150 420,180 470,130
+        C520,80 570,145 620,100
+        C680,50 720,105 770,65
+        C820,30 860,70 900,20
+        `,
+    };
+
+    const path = paths[period];
+
+    chartLine.setAttribute("d", path);
+
+    chartFill.setAttribute("d", path + " L900,300 L0,300 Z");
+  }
+
+  /* =====================================================
+   EXPORT REPORT
+===================================================== */
+
+  const exportButton = document.querySelector("#exportButton");
+
+  exportButton.addEventListener("click", () => {
+    const original = exportButton.innerHTML;
+
+    exportButton.innerHTML = "✓ Report ready";
+
+    exportButton.style.background = "#3c8b62";
+
+    setTimeout(() => {
+      exportButton.innerHTML = original;
+
+      exportButton.style.background = "";
+    }, 2000);
+  });
+
+  /* =====================================================
+   KPI MINI CHART ANIMATION
+===================================================== */
+
+  const miniBars = document.querySelectorAll(".mini-chart span");
+
+  window.addEventListener("load", () => {
+    miniBars.forEach((bar, index) => {
+      const height = bar.style.height;
+
+      bar.style.height = "0%";
+
+      setTimeout(() => {
+        bar.style.height = height;
+      }, index * 70);
+    });
+  });
+
+  /* =====================================================
+   SOCIAL BAR ANIMATION
+===================================================== */
+
+  const socialBars = document.querySelectorAll(".social-bar span");
+
+  const socialObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          socialBars.forEach((bar) => {
+            const height = bar.style.height;
+
+            bar.style.height = "0%";
+
+            setTimeout(() => {
+              bar.style.height = height;
+            }, 100);
+          });
+
+          socialObserver.disconnect();
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    },
+  );
+
+  socialObserver.observe(document.querySelector(".social-card"));
+
+  /* =====================================================
+   TABLE ROW INTERACTION
+===================================================== */
+
+  const campaignRows = document.querySelectorAll("tbody tr");
+
+  campaignRows.forEach((row) => {
+    row.addEventListener("click", () => {
+      campaignRows.forEach((item) => {
+        item.style.background = "";
+      });
+
+      row.style.background = "#f7f7f3";
+    });
+  });
+
+  /* =====================================================
+   NUMBER HOVER
+===================================================== */
+
+  const kpiCards = document.querySelectorAll(".kpi-card");
+
+  kpiCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-2px)";
+
+      card.style.transition = "transform .2s ease";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+</script>

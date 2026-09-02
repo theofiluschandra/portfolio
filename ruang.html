@@ -1,0 +1,3813 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RUANG — Objects That Define Space</title>
+
+    <meta
+      name="description"
+      content="RUANG creates considered furniture and objects for contemporary living."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- CURSOR -->
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-label" id="cursorLabel">VIEW</div>
+
+    <!-- PAGE LOADER -->
+
+    <div class="loader" id="loader">
+      <div class="loader-logo">RUANG</div>
+
+      <div class="loader-line">
+        <span id="loaderProgress"></span>
+      </div>
+
+      <span>FURNITURE / OBJECTS / LIVING</span>
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <header class="header" id="header">
+      <div class="nav">
+        <a href="#home" class="logo"> RUANG </a>
+
+        <div class="nav-meta">Jakarta — Indonesia</div>
+
+        <nav class="desktop-menu">
+          <a href="#collection">Collection</a>
+          <a href="#materials">Materials</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <span class="menu-label"> NAVIGATION </span>
+
+        <a href="#home"> Home </a>
+
+        <a href="#collection"> Collection </a>
+
+        <a href="#materials"> Materials </a>
+
+        <a href="#rooms"> Spaces </a>
+
+        <a href="#about"> About </a>
+
+        <div class="mobile-menu-footer">
+          Jakarta — Indonesia
+          <br />
+          hello@ruang.id
+        </div>
+      </div>
+    </div>
+
+    <main id="home">
+      <!-- HERO -->
+
+      <section class="hero">
+        <div class="hero-number">01 / 05</div>
+
+        <div class="hero-copy">
+          <span class="section-index"> RUANG / 001 </span>
+
+          <h1>
+            Objects
+            <br />
+            that define
+            <br />
+            <i>space.</i>
+          </h1>
+
+          <p>
+            Contemporary furniture designed around the way we live, gather and
+            slow down.
+          </p>
+
+          <a href="#collection" class="circle-link" data-cursor="EXPLORE">
+            <span>Explore</span>
+            <strong>↘</strong>
+          </a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-main image-hover">
+            <img
+              src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=90"
+              alt="RUANG contemporary interior"
+            />
+          </div>
+
+          <div class="hero-image-small image-hover">
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=85"
+              alt="Modern sofa"
+            />
+          </div>
+
+          <div class="hero-caption">
+            <span>FIG. 01</span>
+            <span>QUIET / FORM / BALANCE</span>
+          </div>
+        </div>
+
+        <div class="hero-scroll">
+          <span>SCROLL TO DISCOVER</span>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+
+      <section class="marquee">
+        <div class="marquee-track">
+          <span>FURNITURE</span>
+          <b>✳</b>
+          <span>OBJECTS</span>
+          <b>✳</b>
+          <span>MATERIALS</span>
+          <b>✳</b>
+          <span>LIVING</span>
+          <b>✳</b>
+
+          <span>FURNITURE</span>
+          <b>✳</b>
+          <span>OBJECTS</span>
+          <b>✳</b>
+          <span>MATERIALS</span>
+          <b>✳</b>
+          <span>LIVING</span>
+          <b>✳</b>
+        </div>
+      </section>
+
+      <!-- MANIFESTO -->
+
+      <section class="manifesto">
+        <div class="section-number">02</div>
+
+        <div class="manifesto-label">OUR APPROACH</div>
+
+        <div class="manifesto-content">
+          <h2>
+            A room is not
+            <br />
+            <i>complete</i>
+            without
+            <br />
+            character.
+          </h2>
+
+          <div class="manifesto-copy">
+            <p class="large">
+              We create furniture that doesn't ask for attention. It simply
+              belongs.
+            </p>
+
+            <p>
+              RUANG explores the relationship between objects and the spaces
+              around them. Every piece is designed with restraint, proportion
+              and materiality in mind.
+            </p>
+
+            <a href="#about" class="under-link">
+              Our philosophy
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLECTION -->
+
+      <section class="collection" id="collection">
+        <div class="collection-head">
+          <div>
+            <span class="section-index"> RUANG / 003 </span>
+
+            <h2>
+              The
+              <i>collection.</i>
+            </h2>
+          </div>
+
+          <div class="collection-count">06 OBJECTS</div>
+        </div>
+
+        <div class="product-filter">
+          <button class="filter active" data-filter="all">All</button>
+
+          <button class="filter" data-filter="seating">Seating</button>
+
+          <button class="filter" data-filter="table">Tables</button>
+
+          <button class="filter" data-filter="object">Objects</button>
+        </div>
+
+        <div class="product-rail" id="productRail">
+          <!-- PRODUCT 01 -->
+
+          <article
+            class="product"
+            data-category="seating"
+            data-name="01 / LINEA"
+            data-material="Oak / Linen"
+            data-price="2.850.000"
+            data-description="A quiet lounge chair built around generous proportions, natural oak and tactile linen."
+            data-image="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=90"
+                alt="Linea lounge chair"
+              />
+
+              <span class="product-number"> 01 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>LINEA</h3>
+                <span>LOUNGE CHAIR</span>
+              </div>
+
+              <strong> 2.850.000 </strong>
+            </div>
+          </article>
+
+          <!-- PRODUCT 02 -->
+
+          <article
+            class="product"
+            data-category="table"
+            data-name="02 / FORMA"
+            data-material="Travertine"
+            data-price="3.250.000"
+            data-description="A sculptural coffee table reduced to its most essential geometry."
+            data-image="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1200&q=90"
+                alt="Forma coffee table"
+              />
+
+              <span class="product-number"> 02 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>FORMA</h3>
+                <span>COFFEE TABLE</span>
+              </div>
+
+              <strong> 3.250.000 </strong>
+            </div>
+          </article>
+
+          <!-- PRODUCT 03 -->
+
+          <article
+            class="product"
+            data-category="seating"
+            data-name="03 / NUSA"
+            data-material="Solid Teak"
+            data-price="1.650.000"
+            data-description="A timber dining chair inspired by the warmth and simplicity of Indonesian craft."
+            data-image="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=90"
+                alt="Nusa dining chair"
+              />
+
+              <span class="product-number"> 03 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>NUSA</h3>
+                <span>DINING CHAIR</span>
+              </div>
+
+              <strong> 1.650.000 </strong>
+            </div>
+          </article>
+
+          <!-- PRODUCT 04 -->
+
+          <article
+            class="product"
+            data-category="object"
+            data-name="04 / SORA"
+            data-material="Paper / Brass"
+            data-price="1.250.000"
+            data-description="A soft sculptural light designed to cast a warm and atmospheric glow."
+            data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=90"
+                alt="Sora pendant lamp"
+              />
+
+              <span class="product-number"> 04 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>SORA</h3>
+                <span>PENDANT LIGHT</span>
+              </div>
+
+              <strong> 1.250.000 </strong>
+            </div>
+          </article>
+
+          <!-- PRODUCT 05 -->
+
+          <article
+            class="product"
+            data-category="table"
+            data-name="05 / ONDA"
+            data-material="American Oak"
+            data-price="6.850.000"
+            data-description="A long dining table designed to become the centre of everyday gatherings."
+            data-image="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=90"
+                alt="Onda dining table"
+              />
+
+              <span class="product-number"> 05 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>ONDA</h3>
+                <span>DINING TABLE</span>
+              </div>
+
+              <strong> 6.850.000 </strong>
+            </div>
+          </article>
+
+          <!-- PRODUCT 06 -->
+
+          <article
+            class="product"
+            data-category="object"
+            data-name="06 / ARCA"
+            data-material="Oak / Cane"
+            data-price="5.950.000"
+            data-description="A considered storage object combining woven texture and clean architectural lines."
+            data-image="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=90"
+          >
+            <div class="product-image" data-cursor="VIEW">
+              <img
+                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=90"
+                alt="Arca sideboard"
+              />
+
+              <span class="product-number"> 06 </span>
+
+              <button class="product-plus">+</button>
+            </div>
+
+            <div class="product-info">
+              <div>
+                <h3>ARCA</h3>
+                <span>SIDEBOARD</span>
+              </div>
+
+              <strong> 5.950.000 </strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="rail-control">
+          <button id="railPrev">←</button>
+
+          <div class="rail-line">
+            <span id="railProgress"></span>
+          </div>
+
+          <button id="railNext">→</button>
+        </div>
+      </section>
+
+      <!-- MATERIALS -->
+
+      <section class="materials" id="materials">
+        <div class="materials-intro">
+          <span class="section-index"> RUANG / 004 </span>
+
+          <h2>
+            Honest
+            <br />
+            <i>materials.</i>
+          </h2>
+
+          <p>
+            Texture is part of the design. We choose materials that age
+            beautifully and become more personal over time.
+          </p>
+        </div>
+
+        <div class="material-display">
+          <div class="material-image" id="materialImage">
+            <img
+              src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1400&q=90"
+              alt="Natural wood"
+              id="materialImageElement"
+            />
+
+            <span id="materialIndex"> 01 </span>
+          </div>
+
+          <div class="material-list">
+            <button
+              class="material-item active"
+              data-image="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1400&q=90"
+              data-number="01"
+            >
+              <span>01</span>
+              <strong>WOOD</strong>
+              <small>Warm / Organic</small>
+            </button>
+
+            <button
+              class="material-item"
+              data-image="https://images.unsplash.com/photo-1604074131665-7a4b13870ab4?auto=format&fit=crop&w=1400&q=90"
+              data-number="02"
+            >
+              <span>02</span>
+              <strong>STONE</strong>
+              <small>Quiet / Solid</small>
+            </button>
+
+            <button
+              class="material-item"
+              data-image="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=1400&q=90"
+              data-number="03"
+            >
+              <span>03</span>
+              <strong>LINEN</strong>
+              <small>Soft / Tactile</small>
+            </button>
+
+            <button
+              class="material-item"
+              data-image="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=90"
+              data-number="04"
+            >
+              <span>04</span>
+              <strong>METAL</strong>
+              <small>Precise / Refined</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROOM SELECTOR -->
+
+      <section class="rooms" id="rooms">
+        <div class="rooms-header">
+          <span class="section-index"> RUANG / 005 </span>
+
+          <h2>
+            Find your
+            <i>ruang.</i>
+          </h2>
+        </div>
+
+        <div class="room-selector">
+          <div class="room-image" id="roomImage">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=90"
+              alt="Living room"
+              id="roomImageElement"
+            />
+
+            <div class="room-overlay">
+              <span id="roomNumber"> 01 </span>
+
+              <span id="roomTitle"> LIVING </span>
+            </div>
+          </div>
+
+          <div class="room-list">
+            <button
+              class="room-item active"
+              data-image="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=90"
+              data-title="LIVING"
+              data-number="01"
+            >
+              <span>01</span>
+              <strong>Living</strong>
+              <em>Gather / Rest / Stay</em>
+            </button>
+
+            <button
+              class="room-item"
+              data-image="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1500&q=90"
+              data-title="DINING"
+              data-number="02"
+            >
+              <span>02</span>
+              <strong>Dining</strong>
+              <em>Gather / Eat / Talk</em>
+            </button>
+
+            <button
+              class="room-item"
+              data-image="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1500&q=90"
+              data-title="BEDROOM"
+              data-number="03"
+            >
+              <span>03</span>
+              <strong>Bedroom</strong>
+              <em>Rest / Reset / Dream</em>
+            </button>
+
+            <button
+              class="room-item"
+              data-image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1500&q=90"
+              data-title="WORKSPACE"
+              data-number="04"
+            >
+              <span>04</span>
+              <strong>Workspace</strong>
+              <em>Focus / Create / Build</em>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIG STATEMENT -->
+
+      <section class="statement">
+        <div class="statement-top">EST. 2019 — JAKARTA</div>
+
+        <h2>
+          Designed
+          <br />
+          <i>for living.</i>
+        </h2>
+
+        <div class="statement-bottom">
+          <span>RUANG FURNITURE & LIVING</span>
+          <span>SCROLL / 05</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="about" id="about">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1400&q=90"
+            alt="RUANG interior"
+          />
+        </div>
+
+        <div class="about-content">
+          <span class="section-index"> ABOUT RUANG </span>
+
+          <h2>
+            We believe
+            <i>less</i>
+            can
+            <br />
+            mean more.
+          </h2>
+
+          <p>
+            RUANG is an independent furniture label from Indonesia creating
+            considered pieces for contemporary interiors.
+          </p>
+
+          <p>
+            We collaborate with local makers, architects and craftspeople to
+            create objects that are honest, functional and quietly expressive.
+          </p>
+
+          <div class="about-meta">
+            <div>
+              <strong>06</strong>
+              <span>Collections</span>
+            </div>
+
+            <div>
+              <strong>12</strong>
+              <span>Local makers</span>
+            </div>
+
+            <div>
+              <strong>07</strong>
+              <span>Years</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+
+      <section class="contact">
+        <span class="section-index"> LET'S CREATE A SPACE </span>
+
+        <h2>
+          Have a project
+          <br />
+          <i>in mind?</i>
+        </h2>
+
+        <a href="mailto:hello@ruang.id" class="contact-link">
+          hello@ruang.id
+          <span>↗</span>
+        </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">RUANG</div>
+
+        <div class="footer-location">Jakarta — Indonesia</div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-intro">
+          Furniture and objects
+          <br />
+          made for everyday living.
+        </div>
+
+        <div class="footer-column">
+          <span>EXPLORE</span>
+
+          <a href="#collection">Collection</a>
+          <a href="#materials">Materials</a>
+          <a href="#rooms">Spaces</a>
+          <a href="#about">About</a>
+        </div>
+
+        <div class="footer-column">
+          <span>SOCIAL</span>
+
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Behance</a>
+        </div>
+
+        <div class="footer-column">
+          <span>CONTACT</span>
+
+          <a href="mailto:hello@ruang.id"> hello@ruang.id </a>
+
+          <a href="#"> +62 812 3456 7890 </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 RUANG </span>
+
+        <span> FURNITURE / OBJECTS / LIVING </span>
+
+        <span> MADE IN INDONESIA </span>
+      </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL DRAWER -->
+
+    <aside class="detail-drawer" id="detailDrawer">
+      <button class="drawer-close" id="drawerClose">×</button>
+
+      <div class="drawer-image">
+        <img src="" alt="" id="drawerImage" />
+      </div>
+
+      <div class="drawer-content">
+        <span class="section-index" id="drawerCategory"> COLLECTION </span>
+
+        <h2 id="drawerName">LINEA</h2>
+
+        <div class="drawer-material">
+          <span>MATERIAL</span>
+
+          <strong id="drawerMaterial"> OAK / LINEN </strong>
+        </div>
+
+        <p id="drawerDescription">Product description.</p>
+
+        <div class="drawer-footer">
+          <strong id="drawerPrice"> Rp 0 </strong>
+
+          <button id="drawerAdd">
+            Add to collection
+            <span>+</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- TOAST -->
+
+    <div class="toast" id="toast">Added to your collection.</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<style>
+  ```css
+/* =========================================================
+   RUANG
+   EDITORIAL FURNITURE EXPERIENCE
+   VANILLA CSS
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --paper: #f2efe9;
+    --paper-dark: #e8e3da;
+
+    --black: #171715;
+    --black-soft: #242320;
+
+    --white: #ffffff;
+
+    --gray: #77736c;
+    --gray-light: #aaa69e;
+
+    --line: #d5d0c8;
+
+    --serif: "Playfair Display", Georgia, serif;
+
+    --sans: "DM Sans", Arial, sans-serif;
+
+    --mono: "DM Mono", monospace;
+
+    --ease: cubic-bezier(0.77, 0, 0.18, 1);
+
+    --container: 1320px;
+  }
+
+  /* =========================================================
+   RESET
+========================================================= */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+
+    color: var(--black);
+
+    font-family: var(--sans);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    overflow-x: hidden;
+  }
+
+  body.drawer-open {
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  button,
+  input {
+    font-family: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* =========================================================
+   GLOBAL
+========================================================= */
+
+  .section-index {
+    display: block;
+
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: var(--gray);
+  }
+
+  .image-hover {
+    overflow: hidden;
+  }
+
+  .image-hover img {
+    transition: transform 1.2s var(--ease);
+  }
+
+  .image-hover:hover img {
+    transform: scale(1.05);
+  }
+
+  /* =========================================================
+   CUSTOM CURSOR
+========================================================= */
+
+  .cursor {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 12px;
+    height: 12px;
+
+    background: var(--black);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 5000;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+      width 0.25s ease,
+      height 0.25s ease;
+  }
+
+  .cursor.active {
+    width: 70px;
+    height: 70px;
+
+    background: var(--white);
+
+    mix-blend-mode: difference;
+  }
+
+  .cursor-label {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 5001;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    opacity: 0;
+
+    transition: opacity 0.2s;
+  }
+
+  .cursor-label.active {
+    opacity: 1;
+  }
+
+  /* =========================================================
+   LOADER
+========================================================= */
+
+  .loader {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 6000;
+
+    background: var(--black);
+
+    color: var(--paper);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition:
+      opacity 0.8s var(--ease),
+      visibility 0.8s;
+  }
+
+  .loader.loaded {
+    opacity: 0;
+
+    visibility: hidden;
+  }
+
+  .loader-logo {
+    font-family: var(--serif);
+
+    font-size: 70px;
+
+    letter-spacing: 12px;
+  }
+
+  .loader > span {
+    margin-top: 15px;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+  }
+
+  .loader-line {
+    width: 180px;
+
+    height: 1px;
+
+    background: #444;
+
+    margin-top: 30px;
+  }
+
+  .loader-line span {
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    background: var(--paper);
+
+    transition: width 0.2s linear;
+  }
+
+  /* =========================================================
+   HEADER
+========================================================= */
+
+  .header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 76px;
+
+    z-index: 1000;
+
+    mix-blend-mode: normal;
+
+    transition:
+      background 0.4s,
+      border-color 0.4s;
+  }
+
+  .header.scrolled {
+    background: rgba(242, 239, 233, 0.9);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    width: min(calc(100% - 60px), var(--container));
+
+    height: 100%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+  }
+
+  .logo {
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    letter-spacing: 5px;
+  }
+
+  .nav-meta {
+    justify-self: center;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: var(--gray);
+
+    text-transform: uppercase;
+  }
+
+  .desktop-menu {
+    justify-self: end;
+
+    display: flex;
+
+    gap: 28px;
+  }
+
+  .desktop-menu a {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    color: var(--gray);
+
+    transition: color 0.2s;
+  }
+
+  .desktop-menu a:hover {
+    color: var(--black);
+  }
+
+  .menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    width: 30px;
+  }
+
+  .menu-toggle span {
+    display: block;
+
+    width: 25px;
+
+    height: 1px;
+
+    background: var(--black);
+
+    margin: 6px 0;
+  }
+
+  /* =========================================================
+   MOBILE MENU
+========================================================= */
+
+  .mobile-menu {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 900;
+
+    background: var(--black);
+
+    color: var(--paper);
+
+    transform: translateY(-100%);
+
+    transition: transform 0.8s var(--ease);
+  }
+
+  .mobile-menu.active {
+    transform: translateY(0);
+  }
+
+  .mobile-menu-inner {
+    height: 100%;
+
+    padding: 120px 30px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .menu-label {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: #666;
+
+    margin-bottom: 35px;
+  }
+
+  .mobile-menu a {
+    font-family: var(--serif);
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    padding: 5px 0;
+  }
+
+  .mobile-menu-footer {
+    margin-top: auto;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: #777;
+  }
+
+  /* =========================================================
+   HERO
+========================================================= */
+
+  .hero {
+    position: relative;
+
+    min-height: 900px;
+
+    height: 100vh;
+
+    padding: 150px 5vw 60px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 50px;
+
+    overflow: hidden;
+  }
+
+  .hero-number {
+    position: absolute;
+
+    top: 110px;
+
+    left: 5vw;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: var(--gray);
+  }
+
+  .hero-copy {
+    align-self: center;
+
+    padding-left: 7vw;
+
+    position: relative;
+
+    z-index: 2;
+  }
+
+  .hero-copy h1 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+
+    font-weight: 400;
+
+    font-size: clamp(65px, 7.5vw, 120px);
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+  }
+
+  .hero-copy h1 i {
+    font-style: italic;
+  }
+
+  .hero-copy p {
+    width: 280px;
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    color: var(--gray);
+  }
+
+  .circle-link {
+    width: 105px;
+
+    height: 105px;
+
+    margin-top: 40px;
+
+    border: 1px solid var(--black);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    transition:
+      background 0.4s,
+      color 0.4s;
+  }
+
+  .circle-link span {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+  }
+
+  .circle-link strong {
+    font-size: 18px;
+
+    font-weight: 400;
+  }
+
+  .circle-link:hover {
+    background: var(--black);
+
+    color: var(--paper);
+  }
+
+  .hero-visual {
+    position: relative;
+
+    align-self: center;
+
+    height: 680px;
+  }
+
+  .hero-image-main {
+    position: absolute;
+
+    right: 5%;
+
+    top: 0;
+
+    width: 72%;
+
+    height: 85%;
+  }
+
+  .hero-image-main img {
+    filter: saturate(0.65);
+  }
+
+  .hero-image-small {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 32%;
+
+    height: 40%;
+
+    border: 10px solid var(--paper);
+  }
+
+  .hero-image-small img {
+    filter: saturate(0.5);
+  }
+
+  .hero-caption {
+    position: absolute;
+
+    right: 5%;
+
+    bottom: -30px;
+
+    width: 72%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: var(--gray);
+  }
+
+  .hero-scroll {
+    position: absolute;
+
+    bottom: 50px;
+
+    left: 5vw;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .hero-scroll span {
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: var(--gray);
+  }
+
+  .hero-scroll div {
+    width: 60px;
+
+    height: 1px;
+
+    background: var(--line);
+  }
+
+  /* =========================================================
+   MARQUEE
+========================================================= */
+
+  .marquee {
+    overflow: hidden;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    padding: 20px 0;
+  }
+
+  .marquee-track {
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    animation: marquee 28s linear infinite;
+  }
+
+  .marquee span {
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    white-space: nowrap;
+  }
+
+  .marquee b {
+    font-size: 10px;
+
+    font-weight: 400;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* =========================================================
+   MANIFESTO
+========================================================= */
+
+  .manifesto {
+    position: relative;
+
+    padding: 180px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 100px 180px 1fr;
+
+    gap: 30px;
+  }
+
+  .section-number {
+    font-family: var(--mono);
+
+    font-size: 9px;
+
+    color: var(--gray);
+  }
+
+  .manifesto-label {
+    writing-mode: vertical-rl;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: var(--gray);
+
+    letter-spacing: 2px;
+  }
+
+  .manifesto-content {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 80px;
+  }
+
+  .manifesto-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 6vw, 88px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+  }
+
+  .manifesto-content h2 i {
+    font-style: italic;
+  }
+
+  .manifesto-copy {
+    padding-top: 15px;
+
+    max-width: 350px;
+  }
+
+  .manifesto-copy .large {
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    line-height: 1.35;
+  }
+
+  .manifesto-copy p:not(.large) {
+    margin-top: 30px;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.9;
+  }
+
+  .under-link {
+    display: inline-flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--black);
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+  }
+
+  /* =========================================================
+   COLLECTION
+========================================================= */
+
+  .collection {
+    background: var(--black);
+
+    color: var(--paper);
+
+    padding: 120px 5vw 80px;
+
+    overflow: hidden;
+  }
+
+  .collection-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    width: min(100%, var(--container));
+
+    margin: auto;
+  }
+
+  .collection-head h2 {
+    margin-top: 20px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+  }
+
+  .collection-head h2 i {
+    font-style: italic;
+  }
+
+  .collection-count {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: #777;
+  }
+
+  .product-filter {
+    width: min(100%, var(--container));
+
+    margin: 70px auto 0;
+
+    display: flex;
+
+    gap: 30px;
+
+    border-bottom: 1px solid #373633;
+  }
+
+  .filter {
+    position: relative;
+
+    background: transparent;
+
+    color: #777;
+
+    border: 0;
+
+    padding-bottom: 14px;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+  }
+
+  .filter.active {
+    color: var(--paper);
+  }
+
+  .filter.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -1px;
+
+    height: 1px;
+
+    background: var(--paper);
+  }
+
+  .product-rail {
+    width: min(calc(100% + 5vw), 1450px);
+
+    margin: 55px auto 0;
+
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    padding-bottom: 30px;
+
+    scrollbar-width: none;
+  }
+
+  .product-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product {
+    flex: 0 0 350px;
+  }
+
+  .product:nth-child(2) {
+    margin-top: 80px;
+  }
+
+  .product:nth-child(4) {
+    margin-top: 40px;
+  }
+
+  .product-image {
+    height: 470px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #282725;
+  }
+
+  .product-image img {
+    filter: saturate(0.55);
+
+    transition:
+      transform 1s var(--ease),
+      filter 0.5s;
+  }
+
+  .product:hover .product-image img {
+    transform: scale(1.04);
+
+    filter: saturate(0.8);
+  }
+
+  .product-number {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+  }
+
+  .product-plus {
+    position: absolute;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--paper);
+
+    color: var(--black);
+
+    font-size: 20px;
+
+    transition: transform 0.3s;
+  }
+
+  .product:hover .product-plus {
+    transform: rotate(90deg);
+  }
+
+  .product-info {
+    padding-top: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  .product-info h3 {
+    font-family: var(--serif);
+
+    font-size: 23px;
+
+    font-weight: 400;
+  }
+
+  .product-info span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: #777;
+  }
+
+  .product-info strong {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    font-weight: 400;
+
+    color: #aaa;
+  }
+
+  .rail-control {
+    width: min(100%, var(--container));
+
+    margin: 60px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .rail-control button {
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #444;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--paper);
+  }
+
+  .rail-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: #333;
+  }
+
+  .rail-line span {
+    display: block;
+
+    width: 20%;
+
+    height: 100%;
+
+    background: var(--paper);
+
+    transition: width 0.4s;
+  }
+
+  /* =========================================================
+   MATERIALS
+========================================================= */
+
+  .materials {
+    padding: 150px 8vw;
+
+    background: var(--paper-dark);
+  }
+
+  .materials-intro {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: end;
+  }
+
+  .materials-intro h2 {
+    margin-top: 20px;
+
+    font-family: var(--serif);
+
+    font-weight: 400;
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: 0.85;
+
+    letter-spacing: -6px;
+  }
+
+  .materials-intro h2 i {
+    font-style: italic;
+  }
+
+  .materials-intro p {
+    max-width: 300px;
+
+    margin-left: auto;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.9;
+  }
+
+  .material-display {
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.6fr;
+
+    gap: 80px;
+  }
+
+  .material-image {
+    height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .material-image img {
+    transition:
+      opacity 0.4s,
+      transform 1s var(--ease);
+
+    filter: saturate(0.6);
+  }
+
+  .material-image > span {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    color: white;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+  }
+
+  .material-list {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .material-item {
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    text-align: left;
+
+    padding: 22px 0;
+
+    border: 0;
+
+    border-top: 1px solid var(--line);
+
+    background: transparent;
+
+    color: var(--gray);
+  }
+
+  .material-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .material-item span {
+    grid-row: 1 / 3;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+  }
+
+  .material-item strong {
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    color: var(--black);
+  }
+
+  .material-item small {
+    font-family: var(--mono);
+
+    font-size: 7px;
+  }
+
+  .material-item.active strong {
+    font-style: italic;
+  }
+
+  /* =========================================================
+   ROOMS
+========================================================= */
+
+  .rooms {
+    padding: 150px 5vw;
+
+    background: var(--white);
+  }
+
+  .rooms-header {
+    width: min(100%, var(--container));
+
+    margin: auto;
+  }
+
+  .rooms-header h2 {
+    margin-top: 20px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: 0.85;
+
+    font-weight: 400;
+
+    letter-spacing: -6px;
+  }
+
+  .rooms-header h2 i {
+    font-style: italic;
+  }
+
+  .room-selector {
+    width: min(100%, var(--container));
+
+    margin: 100px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.5fr;
+
+    gap: 50px;
+  }
+
+  .room-image {
+    height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .room-image img {
+    filter: saturate(0.55);
+
+    transition:
+      opacity 0.3s,
+      transform 1s var(--ease);
+  }
+
+  .room-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 25px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    font-family: var(--mono);
+  }
+
+  .room-overlay span:last-child {
+    font-family: var(--serif);
+
+    font-size: 50px;
+  }
+
+  .room-list {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+  .room-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 40px 1fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    padding: 25px 0;
+
+    text-align: left;
+
+    background: transparent;
+
+    border: 0;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--gray);
+  }
+
+  .room-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .room-item span {
+    grid-row: 1 / 3;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+  }
+
+  .room-item strong {
+    font-family: var(--serif);
+
+    font-size: 29px;
+
+    font-weight: 400;
+
+    color: var(--black);
+  }
+
+  .room-item em {
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    font-style: normal;
+  }
+
+  .room-item.active strong {
+    font-style: italic;
+  }
+
+  /* =========================================================
+   STATEMENT
+========================================================= */
+
+  .statement {
+    min-height: 750px;
+
+    background: var(--black);
+
+    color: var(--paper);
+
+    padding: 50px 5vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
+
+  .statement-top,
+  .statement-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: #777;
+  }
+
+  .statement h2 {
+    align-self: center;
+
+    text-align: center;
+
+    font-family: var(--serif);
+
+    font-size: clamp(80px, 13vw, 190px);
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+    letter-spacing: -9px;
+  }
+
+  .statement h2 i {
+    font-style: italic;
+  }
+
+  /* =========================================================
+   ABOUT
+========================================================= */
+
+  .about {
+    padding: 150px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: center;
+  }
+
+  .about-image {
+    height: 700px;
+  }
+
+  .about-image img {
+    filter: saturate(0.55);
+  }
+
+  .about-content {
+    max-width: 600px;
+  }
+
+  .about-content h2 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.9;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+  }
+
+  .about-content h2 i {
+    font-style: italic;
+  }
+
+  .about-content > p {
+    max-width: 420px;
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    color: var(--gray);
+
+    line-height: 1.9;
+  }
+
+  .about-content > p + p {
+    margin-top: 15px;
+  }
+
+  .about-meta {
+    display: flex;
+
+    gap: 60px;
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--line);
+  }
+
+  .about-meta strong {
+    display: block;
+
+    font-family: var(--serif);
+
+    font-size: 32px;
+
+    font-weight: 400;
+  }
+
+  .about-meta span {
+    display: block;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: var(--gray);
+  }
+
+  /* =========================================================
+   CONTACT
+========================================================= */
+
+  .contact {
+    padding: 150px 8vw;
+
+    background: var(--paper-dark);
+  }
+
+  .contact h2 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 10vw, 140px);
+
+    line-height: 0.85;
+
+    letter-spacing: -7px;
+
+    font-weight: 400;
+  }
+
+  .contact h2 i {
+    font-style: italic;
+  }
+
+  .contact-link {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 700px;
+
+    margin-top: 80px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--black);
+
+    font-family: var(--serif);
+
+    font-size: 28px;
+  }
+
+  .contact-link span {
+    font-family: var(--sans);
+
+    font-size: 25px;
+  }
+
+  /* =========================================================
+   FOOTER
+========================================================= */
+
+  .footer {
+    background: var(--black);
+
+    color: var(--paper);
+
+    padding: 60px 5vw 25px;
+  }
+
+  .footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid #343331;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+
+    font-size: 45px;
+
+    letter-spacing: 7px;
+  }
+
+  .footer-location {
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: #777;
+  }
+
+  .footer-main {
+    padding: 60px 0 100px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 30px;
+  }
+
+  .footer-intro {
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    line-height: 1.2;
+  }
+
+  .footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .footer-column span {
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    color: #666;
+
+    margin-bottom: 10px;
+  }
+
+  .footer-column a {
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    color: #aaa;
+  }
+
+  .footer-column a:hover {
+    color: var(--paper);
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+
+    border-top: 1px solid #343331;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: var(--mono);
+
+    font-size: 6px;
+
+    color: #666;
+  }
+
+  /* =========================================================
+   DETAIL DRAWER
+========================================================= */
+
+  .detail-drawer {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    z-index: 3000;
+
+    width: min(550px, 100%);
+
+    height: 100vh;
+
+    background: var(--paper);
+
+    transform: translateX(100%);
+
+    transition: transform 0.8s var(--ease);
+
+    overflow-y: auto;
+  }
+
+  .detail-drawer.active {
+    transform: translateX(0);
+  }
+
+  .drawer-close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 5;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--black);
+
+    color: white;
+
+    font-size: 22px;
+  }
+
+  .drawer-image {
+    height: 50vh;
+  }
+
+  .drawer-content {
+    padding: 40px;
+  }
+
+  .drawer-content h2 {
+    margin-top: 20px;
+
+    font-family: var(--serif);
+
+    font-size: 55px;
+
+    font-weight: 400;
+  }
+
+  .drawer-material {
+    margin-top: 30px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+  }
+
+  .drawer-content > p {
+    margin-top: 30px;
+
+    max-width: 400px;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.9;
+  }
+
+  .drawer-footer {
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+  .drawer-footer > strong {
+    font-family: var(--serif);
+
+    font-size: 25px;
+
+    font-weight: 400;
+  }
+
+  .drawer-footer button {
+    padding: 15px 20px;
+
+    background: var(--black);
+
+    color: white;
+
+    border: 0;
+
+    font-family: var(--mono);
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+  }
+
+  .drawer-footer button span {
+    margin-left: 20px;
+  }
+
+  /* =========================================================
+   TOAST
+========================================================= */
+
+  .toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    z-index: 4000;
+
+    transform: translate(-50%, 100px);
+
+    padding: 14px 22px;
+
+    background: var(--black);
+
+    color: white;
+
+    font-family: var(--mono);
+
+    font-size: 8px;
+
+    opacity: 0;
+
+    transition:
+      transform 0.4s,
+      opacity 0.4s;
+  }
+
+  .toast.active {
+    transform: translate(-50%, 0);
+
+    opacity: 1;
+  }
+
+  /* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+  @media (max-width: 1000px) {
+    .nav {
+      grid-template-columns: 1fr auto;
+    }
+
+    .nav-meta,
+    .desktop-menu {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+
+    .hero {
+      min-height: 850px;
+
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-copy {
+      padding-left: 0;
+    }
+
+    .hero-copy h1 {
+      font-size: 70px;
+    }
+
+    .hero-visual {
+      height: 580px;
+    }
+
+    .manifesto {
+      grid-template-columns: 50px 100px 1fr;
+
+      padding: 120px 5vw;
+    }
+
+    .manifesto-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .materials {
+      padding: 110px 5vw;
+    }
+
+    .material-display {
+      gap: 40px;
+    }
+
+    .room-selector {
+      grid-template-columns: 1fr;
+    }
+
+    .room-image {
+      height: 550px;
+    }
+
+    .about {
+      padding: 110px 5vw;
+      gap: 60px;
+    }
+
+    .footer-main {
+      grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .footer-intro {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+  @media (max-width: 650px) {
+    .cursor,
+    .cursor-label {
+      display: none;
+    }
+
+    .header {
+      height: 68px;
+    }
+
+    .nav {
+      width: calc(100% - 32px);
+    }
+
+    .logo {
+      font-size: 21px;
+    }
+
+    .loader-logo {
+      font-size: 48px;
+    }
+
+    .hero {
+      min-height: 800px;
+
+      height: auto;
+
+      padding: 120px 16px 80px;
+
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .hero-number {
+      top: 90px;
+      left: 16px;
+    }
+
+    .hero-copy {
+      order: 1;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(58px, 17vw, 85px);
+
+      letter-spacing: -4px;
+    }
+
+    .hero-copy p {
+      width: 230px;
+    }
+
+    .circle-link {
+      width: 90px;
+      height: 90px;
+    }
+
+    .hero-visual {
+      order: 2;
+
+      height: 500px;
+
+      width: 100%;
+
+      margin-top: 40px;
+    }
+
+    .hero-image-main {
+      width: 82%;
+
+      height: 82%;
+
+      right: 0;
+    }
+
+    .hero-image-small {
+      width: 43%;
+
+      height: 38%;
+
+      left: 0;
+
+      border-width: 7px;
+    }
+
+    .hero-caption {
+      width: 82%;
+
+      right: 0;
+
+      bottom: -20px;
+    }
+
+    .hero-scroll {
+      display: none;
+    }
+
+    .marquee span {
+      font-size: 20px;
+    }
+
+    .manifesto {
+      padding: 100px 16px;
+
+      display: block;
+    }
+
+    .manifesto-label {
+      writing-mode: initial;
+
+      margin-top: 30px;
+    }
+
+    .manifesto-content {
+      margin-top: 50px;
+    }
+
+    .manifesto-content h2 {
+      font-size: 55px;
+
+      letter-spacing: -3px;
+    }
+
+    .manifesto-copy .large {
+      font-size: 22px;
+    }
+
+    .collection {
+      padding: 90px 16px 60px;
+    }
+
+    .collection-head {
+      display: block;
+    }
+
+    .collection-head h2 {
+      font-size: 60px;
+    }
+
+    .collection-count {
+      margin-top: 25px;
+    }
+
+    .product-filter {
+      margin-top: 50px;
+
+      overflow-x: auto;
+
+      gap: 25px;
+
+      white-space: nowrap;
+    }
+
+    .product-rail {
+      margin-top: 40px;
+
+      gap: 15px;
+
+      width: calc(100% + 16px);
+    }
+
+    .product {
+      flex: 0 0 82vw;
+    }
+
+    .product:nth-child(2),
+    .product:nth-child(4) {
+      margin-top: 0;
+    }
+
+    .product-image {
+      height: 105vw;
+    }
+
+    .materials {
+      padding: 90px 16px;
+    }
+
+    .materials-intro {
+      display: block;
+    }
+
+    .materials-intro h2 {
+      font-size: 70px;
+
+      letter-spacing: -4px;
+    }
+
+    .materials-intro p {
+      margin: 35px 0 0;
+    }
+
+    .material-display {
+      margin-top: 60px;
+
+      grid-template-columns: 1fr;
+
+      gap: 40px;
+    }
+
+    .material-image {
+      height: 100vw;
+    }
+
+    .rooms {
+      padding: 90px 16px;
+    }
+
+    .rooms-header h2 {
+      font-size: 70px;
+
+      letter-spacing: -4px;
+    }
+
+    .room-selector {
+      margin-top: 60px;
+    }
+
+    .room-image {
+      height: 110vw;
+    }
+
+    .room-overlay span:last-child {
+      font-size: 40px;
+    }
+
+    .statement {
+      min-height: 600px;
+
+      padding: 30px 16px;
+    }
+
+    .statement h2 {
+      font-size: 22vw;
+
+      letter-spacing: -4px;
+    }
+
+    .about {
+      padding: 90px 16px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 60px;
+    }
+
+    .about-image {
+      height: 110vw;
+
+      width: 100%;
+    }
+
+    .about-content h2 {
+      font-size: 55px;
+    }
+
+    .about-meta {
+      gap: 30px;
+    }
+
+    .contact {
+      padding: 90px 16px;
+    }
+
+    .contact h2 {
+      font-size: 18vw;
+
+      letter-spacing: -4px;
+    }
+
+    .contact-link {
+      font-size: 20px;
+
+      margin-top: 50px;
+    }
+
+    .footer {
+      padding: 50px 16px 20px;
+    }
+
+    .footer-top {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 15px;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+
+      padding: 50px 0 70px;
+    }
+
+    .footer-intro {
+      grid-column: 1 / -1;
+
+      font-size: 24px;
+
+      margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+
+      gap: 8px;
+    }
+
+    .detail-drawer {
+      width: 100%;
+    }
+
+    .drawer-image {
+      height: 45vh;
+    }
+
+    .drawer-content {
+      padding: 30px 20px;
+    }
+
+    .drawer-content h2 {
+      font-size: 48px;
+    }
+
+    .drawer-footer {
+      align-items: flex-start;
+
+      flex-direction: column;
+
+      gap: 20px;
+    }
+
+    .drawer-footer button {
+      width: 100%;
+    }
+  }
+</style>
+<script>
+      ```javascript
+  /* =========================================================
+     RUANG
+     EDITORIAL FURNITURE EXPERIENCE
+     VANILLA JAVASCRIPT
+  ========================================================= */
+
+
+  /* =========================================================
+     PAGE LOADER
+  ========================================================= */
+
+  const loader =
+      document.getElementById("loader");
+
+  const loaderProgress =
+      document.getElementById("loaderProgress");
+
+  let progress = 0;
+
+  const loaderInterval =
+      setInterval(() => {
+
+          progress += Math.random() * 12;
+
+          if (progress >= 100) {
+
+              progress = 100;
+
+              clearInterval(loaderInterval);
+
+              setTimeout(() => {
+
+                  loader.classList.add("loaded");
+
+              }, 400);
+
+          }
+
+          loaderProgress.style.width =
+              `${progress}%`;
+
+      }, 100);
+
+
+  /* =========================================================
+     HEADER
+  ========================================================= */
+
+  const header =
+      document.getElementById("header");
+
+  window.addEventListener(
+      "scroll",
+      () => {
+
+          header.classList.toggle(
+              "scrolled",
+              window.scrollY > 30
+          );
+
+      }
+  );
+
+
+  /* =========================================================
+     MOBILE MENU
+  ========================================================= */
+
+  const menuToggle =
+      document.getElementById("menuToggle");
+
+  const mobileMenu =
+      document.getElementById("mobileMenu");
+
+  const mobileLinks =
+      mobileMenu.querySelectorAll("a");
+
+
+  menuToggle.addEventListener(
+      "click",
+      () => {
+
+          mobileMenu.classList.toggle(
+              "active"
+          );
+
+          document.body.classList.toggle(
+              "drawer-open"
+          );
+
+      }
+  );
+
+
+  mobileLinks.forEach(link => {
+
+      link.addEventListener(
+          "click",
+          () => {
+
+              mobileMenu.classList.remove(
+                  "active"
+              );
+
+              document.body.classList.remove(
+                  "drawer-open"
+              );
+
+          }
+      );
+
+  });
+
+
+  /* =========================================================
+     CUSTOM CURSOR
+  ========================================================= */
+
+  const cursor =
+      document.getElementById("cursor");
+
+  const cursorLabel =
+      document.getElementById("cursorLabel");
+
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let cursorX = 0;
+  let cursorY = 0;
+
+
+  document.addEventListener(
+      "mousemove",
+      event => {
+
+          mouseX = event.clientX;
+          mouseY = event.clientY;
+
+      }
+  );
+
+
+  function animateCursor() {
+
+      cursorX +=
+          (mouseX - cursorX) * .15;
+
+      cursorY +=
+          (mouseY - cursorY) * .15;
+
+
+      cursor.style.left =
+          `${cursorX}px`;
+
+      cursor.style.top =
+          `${cursorY}px`;
+
+
+      cursorLabel.style.left =
+          `${cursorX}px`;
+
+      cursorLabel.style.top =
+          `${cursorY}px`;
+
+
+      requestAnimationFrame(
+          animateCursor
+      );
+
+  }
+
+  animateCursor();
+
+
+  const cursorElements =
+      document.querySelectorAll(
+          "[data-cursor]"
+      );
+
+
+  cursorElements.forEach(element => {
+
+      element.addEventListener(
+          "mouseenter",
+          () => {
+
+              cursor.classList.add(
+                  "active"
+              );
+
+              cursorLabel.textContent =
+                  element.dataset.cursor;
+
+              cursorLabel.classList.add(
+                  "active"
+              );
+
+          }
+      );
+
+
+      element.addEventListener(
+          "mouseleave",
+          () => {
+
+              cursor.classList.remove(
+                  "active"
+              );
+
+              cursorLabel.classList.remove(
+                  "active"
+              );
+
+          }
+      );
+
+  });
+
+
+  /* =========================================================
+     PRODUCT FILTER
+  ========================================================= */
+
+  const filters =
+      document.querySelectorAll(
+          ".filter"
+      );
+
+  const products =
+      document.querySelectorAll(
+          ".product"
+      );
+
+
+  filters.forEach(filter => {
+
+      filter.addEventListener(
+          "click",
+          () => {
+
+              const selected =
+                  filter.dataset.filter;
+
+
+              filters.forEach(item => {
+
+                  item.classList.remove(
+                      "active"
+                  );
+
+              });
+
+
+              filter.classList.add(
+                  "active"
+              );
+
+
+              products.forEach(product => {
+
+                  const category =
+                      product.dataset.category;
+
+
+                  if (
+                      selected === "all" ||
+                      category === selected
+                  ) {
+
+                      product.style.display =
+                          "block";
+
+                  } else {
+
+                      product.style.display =
+                          "none";
+
+                  }
+
+              });
+
+          }
+      );
+
+  });
+
+
+  /* =========================================================
+     PRODUCT DETAIL DRAWER
+  ========================================================= */
+
+  const drawer =
+      document.getElementById(
+          "detailDrawer"
+      );
+
+  const drawerClose =
+      document.getElementById(
+          "drawerClose"
+      );
+
+  const drawerImage =
+      document.getElementById(
+          "drawerImage"
+      );
+
+  const drawerName =
+      document.getElementById(
+          "drawerName"
+      );
+
+  const drawerMaterial =
+      document.getElementById(
+          "drawerMaterial"
+      );
+
+  const drawerPrice =
+      document.getElementById(
+          "drawerPrice"
+      );
+
+  const drawerDescription =
+      document.getElementById(
+          "drawerDescription"
+      );
+
+  const drawerCategory =
+      document.getElementById(
+          "drawerCategory"
+      );
+
+  const drawerAdd =
+      document.getElementById(
+          "drawerAdd"
+      );
+
+
+  let selectedProduct = null;
+
+
+  function openDrawer(product) {
+
+      selectedProduct = product;
+
+
+      drawerImage.src =
+          product.dataset.image;
+
+
+      drawerImage.alt =
+          product.dataset.name;
+
+
+      drawerName.textContent =
+          product.dataset.name;
+
+
+      drawerMaterial.textContent =
+          product.dataset.material;
+
+
+      drawerPrice.textContent =
+          `Rp ${product.dataset.price}`;
+
+
+      drawerDescription.textContent =
+          product.dataset.description;
+
+
+      drawerCategory.textContent =
+          product.dataset.category
+              .toUpperCase();
+
+
+      drawer.classList.add(
+          "active"
+      );
+
+
+      document.body.classList.add(
+          "drawer-open"
+      );
+
+  }
+
+
+  function closeDrawer() {
+
+      drawer.classList.remove(
+          "active"
+      );
+
+      document.body.classList.remove(
+          "drawer-open"
+      );
+
+  }
+
+
+  products.forEach(product => {
+
+      const productImage =
+          product.querySelector(
+              ".product-image"
+          );
+
+      const plus =
+          product.querySelector(
+              ".product-plus"
+          );
+
+
+      productImage.addEventListener(
+          "click",
+          () => {
+
+              openDrawer(product);
+
+          }
+      );
+
+
+      plus.addEventListener(
+          "click",
+          event => {
+
+              event.stopPropagation();
+
+              openDrawer(product);
+
+          }
+      );
+
+  });
+
+
+  drawerClose.addEventListener(
+      "click",
+      closeDrawer
+  );
+
+
+  /* =========================================================
+     ADD TO COLLECTION
+  ========================================================= */
+
+  const toast =
+      document.getElementById(
+          "toast"
+      );
+
+
+  drawerAdd.addEventListener(
+      "click",
+      () => {
+
+          if (!selectedProduct) {
+              return;
+          }
+
+
+          closeDrawer();
+
+
+          toast.classList.add(
+              "active"
+          );
+
+
+          setTimeout(() => {
+
+              toast.classList.remove(
+                  "active"
+              );
+
+          }, 2500);
+
+      }
+  );
+
+
+  /* =========================================================
+     PRODUCT RAIL
+  ========================================================= */
+
+  const productRail =
+      document.getElementById(
+          "productRail"
+      );
+
+  const railPrev =
+      document.getElementById(
+          "railPrev"
+      );
+
+  const railNext =
+      document.getElementById(
+          "railNext"
+      );
+
+  const railProgress =
+      document.getElementById(
+          "railProgress"
+      );
+
+
+  railNext.addEventListener(
+      "click",
+      () => {
+
+          productRail.scrollBy({
+              left: 400,
+              behavior: "smooth"
+          });
+
+      }
+  );
+
+
+  railPrev.addEventListener(
+      "click",
+      () => {
+
+          productRail.scrollBy({
+              left: -400,
+              behavior: "smooth"
+          });
+
+      }
+  );
+
+
+  productRail.addEventListener(
+      "scroll",
+      () => {
+
+          const maxScroll =
+              productRail.scrollWidth -
+              productRail.clientWidth;
+
+
+          if (maxScroll <= 0) {
+              return;
+          }
+
+
+          const percentage =
+              (productRail.scrollLeft /
+                  maxScroll) * 100;
+
+
+          railProgress.style.width =
+              `${Math.max(
+                  20,
+                  percentage
+              )}%`;
+
+      }
+  );
+
+
+  /* =========================================================
+     MATERIAL SWITCHER
+  ========================================================= */
+
+  const materialItems =
+      document.querySelectorAll(
+          ".material-item"
+      );
+
+  const materialImage =
+      document.getElementById(
+          "materialImageElement"
+      );
+
+  const materialIndex =
+      document.getElementById(
+          "materialIndex"
+      );
+
+
+  materialItems.forEach(item => {
+
+      item.addEventListener(
+          "click",
+          () => {
+
+              materialItems.forEach(
+                  element => {
+
+                      element.classList.remove(
+                          "active"
+                      );
+
+                  }
+              );
+
+
+              item.classList.add(
+                  "active"
+              );
+
+
+              materialImage.style.opacity =
+                  "0";
+
+
+              setTimeout(() => {
+
+                  materialImage.src =
+                      item.dataset.image;
+
+                  materialIndex.textContent =
+                      item.dataset.number;
+
+                  materialImage.style.opacity =
+                      "1";
+
+              }, 250);
+
+          }
+      );
+
+  });
+
+
+  /* =========================================================
+     ROOM SWITCHER
+  ========================================================= */
+
+  const roomItems =
+      document.querySelectorAll(
+          ".room-item"
+      );
+
+  const roomImage =
+      document.getElementById(
+          "roomImageElement"
+      );
+
+  const roomTitle =
+      document.getElementById(
+          "roomTitle"
+      );
+
+  const roomNumber =
+      document.getElementById(
+          "roomNumber"
+      );
+
+
+  roomItems.forEach(item => {
+
+      item.addEventListener(
+          "click",
+          () => {
+
+              roomItems.forEach(
+                  element => {
+
+                      element.classList.remove(
+                          "active"
+                      );
+
+                  }
+              );
+
+
+              item.classList.add(
+                  "active"
+              );
+
+
+              roomImage.style.opacity =
+                  "0";
+
+
+              setTimeout(() => {
+
+                  roomImage.src =
+                      item.dataset.image;
+
+                  roomTitle.textContent =
+                      item.dataset.title;
+
+                  roomNumber.textContent =
+                      item.dataset.number;
+
+                  roomImage.style.opacity =
+                      "1";
+
+              }, 250);
+
+          }
+      );
+
+  });
+
+
+  /* =========================================================
+     ESC KEY
+  ========================================================= */
+
+  document.addEventListener(
+      "keydown",
+      event => {
+
+          if (
+              event.key === "Escape"
+          ) {
+
+              closeDrawer();
+
+              mobileMenu.classList.remove(
+                  "active"
+              );
+
+              document.body.classList.remove(
+                  "drawer-open"
+              );
+
+          }
+
+      }
+  );
+
+
+  /* =========================================================
+     SMOOTH ANCHOR
+  ========================================================= */
+
+  document
+      .querySelectorAll(
+          'a[href^="#"]'
+      )
+      .forEach(link => {
+
+          link.addEventListener(
+              "click",
+              event => {
+
+                  const targetId =
+                      link.getAttribute(
+                          "href"
+                      );
+
+
+                  if (
+                      targetId === "#" ||
+                      !targetId
+                  ) {
+                      return;
+                  }
+
+
+                  const target =
+                      document.querySelector(
+                          targetId
+                      );
+
+
+                  if (!target) {
+                      return;
+                  }
+
+
+                  event.preventDefault();
+
+
+                  target.scrollIntoView({
+                      behavior: "smooth"
+                  });
+
+              }
+          );
+
+      });
+  ```
+</script>

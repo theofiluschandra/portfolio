@@ -1,0 +1,1783 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MIETTE — Artisan Bakery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+      <a href="#" class="logo"> MIETTE<span>®</span> </a>
+
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="#visit">Visit</a>
+      </nav>
+
+      <button class="order-open" id="orderOpen">
+        Order <span id="orderCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+
+      <section class="hero">
+        <div class="hero-top">
+          <span>ARTISAN BAKERY / EST. 2018</span>
+
+          <span>PARIS · JAKARTA · EVERYWHERE</span>
+        </div>
+
+        <div class="hero-layout">
+          <div class="hero-title">
+            <p class="small-title">
+              BAKED WITH<br />
+              PATIENCE.
+            </p>
+
+            <h1>
+              Good<br />
+              things<br />
+              <i>take</i><br />
+              time.
+            </h1>
+
+            <a href="#menu" class="hero-link"> Explore today's bake ↓ </a>
+          </div>
+
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=90"
+              alt="Fresh artisan bread"
+            />
+
+            <div class="image-caption">
+              <span>01</span>
+              <span>THE DAILY LOAF</span>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <div class="rotating-badge">
+              <span>FRESH • HANDMADE • DAILY •</span>
+            </div>
+
+            <p>
+              Slow fermentation. Honest ingredients. Bread that deserves to be
+              remembered.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TICKER ================= -->
+
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>BAKED THIS MORNING</span>
+          <span>BAKED THIS MORNING</span>
+          <span>BAKED THIS MORNING</span>
+          <span>BAKED THIS MORNING</span>
+        </div>
+      </div>
+
+      <!-- ================= INTRO ================= -->
+
+      <section class="intro" id="story">
+        <div class="section-number">01 — STORY</div>
+
+        <div class="intro-content">
+          <h2>
+            We believe<br />
+            <em>simple</em> is<br />
+            never boring.
+          </h2>
+
+          <div class="intro-description">
+            <p>
+              MIETTE started with one simple obsession: making really good
+              bread.
+            </p>
+
+            <p>
+              Every loaf begins before sunrise. Flour, water, wild yeast and
+              time are transformed by hand into something worth slowing down
+              for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MENU ================= -->
+
+      <section class="menu" id="menu">
+        <div class="menu-heading">
+          <div>
+            <span class="section-number"> 02 — TODAY'S MENU </span>
+
+            <h2>
+              Fresh from<br />
+              the <i>oven.</i>
+            </h2>
+          </div>
+
+          <div class="menu-tabs">
+            <button class="menu-tab active" data-category="all">All</button>
+
+            <button class="menu-tab" data-category="bread">Bread</button>
+
+            <button class="menu-tab" data-category="pastry">Pastry</button>
+
+            <button class="menu-tab" data-category="sweet">Sweet</button>
+          </div>
+        </div>
+
+        <div class="menu-list" id="menuList"></div>
+      </section>
+
+      <!-- ================= FEATURE ================= -->
+
+      <section class="feature">
+        <div class="feature-image">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=90"
+            alt="Fresh croissant"
+          />
+        </div>
+
+        <div class="feature-copy">
+          <span class="section-number"> MIETTE / 03 </span>
+
+          <h2>
+            Butter<br />
+            makes<br />
+            <i>everything</i><br />
+            better.
+          </h2>
+
+          <p>
+            Our laminated pastries take three days, plenty of butter and an
+            unreasonable amount of attention.
+          </p>
+
+          <button class="dark-button" onclick="scrollToMenu()">
+            Shop pastries →
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= MANIFESTO ================= -->
+
+      <section class="manifesto">
+        <div class="manifesto-left">
+          THE MIETTE<br />
+          MANIFESTO
+        </div>
+
+        <div class="manifesto-main">
+          <p>
+            NO SHORTCUTS.<br />
+            NO RUSH.<br />
+            NO BORING BREAD.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= VISIT ================= -->
+
+      <section class="visit" id="visit">
+        <div class="visit-image">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=90"
+            alt="Bakery interior"
+          />
+        </div>
+
+        <div class="visit-copy">
+          <span class="section-number"> 04 — COME BY </span>
+
+          <h2>
+            Meet us<br />
+            over <i>coffee.</i>
+          </h2>
+
+          <div class="location">
+            <strong>MIETTE CENTRAL</strong>
+
+            <p>
+              24 Morning Street<br />
+              Jakarta, Indonesia
+            </p>
+
+            <p>
+              Mon — Sun<br />
+              07:00 — 20:00
+            </p>
+          </div>
+
+          <a href="#" class="text-link"> Get directions → </a>
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+
+      <footer>
+        <div class="footer-brand">MIETTE<span>®</span></div>
+
+        <div>
+          Artisan bakery<br />
+          baked every day.
+        </div>
+
+        <div>
+          Instagram<br />
+          WhatsApp
+        </div>
+
+        <div class="footer-copy">© 2026 MIETTE</div>
+      </footer>
+    </main>
+
+    <!-- ================= ORDER DRAWER ================= -->
+
+    <div class="order-overlay" id="orderOverlay"></div>
+
+    <aside class="order-drawer" id="orderDrawer">
+      <div class="order-header">
+        <div>
+          <span>YOUR ORDER</span>
+          <h2>Basket</h2>
+        </div>
+
+        <button id="orderClose">×</button>
+      </div>
+
+      <div class="order-items" id="orderItems">
+        <p class="empty-order">Your basket is empty.</p>
+      </div>
+
+      <div class="order-footer">
+        <div class="total">
+          <span>Total</span>
+
+          <strong id="orderTotal"> Rp 0 </strong>
+        </div>
+
+        <button id="checkout">Place order →</button>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<style>
+  /* =========================
+   VARIABLES
+========================= */
+
+  :root {
+    --butter: #f3e7c5;
+    --cream: #f8f4eb;
+    --espresso: #241c18;
+    --tomato: #d94a38;
+    --sage: #66735c;
+    --line: #d8cfbd;
+
+    --serif: "Bodoni Moda", serif;
+    --sans: "Manrope", sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--cream);
+
+    color: var(--espresso);
+
+    font-family: var(--sans);
+
+    overflow-x: hidden;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    border: 0;
+    cursor: pointer;
+  }
+
+  /* =========================
+   HEADER
+========================= */
+
+  .header {
+    height: 80px;
+
+    padding: 0 5vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .logo {
+    font-family: var(--serif);
+
+    font-size: 30px;
+
+    letter-spacing: -2px;
+  }
+
+  .logo span {
+    font-size: 10px;
+  }
+
+  .header nav {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+  }
+
+  .header nav a {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+  }
+
+  .order-open {
+    justify-self: end;
+
+    background: var(--tomato);
+
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 100px;
+
+    font-size: 11px;
+  }
+
+  .order-open span {
+    margin-left: 7px;
+
+    opacity: 0.7;
+  }
+
+  /* =========================
+   HERO
+========================= */
+
+  .hero {
+    padding: 25px 5vw 90px;
+  }
+
+  .hero-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    letter-spacing: 0.14em;
+  }
+
+  .hero-layout {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1.3fr 0.45fr;
+
+    gap: 30px;
+
+    align-items: end;
+  }
+
+  .small-title {
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+  }
+
+  .hero-title h1 {
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 9vw, 150px);
+
+    line-height: 0.76;
+
+    letter-spacing: -7px;
+
+    font-weight: 400;
+  }
+
+  .hero-title h1 i {
+    color: var(--tomato);
+
+    font-weight: 400;
+  }
+
+  .hero-link {
+    display: inline-block;
+
+    margin-top: 55px;
+
+    font-size: 11px;
+
+    border-bottom: 1px solid var(--espresso);
+
+    padding-bottom: 7px;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image img {
+    height: 650px;
+
+    object-fit: cover;
+  }
+
+  .image-caption {
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 15px;
+
+    right: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .hero-side {
+    align-self: center;
+
+    padding-bottom: 100px;
+  }
+
+  .hero-side p {
+    margin-top: 60px;
+
+    font-family: var(--serif);
+
+    font-size: 21px;
+
+    line-height: 1.3;
+  }
+
+  /* =========================
+   BADGE
+========================= */
+
+  .rotating-badge {
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 50%;
+
+    background: var(--sage);
+
+    color: white;
+
+    display: grid;
+
+    place-items: center;
+
+    animation: rotateBadge 15s linear infinite;
+  }
+
+  .rotating-badge span {
+    width: 75px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    line-height: 1.5;
+  }
+
+  @keyframes rotateBadge {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* =========================
+   TICKER
+========================= */
+
+  .ticker {
+    background: var(--tomato);
+
+    color: white;
+
+    overflow: hidden;
+
+    padding: 17px 0;
+  }
+
+  .ticker-track {
+    display: flex;
+
+    gap: 70px;
+
+    width: max-content;
+
+    animation: ticker 20s linear infinite;
+  }
+
+  .ticker-track span {
+    font-family: var(--serif);
+
+    font-size: 27px;
+
+    white-space: nowrap;
+  }
+
+  @keyframes ticker {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* =========================
+   INTRO
+========================= */
+
+  .intro {
+    padding: 150px 5vw;
+
+    display: grid;
+
+    grid-template-columns: 0.6fr 2fr;
+  }
+
+  .section-number {
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+  }
+
+  .intro-content {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.7fr;
+
+    gap: 80px;
+  }
+
+  .intro h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 7vw, 110px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    font-weight: 400;
+  }
+
+  .intro h2 em {
+    color: var(--tomato);
+
+    font-style: italic;
+  }
+
+  .intro-description {
+    padding-top: 20px;
+  }
+
+  .intro-description p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+  }
+
+  /* =========================
+   MENU
+========================= */
+
+  .menu {
+    background: var(--butter);
+
+    padding: 120px 5vw;
+  }
+
+  .menu-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 70px;
+  }
+
+  .menu-heading h2 {
+    font-family: var(--serif);
+
+    font-weight: 400;
+
+    font-size: clamp(60px, 8vw, 120px);
+
+    line-height: 0.8;
+
+    letter-spacing: -6px;
+
+    margin-top: 25px;
+  }
+
+  .menu-heading h2 i {
+    color: var(--tomato);
+  }
+
+  .menu-tabs {
+    display: flex;
+
+    gap: 8px;
+  }
+
+  .menu-tab {
+    background: transparent;
+
+    border: 1px solid #c8bda7;
+
+    padding: 10px 15px;
+
+    border-radius: 100px;
+
+    font-size: 10px;
+  }
+
+  .menu-tab.active {
+    background: var(--espresso);
+
+    color: white;
+
+    border-color: var(--espresso);
+  }
+
+  /* =========================
+   MENU LIST
+========================= */
+
+  .menu-list {
+    border-top: 1px solid var(--espresso);
+  }
+
+  .menu-item {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 1fr auto;
+
+    gap: 25px;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    transition: 0.3s;
+  }
+
+  .menu-item:hover {
+    padding-left: 15px;
+
+    padding-right: 15px;
+
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .menu-number {
+    font-size: 10px;
+
+    color: #8a806e;
+  }
+
+  .menu-name {
+    font-family: var(--serif);
+
+    font-size: 27px;
+  }
+
+  .menu-description {
+    font-size: 11px;
+
+    color: #776f61;
+  }
+
+  .menu-price {
+    font-size: 12px;
+
+    white-space: nowrap;
+  }
+
+  .add-item {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: var(--tomato);
+
+    color: white;
+
+    font-size: 18px;
+  }
+
+  .add-item:hover {
+    background: var(--espresso);
+  }
+
+  /* =========================
+   FEATURE
+========================= */
+
+  .feature {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .feature-image img {
+    height: 700px;
+
+    object-fit: cover;
+  }
+
+  .feature-copy {
+    background: var(--sage);
+
+    color: white;
+
+    padding: 10vw 7vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+  .feature-copy h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 400;
+
+    margin: 35px 0;
+  }
+
+  .feature-copy h2 i {
+    color: var(--butter);
+  }
+
+  .feature-copy p {
+    max-width: 380px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+  }
+
+  .dark-button {
+    width: fit-content;
+
+    padding: 15px 20px;
+
+    background: var(--espresso);
+
+    color: white;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+  }
+
+  /* =========================
+   MANIFESTO
+========================= */
+
+  .manifesto {
+    padding: 150px 5vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    background: var(--espresso);
+
+    color: white;
+  }
+
+  .manifesto-left {
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .manifesto-main p {
+    font-family: var(--serif);
+
+    font-size: clamp(60px, 9vw, 140px);
+
+    line-height: 0.82;
+
+    letter-spacing: -6px;
+  }
+
+  /* =========================
+   VISIT
+========================= */
+
+  .visit {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .visit-image img {
+    height: 650px;
+
+    object-fit: cover;
+  }
+
+  .visit-copy {
+    padding: 10vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+  }
+
+  .visit-copy h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    margin: 30px 0 60px;
+
+    font-weight: 400;
+  }
+
+  .visit-copy h2 i {
+    color: var(--tomato);
+  }
+
+  .location {
+    border-top: 1px solid var(--line);
+
+    padding-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+  .location strong {
+    font-size: 10px;
+  }
+
+  .text-link {
+    margin-top: 50px;
+
+    font-size: 11px;
+
+    text-decoration: underline;
+  }
+
+  /* =========================
+   FOOTER
+========================= */
+
+  footer {
+    padding: 50px 5vw;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 30px;
+
+    border-top: 1px solid var(--line);
+
+    font-size: 10px;
+
+    line-height: 1.8;
+  }
+
+  .footer-brand {
+    font-family: var(--serif);
+
+    font-size: 35px;
+  }
+
+  .footer-brand span {
+    font-size: 9px;
+  }
+
+  .footer-copy {
+    text-align: right;
+  }
+
+  /* =========================
+   ORDER DRAWER
+========================= */
+
+  .order-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(36, 28, 24, 0.55);
+
+    z-index: 90;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+  }
+
+  .order-overlay.active {
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+  .order-drawer {
+    position: fixed;
+
+    right: 0;
+
+    top: 0;
+
+    width: min(460px, 100%);
+
+    height: 100vh;
+
+    z-index: 100;
+
+    background: var(--cream);
+
+    transform: translateX(100%);
+
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .order-drawer.active {
+    transform: translateX(0);
+  }
+
+  .order-header {
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .order-header span {
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+  }
+
+  .order-header h2 {
+    font-family: var(--serif);
+
+    font-size: 42px;
+
+    font-weight: 400;
+  }
+
+  .order-header button {
+    font-size: 30px;
+  }
+
+  .order-items {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 25px;
+  }
+
+  .empty-order {
+    text-align: center;
+
+    padding: 80px 0;
+
+    color: #888;
+
+    font-size: 12px;
+  }
+
+  .order-item {
+    display: grid;
+
+    grid-template-columns: 70px 1fr auto;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .order-item-image {
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: cover;
+  }
+
+  .order-item h4 {
+    font-family: var(--serif);
+
+    font-size: 18px;
+  }
+
+  .order-item p {
+    font-size: 11px;
+
+    margin-top: 5px;
+  }
+
+  .quantity {
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  .quantity button {
+    width: 22px;
+
+    height: 22px;
+
+    border: 1px solid var(--line);
+  }
+
+  .remove {
+    font-size: 9px;
+
+    text-decoration: underline;
+  }
+
+  .order-footer {
+    padding: 25px;
+
+    border-top: 1px solid var(--line);
+  }
+
+  .total {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+
+  .total strong {
+    font-family: var(--serif);
+
+    font-size: 27px;
+  }
+
+  #checkout {
+    width: 100%;
+
+    background: var(--tomato);
+
+    color: white;
+
+    padding: 18px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+  }
+
+  /* =========================
+   RESPONSIVE
+========================= */
+
+  @media (max-width: 900px) {
+    .header {
+      grid-template-columns: 1fr auto;
+    }
+
+    .header nav {
+      display: none;
+    }
+
+    .hero-layout {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-title {
+      grid-column: 1 / -1;
+    }
+
+    .hero-image {
+      grid-column: 1 / -1;
+    }
+
+    .hero-side {
+      display: none;
+    }
+
+    .intro {
+      grid-template-columns: 1fr;
+
+      gap: 40px;
+    }
+
+    .intro-content {
+      grid-template-columns: 1fr;
+
+      gap: 40px;
+    }
+
+    .menu-heading {
+      flex-direction: column;
+
+      align-items: start;
+
+      gap: 40px;
+    }
+
+    .menu-item {
+      grid-template-columns: 45px 1fr auto;
+    }
+
+    .menu-description {
+      display: none;
+    }
+
+    .feature {
+      grid-template-columns: 1fr;
+    }
+
+    .visit {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-copy {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      padding: 0 20px;
+    }
+
+    .hero {
+      padding-left: 20px;
+
+      padding-right: 20px;
+    }
+
+    .hero-top {
+      font-size: 8px;
+    }
+
+    .hero-top span:last-child {
+      display: none;
+    }
+
+    .hero-layout {
+      display: block;
+    }
+
+    .hero-title h1 {
+      font-size: 22vw;
+
+      letter-spacing: -5px;
+
+      margin-bottom: 60px;
+    }
+
+    .hero-image img {
+      height: 450px;
+    }
+
+    .intro,
+    .menu,
+    .manifesto {
+      padding: 90px 20px;
+    }
+
+    .menu-heading h2 {
+      font-size: 18vw;
+
+      letter-spacing: -4px;
+    }
+
+    .menu-tabs {
+      flex-wrap: wrap;
+    }
+
+    .menu-item {
+      grid-template-columns: 35px 1fr auto;
+
+      gap: 10px;
+    }
+
+    .menu-name {
+      font-size: 21px;
+    }
+
+    .feature-image img {
+      height: 450px;
+    }
+
+    .feature-copy {
+      padding: 90px 20px;
+    }
+
+    .manifesto-main p {
+      font-size: 17vw;
+
+      letter-spacing: -4px;
+    }
+
+    .visit-copy {
+      padding: 90px 20px;
+    }
+
+    .visit-image img {
+      height: 450px;
+    }
+
+    .location {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      grid-template-columns: 1fr;
+
+      padding: 40px 20px;
+    }
+  }
+</style>
+
+<script>
+  /* =========================
+   MENU DATA
+========================= */
+
+  const menu = [
+    {
+      id: 1,
+      name: "Country Sourdough",
+      category: "bread",
+      description: "72-hour fermentation · Sea salt",
+      price: 58000,
+      image:
+        "https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=500&q=85",
+    },
+
+    {
+      id: 2,
+      name: "Butter Croissant",
+      category: "pastry",
+      description: "French butter · 3-day process",
+      price: 32000,
+      image:
+        "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=85",
+    },
+
+    {
+      id: 3,
+      name: "Pain au Chocolat",
+      category: "pastry",
+      description: "Dark chocolate · French butter",
+      price: 38000,
+      image:
+        "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=85",
+    },
+
+    {
+      id: 4,
+      name: "Sea Salt Focaccia",
+      category: "bread",
+      description: "Olive oil · Rosemary · Sea salt",
+      price: 45000,
+      image:
+        "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&q=85",
+    },
+
+    {
+      id: 5,
+      name: "Basque Cheesecake",
+      category: "sweet",
+      description: "Burnt top · Vanilla bean",
+      price: 65000,
+      image:
+        "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=500&q=85",
+    },
+
+    {
+      id: 6,
+      name: "Cinnamon Morning Bun",
+      category: "sweet",
+      description: "Brown butter · Cinnamon sugar",
+      price: 35000,
+      image:
+        "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=85",
+    },
+  ];
+
+  /* =========================
+   STATE
+========================= */
+
+  let basket = [];
+
+  /* =========================
+   ELEMENTS
+========================= */
+
+  const menuList = document.getElementById("menuList");
+
+  const orderItems = document.getElementById("orderItems");
+
+  const orderCount = document.getElementById("orderCount");
+
+  const orderTotal = document.getElementById("orderTotal");
+
+  const orderDrawer = document.getElementById("orderDrawer");
+
+  const orderOverlay = document.getElementById("orderOverlay");
+
+  /* =========================
+   FORMAT PRICE
+========================= */
+
+  function formatPrice(value) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0,
+    }).format(value);
+  }
+
+  /* =========================
+   RENDER MENU
+========================= */
+
+  function renderMenu(category = "all") {
+    menuList.innerHTML = "";
+
+    const filtered =
+      category === "all"
+        ? menu
+        : menu.filter((item) => item.category === category);
+
+    filtered.forEach((item, index) => {
+      const element = document.createElement("div");
+
+      element.className = "menu-item";
+
+      element.innerHTML = `
+
+            <span class="menu-number">
+                ${String(index + 1).padStart(2, "0")}
+            </span>
+
+            <div class="menu-name">
+                ${item.name}
+            </div>
+
+            <div class="menu-description">
+                ${item.description}
+            </div>
+
+            <div class="menu-price">
+                ${formatPrice(item.price)}
+            </div>
+
+            <button
+                class="add-item"
+                data-id="${item.id}"
+            >
+                +
+            </button>
+
+        `;
+
+      menuList.appendChild(element);
+    });
+  }
+
+  renderMenu();
+
+  /* =========================
+   CATEGORY FILTER
+========================= */
+
+  document.querySelectorAll(".menu-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      document
+        .querySelectorAll(".menu-tab")
+        .forEach((item) => item.classList.remove("active"));
+
+      tab.classList.add("active");
+
+      renderMenu(tab.dataset.category);
+    });
+  });
+
+  /* =========================
+   ADD ITEM
+========================= */
+
+  menuList.addEventListener("click", (event) => {
+    const button = event.target.closest(".add-item");
+
+    if (!button) return;
+
+    const id = Number(button.dataset.id);
+
+    addToBasket(id);
+  });
+
+  function addToBasket(id) {
+    const product = menu.find((item) => item.id === id);
+
+    const existing = basket.find((item) => item.id === id);
+
+    if (existing) {
+      existing.quantity++;
+    } else {
+      basket.push({
+        ...product,
+
+        quantity: 1,
+      });
+    }
+
+    updateBasket();
+
+    openOrder();
+  }
+
+  /* =========================
+   UPDATE BASKET
+========================= */
+
+  function updateBasket() {
+    renderBasket();
+
+    updateCount();
+
+    updateTotal();
+  }
+
+  /* =========================
+   COUNT
+========================= */
+
+  function updateCount() {
+    const count = basket.reduce((total, item) => total + item.quantity, 0);
+
+    orderCount.textContent = count;
+  }
+
+  /* =========================
+   TOTAL
+========================= */
+
+  function updateTotal() {
+    const total = basket.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0,
+    );
+
+    orderTotal.textContent = formatPrice(total);
+  }
+
+  /* =========================
+   RENDER BASKET
+========================= */
+
+  function renderBasket() {
+    if (basket.length === 0) {
+      orderItems.innerHTML = `
+
+            <p class="empty-order">
+                Your basket is empty.
+            </p>
+
+        `;
+
+      return;
+    }
+
+    orderItems.innerHTML = "";
+
+    basket.forEach((item) => {
+      const element = document.createElement("div");
+
+      element.className = "order-item";
+
+      element.innerHTML = `
+
+            <img
+                class="order-item-image"
+                src="${item.image}"
+                alt="${item.name}"
+            >
+
+            <div>
+
+                <h4>
+                    ${item.name}
+                </h4>
+
+                <p>
+                    ${formatPrice(item.price)}
+                </p>
+
+                <div class="quantity">
+
+                    <button
+                        data-action="minus"
+                        data-id="${item.id}"
+                    >
+                        −
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        data-action="plus"
+                        data-id="${item.id}"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button
+                class="remove"
+                data-action="remove"
+                data-id="${item.id}"
+            >
+                Remove
+            </button>
+
+        `;
+
+      orderItems.appendChild(element);
+    });
+  }
+
+  /* =========================
+   BASKET ACTIONS
+========================= */
+
+  orderItems.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-action]");
+
+    if (!button) return;
+
+    const id = Number(button.dataset.id);
+
+    const action = button.dataset.action;
+
+    const item = basket.find((item) => item.id === id);
+
+    if (!item) return;
+
+    if (action === "plus") {
+      item.quantity++;
+    }
+
+    if (action === "minus") {
+      item.quantity--;
+
+      if (item.quantity <= 0) {
+        basket = basket.filter((item) => item.id !== id);
+      }
+    }
+
+    if (action === "remove") {
+      basket = basket.filter((item) => item.id !== id);
+    }
+
+    updateBasket();
+  });
+
+  /* =========================
+   OPEN ORDER
+========================= */
+
+  document.getElementById("orderOpen").addEventListener("click", openOrder);
+
+  function openOrder() {
+    orderDrawer.classList.add("active");
+
+    orderOverlay.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+  }
+
+  /* =========================
+   CLOSE ORDER
+========================= */
+
+  document.getElementById("orderClose").addEventListener("click", closeOrder);
+
+  orderOverlay.addEventListener("click", closeOrder);
+
+  function closeOrder() {
+    orderDrawer.classList.remove("active");
+
+    orderOverlay.classList.remove("active");
+
+    document.body.style.overflow = "";
+  }
+
+  /* =========================
+   CHECKOUT
+========================= */
+
+  document.getElementById("checkout").addEventListener("click", () => {
+    if (basket.length === 0) {
+      alert("Please add something to your basket first.");
+
+      return;
+    }
+
+    const orderText = basket
+      .map((item) => `${item.name} x${item.quantity}`)
+      .join("\n");
+
+    alert(
+      `Thank you!\n\nYour order:\n${orderText}\n\nTotal: ${orderTotal.textContent}`,
+    );
+  });
+
+  /* =========================
+   SCROLL TO MENU
+========================= */
+
+  function scrollToMenu() {
+    document.getElementById("menu").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+</script>

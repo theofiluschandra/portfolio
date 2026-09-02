@@ -1,0 +1,2398 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="KOPI 88 — Chinese Kopitiam serving traditional coffee, noodles, rice dishes and nostalgic favourites."
+    />
+
+    <title>KOPI 88 — Chinese Kopitiam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Serif+SC:wght@400;600;700;900&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =====================================================
+       ROOT
+    ===================================================== */
+
+      :root {
+        --red: #b32127;
+
+        --red-dark: #78171c;
+
+        --red-deep: #541114;
+
+        --cream: #f6ebdd;
+
+        --cream-dark: #ebd8c3;
+
+        --gold: #c89b50;
+
+        --gold-light: #e0bd76;
+
+        --black: #241715;
+
+        --white: #fff9f2;
+
+        --muted: #806e65;
+
+        --serif: "DM Serif Display", serif;
+
+        --chinese: "Noto Serif SC", serif;
+
+        --sans: "Manrope", sans-serif;
+      }
+
+      /* =====================================================
+       RESET
+    ===================================================== */
+
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+
+        color: var(--black);
+
+        font-family: var(--sans);
+
+        overflow-x: hidden;
+      }
+
+      img {
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select {
+        font-family: inherit;
+      }
+
+      /* =====================================================
+       TOP BAR
+    ===================================================== */
+
+      .topbar {
+        min-height: 36px;
+
+        padding: 0 6vw;
+
+        background: var(--red-dark);
+
+        color: var(--cream);
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        font-size: 8px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+      }
+
+      .topbar-left {
+        display: flex;
+
+        gap: 20px;
+      }
+
+      .topbar-right {
+        color: var(--gold-light);
+      }
+
+      /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+      .navbar {
+        height: 88px;
+
+        padding: 0 6vw;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        background: var(--red);
+
+        color: var(--cream);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+        position: relative;
+
+        z-index: 100;
+      }
+
+      .logo {
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+      }
+
+      .logo-seal {
+        width: 47px;
+
+        height: 47px;
+
+        border: 2px solid var(--gold-light);
+
+        color: var(--gold-light);
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-family: var(--chinese);
+
+        font-size: 23px;
+
+        position: relative;
+      }
+
+      .logo-seal::before,
+      .logo-seal::after {
+        content: "";
+
+        position: absolute;
+
+        width: 5px;
+
+        height: 5px;
+
+        background: var(--gold-light);
+      }
+
+      .logo-seal::before {
+        top: 4px;
+
+        left: 4px;
+      }
+
+      .logo-seal::after {
+        right: 4px;
+
+        bottom: 4px;
+      }
+
+      .logo-name {
+        font-family: var(--serif);
+
+        font-size: 23px;
+
+        letter-spacing: 0.03em;
+      }
+
+      .logo-name small {
+        display: block;
+
+        font-family: var(--sans);
+
+        font-size: 6px;
+
+        letter-spacing: 0.22em;
+
+        font-weight: 700;
+
+        margin-top: 3px;
+
+        color: var(--gold-light);
+      }
+
+      .nav-links {
+        display: flex;
+
+        align-items: center;
+
+        gap: 32px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+
+        transition: 0.25s;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold-light);
+      }
+
+      .nav-reserve {
+        border: 1px solid var(--gold-light);
+
+        padding: 12px 18px;
+
+        color: var(--gold-light) !important;
+      }
+
+      .nav-reserve:hover {
+        background: var(--gold-light);
+
+        color: var(--red-dark) !important;
+      }
+
+      /* =====================================================
+       MENU BUTTON
+    ===================================================== */
+
+      .menu-button {
+        display: none;
+
+        width: 40px;
+
+        height: 40px;
+
+        border: 1px solid var(--gold-light);
+
+        background: transparent;
+
+        cursor: pointer;
+
+        position: relative;
+      }
+
+      .menu-button span {
+        position: absolute;
+
+        width: 18px;
+
+        height: 1px;
+
+        left: 10px;
+
+        background: var(--gold-light);
+
+        transition: 0.3s;
+      }
+
+      .menu-button span:first-child {
+        top: 15px;
+      }
+
+      .menu-button span:last-child {
+        top: 23px;
+      }
+
+      .menu-button.active span:first-child {
+        top: 19px;
+
+        transform: rotate(45deg);
+      }
+
+      .menu-button.active span:last-child {
+        top: 19px;
+
+        transform: rotate(-45deg);
+      }
+
+      /* =====================================================
+       MOBILE NAV
+    ===================================================== */
+
+      .mobile-nav {
+        position: fixed;
+
+        inset: 0;
+
+        background: var(--red-dark);
+
+        color: var(--cream);
+
+        z-index: 90;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        transform: translateY(-100%);
+
+        transition: 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+      }
+
+      .mobile-nav.active {
+        transform: translateY(0);
+      }
+
+      .mobile-links {
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+      }
+
+      .mobile-links a {
+        font-family: var(--serif);
+
+        font-size: 54px;
+      }
+
+      /* =====================================================
+       HERO
+    ===================================================== */
+
+      .hero {
+        min-height: 700px;
+
+        background: var(--red);
+
+        color: var(--cream);
+
+        display: grid;
+
+        grid-template-columns: 43% 57%;
+
+        padding: 75px 6vw;
+
+        position: relative;
+
+        overflow: hidden;
+      }
+
+      /* Chinese pattern */
+
+      .hero::before {
+        content: "福";
+
+        position: absolute;
+
+        right: 4%;
+
+        top: -90px;
+
+        font-family: var(--chinese);
+
+        font-size: 430px;
+
+        color: rgba(255, 255, 255, 0.035);
+
+        pointer-events: none;
+      }
+
+      .hero-content {
+        align-self: center;
+
+        position: relative;
+
+        z-index: 2;
+      }
+
+      .hero-kicker {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        color: var(--gold-light);
+
+        font-size: 8px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.16em;
+      }
+
+      .hero-kicker::before {
+        content: "";
+
+        width: 35px;
+
+        height: 1px;
+
+        background: var(--gold-light);
+      }
+
+      .hero-title {
+        font-family: var(--serif);
+
+        font-weight: 400;
+
+        font-size: clamp(65px, 8vw, 125px);
+
+        line-height: 0.82;
+
+        margin-top: 25px;
+
+        letter-spacing: -0.04em;
+      }
+
+      .hero-title em {
+        display: block;
+
+        color: var(--gold-light);
+
+        font-style: italic;
+      }
+
+      .hero-chinese {
+        font-family: var(--chinese);
+
+        font-size: 17px;
+
+        letter-spacing: 0.5em;
+
+        color: var(--cream);
+
+        margin-top: 28px;
+      }
+
+      .hero-description {
+        max-width: 390px;
+
+        color: #e6cfc1;
+
+        font-size: 11px;
+
+        line-height: 1.9;
+
+        margin-top: 25px;
+      }
+
+      .hero-actions {
+        display: flex;
+
+        gap: 10px;
+
+        margin-top: 32px;
+      }
+
+      .button {
+        padding: 15px 22px;
+
+        font-size: 8px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        transition: 0.3s;
+      }
+
+      .button-gold {
+        background: var(--gold-light);
+
+        color: var(--red-dark);
+      }
+
+      .button-gold:hover {
+        background: var(--cream);
+      }
+
+      .button-outline {
+        border: 1px solid rgba(246, 235, 221, 0.55);
+      }
+
+      .button-outline:hover {
+        background: var(--cream);
+
+        color: var(--red-dark);
+      }
+
+      /* =====================================================
+       HERO IMAGE
+    ===================================================== */
+
+      .hero-visual {
+        position: relative;
+
+        height: 550px;
+
+        align-self: center;
+      }
+
+      .hero-image {
+        width: 83%;
+
+        height: 100%;
+
+        margin-left: auto;
+
+        overflow: hidden;
+
+        position: relative;
+
+        border: 1px solid rgba(200, 155, 80, 0.55);
+      }
+
+      .hero-image::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: linear-gradient(
+          180deg,
+          transparent 50%,
+          rgba(50, 0, 0, 0.45)
+        );
+      }
+
+      .hero-image img {
+        transition: 1s;
+      }
+
+      .hero:hover .hero-image img {
+        transform: scale(1.04);
+      }
+
+      .hero-stamp {
+        position: absolute;
+
+        left: 3%;
+
+        bottom: 35px;
+
+        width: 110px;
+
+        height: 110px;
+
+        background: var(--cream);
+
+        color: var(--red);
+
+        border-radius: 50%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        transform: rotate(-10deg);
+
+        border: 5px solid var(--red);
+
+        outline: 1px solid var(--gold-light);
+      }
+
+      .hero-stamp strong {
+        font-family: var(--chinese);
+
+        font-size: 31px;
+
+        line-height: 1;
+      }
+
+      .hero-stamp span {
+        font-size: 6px;
+
+        font-weight: 800;
+
+        letter-spacing: 0.1em;
+
+        margin-top: 5px;
+      }
+
+      .hero-menu-card {
+        position: absolute;
+
+        right: 0;
+
+        top: 25px;
+
+        background: var(--cream);
+
+        color: var(--black);
+
+        width: 145px;
+
+        padding: 18px;
+
+        border-left: 4px solid var(--gold);
+      }
+
+      .hero-menu-card small {
+        font-size: 6px;
+
+        color: var(--red);
+
+        text-transform: uppercase;
+
+        font-weight: 800;
+
+        letter-spacing: 0.15em;
+      }
+
+      .hero-menu-card h3 {
+        font-family: var(--serif);
+
+        font-size: 23px;
+
+        font-weight: 400;
+
+        margin: 5px 0;
+      }
+
+      .hero-menu-card p {
+        color: var(--muted);
+
+        font-size: 7px;
+
+        line-height: 1.6;
+      }
+
+      /* =====================================================
+       GOLD DIVIDER
+    ===================================================== */
+
+      .gold-divider {
+        height: 5px;
+
+        background: var(--gold);
+      }
+
+      /* =====================================================
+       INTRO
+    ===================================================== */
+
+      .intro {
+        padding: 125px 7vw;
+
+        display: grid;
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 100px;
+
+        align-items: center;
+
+        position: relative;
+      }
+
+      .intro-symbol {
+        font-family: var(--chinese);
+
+        color: var(--red);
+
+        font-size: 180px;
+
+        line-height: 1;
+
+        text-align: center;
+
+        border: 1px solid rgba(179, 33, 39, 0.25);
+
+        padding: 50px;
+
+        position: relative;
+      }
+
+      .intro-symbol::after {
+        content: "TRADITION • FLAVOUR • FAMILY";
+
+        position: absolute;
+
+        bottom: 22px;
+
+        left: 0;
+
+        right: 0;
+
+        font-family: var(--sans);
+
+        font-size: 7px;
+
+        letter-spacing: 0.18em;
+
+        color: var(--muted);
+      }
+
+      .section-label {
+        color: var(--red);
+
+        font-size: 8px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.15em;
+      }
+
+      .intro h2 {
+        font-family: var(--serif);
+
+        font-weight: 400;
+
+        font-size: clamp(55px, 6vw, 90px);
+
+        line-height: 0.9;
+
+        margin: 20px 0 30px;
+      }
+
+      .intro h2 span {
+        color: var(--red);
+
+        font-style: italic;
+      }
+
+      .intro p {
+        max-width: 520px;
+
+        color: var(--muted);
+
+        font-size: 11px;
+
+        line-height: 2;
+      }
+
+      .intro-link {
+        display: inline-block;
+
+        margin-top: 28px;
+
+        color: var(--red);
+
+        font-size: 8px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        border-bottom: 1px solid var(--red);
+
+        padding-bottom: 5px;
+      }
+
+      /* =====================================================
+       MENU
+    ===================================================== */
+
+      .menu-section {
+        background: var(--cream-dark);
+
+        padding: 120px 7vw;
+
+        position: relative;
+      }
+
+      .menu-section::before {
+        content: "茶";
+
+        position: absolute;
+
+        right: 5%;
+
+        top: 30px;
+
+        font-family: var(--chinese);
+
+        font-size: 230px;
+
+        color: rgba(179, 33, 39, 0.045);
+      }
+
+      .menu-header {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        margin-bottom: 55px;
+
+        position: relative;
+      }
+
+      .menu-header h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(65px, 7vw, 105px);
+
+        line-height: 0.8;
+
+        font-weight: 400;
+      }
+
+      .menu-header h2 span {
+        color: var(--red);
+      }
+
+      .menu-header p {
+        max-width: 300px;
+
+        color: var(--muted);
+
+        font-size: 9px;
+
+        line-height: 1.8;
+      }
+
+      .filters {
+        display: flex;
+
+        gap: 7px;
+
+        margin-bottom: 40px;
+
+        flex-wrap: wrap;
+      }
+
+      .filter {
+        border: 1px solid rgba(36, 23, 21, 0.25);
+
+        background: transparent;
+
+        padding: 10px 16px;
+
+        border-radius: 2px;
+
+        font-size: 7px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+
+        color: var(--black);
+
+        cursor: pointer;
+
+        transition: 0.25s;
+      }
+
+      .filter:hover,
+      .filter.active {
+        background: var(--red);
+
+        color: var(--cream);
+
+        border-color: var(--red);
+      }
+
+      .menu-list {
+        border-top: 2px solid var(--red);
+
+        position: relative;
+      }
+
+      .menu-item {
+        display: grid;
+
+        grid-template-columns: 55px 1fr 1.2fr 100px;
+
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 25px 10px;
+
+        border-bottom: 1px solid rgba(36, 23, 21, 0.16);
+
+        transition: 0.3s;
+      }
+
+      .menu-item:hover {
+        background: rgba(179, 33, 39, 0.06);
+
+        padding-left: 20px;
+      }
+
+      .menu-item.hidden {
+        display: none;
+      }
+
+      .menu-no {
+        font-family: var(--chinese);
+
+        color: var(--red);
+
+        font-size: 19px;
+      }
+
+      .menu-name {
+        font-family: var(--serif);
+
+        font-size: 26px;
+
+        font-weight: 400;
+      }
+
+      .menu-description {
+        color: var(--muted);
+
+        font-size: 8px;
+
+        line-height: 1.7;
+      }
+
+      .menu-price {
+        text-align: right;
+
+        color: var(--red);
+
+        font-size: 9px;
+
+        font-weight: 800;
+      }
+
+      /* =====================================================
+       FEATURE
+    ===================================================== */
+
+      .feature {
+        padding: 140px 7vw;
+
+        display: grid;
+
+        grid-template-columns: 55% 45%;
+
+        gap: 90px;
+
+        align-items: center;
+      }
+
+      .feature-image {
+        height: 580px;
+
+        position: relative;
+      }
+
+      .feature-image img {
+        border: 1px solid rgba(179, 33, 39, 0.25);
+      }
+
+      .feature-tag {
+        position: absolute;
+
+        bottom: 25px;
+
+        left: 25px;
+
+        background: var(--red);
+
+        color: var(--cream);
+
+        padding: 12px 17px;
+
+        font-size: 7px;
+
+        text-transform: uppercase;
+
+        font-weight: 800;
+
+        letter-spacing: 0.12em;
+      }
+
+      .feature-content h2 {
+        font-family: var(--serif);
+
+        font-weight: 400;
+
+        font-size: clamp(55px, 6vw, 90px);
+
+        line-height: 0.87;
+
+        margin: 20px 0 30px;
+      }
+
+      .feature-content h2 span {
+        color: var(--red);
+      }
+
+      .feature-content p {
+        max-width: 450px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+
+        line-height: 2;
+      }
+
+      .feature-price {
+        margin-top: 30px;
+
+        color: var(--red);
+
+        font-family: var(--serif);
+
+        font-size: 35px;
+      }
+
+      /* =====================================================
+       GALLERY
+    ===================================================== */
+
+      .gallery {
+        background: var(--red-dark);
+
+        padding: 120px 7vw;
+
+        color: var(--cream);
+      }
+
+      .gallery-heading {
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: flex-end;
+
+        margin-bottom: 50px;
+      }
+
+      .gallery-heading h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 7vw, 100px);
+
+        line-height: 0.8;
+
+        font-weight: 400;
+      }
+
+      .gallery-heading p {
+        max-width: 280px;
+
+        color: #d9beb0;
+
+        font-size: 9px;
+
+        line-height: 1.8;
+      }
+
+      .gallery-grid {
+        display: grid;
+
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+
+        grid-template-rows: 260px 260px;
+
+        gap: 12px;
+      }
+
+      .gallery-item {
+        overflow: hidden;
+
+        border: 1px solid rgba(224, 189, 118, 0.25);
+      }
+
+      .gallery-item:first-child {
+        grid-row: span 2;
+      }
+
+      .gallery-item:nth-child(2) {
+        grid-column: span 2;
+      }
+
+      .gallery-item img {
+        transition: 0.7s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      /* =====================================================
+       QUOTE
+    ===================================================== */
+
+      .quote {
+        padding: 135px 8vw;
+
+        text-align: center;
+
+        background: var(--cream);
+      }
+
+      .quote-symbol {
+        color: var(--red);
+
+        font-family: var(--chinese);
+
+        font-size: 38px;
+      }
+
+      .quote blockquote {
+        max-width: 1000px;
+
+        margin: 25px auto 30px;
+
+        font-family: var(--serif);
+
+        font-size: clamp(38px, 5vw, 70px);
+
+        line-height: 1;
+
+        font-weight: 400;
+      }
+
+      .quote blockquote span {
+        color: var(--red);
+      }
+
+      .quote cite {
+        font-style: normal;
+
+        color: var(--muted);
+
+        font-size: 7px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.16em;
+
+        font-weight: 800;
+      }
+
+      /* =====================================================
+       RESERVATION
+    ===================================================== */
+
+      .reservation {
+        background: var(--cream-dark);
+
+        padding: 120px 7vw;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 100px;
+
+        align-items: center;
+      }
+
+      .reservation h2 {
+        font-family: var(--serif);
+
+        font-size: clamp(60px, 7vw, 100px);
+
+        line-height: 0.8;
+
+        font-weight: 400;
+
+        margin-top: 20px;
+      }
+
+      .reservation h2 span {
+        color: var(--red);
+      }
+
+      .reservation-description {
+        max-width: 400px;
+
+        color: var(--muted);
+
+        font-size: 10px;
+
+        line-height: 1.9;
+
+        margin-top: 30px;
+      }
+
+      .reservation-form {
+        background: var(--red);
+
+        color: var(--cream);
+
+        padding: 40px;
+
+        border-top: 5px solid var(--gold);
+      }
+
+      .reservation-form h3 {
+        font-family: var(--serif);
+
+        font-size: 33px;
+
+        font-weight: 400;
+
+        margin-bottom: 25px;
+      }
+
+      .form-group {
+        margin-bottom: 14px;
+      }
+
+      .form-group label {
+        display: block;
+
+        font-size: 7px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        color: #e5c8b9;
+
+        margin-bottom: 7px;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+
+        height: 44px;
+
+        background: rgba(0, 0, 0, 0.12);
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+
+        color: var(--cream);
+
+        padding: 0 12px;
+
+        outline: none;
+
+        font-size: 9px;
+      }
+
+      .form-group select option {
+        color: var(--black);
+      }
+
+      .form-row {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+      }
+
+      .submit-button {
+        width: 100%;
+
+        height: 47px;
+
+        border: 0;
+
+        margin-top: 7px;
+
+        background: var(--gold-light);
+
+        color: var(--red-dark);
+
+        font-size: 8px;
+
+        font-weight: 800;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.12em;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+      }
+
+      .submit-button:hover {
+        background: var(--cream);
+      }
+
+      /* =====================================================
+       FOOTER
+    ===================================================== */
+
+      footer {
+        background: var(--red-deep);
+
+        color: var(--cream);
+
+        padding: 70px 7vw 25px;
+      }
+
+      .footer-top {
+        display: grid;
+
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+
+        gap: 50px;
+
+        padding-bottom: 65px;
+      }
+
+      .footer-logo {
+        font-family: var(--serif);
+
+        font-size: 50px;
+      }
+
+      .footer-logo-chinese {
+        color: var(--gold-light);
+
+        font-family: var(--chinese);
+
+        font-size: 13px;
+
+        margin-left: 8px;
+      }
+
+      .footer-description {
+        max-width: 300px;
+
+        color: #c8aaa0;
+
+        font-size: 9px;
+
+        line-height: 1.8;
+
+        margin-top: 15px;
+      }
+
+      .footer-column h4 {
+        color: var(--gold-light);
+
+        font-size: 7px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.15em;
+
+        margin-bottom: 18px;
+      }
+
+      .footer-column a,
+      .footer-column p {
+        display: block;
+
+        color: #d5bbb2;
+
+        font-size: 8px;
+
+        margin-bottom: 11px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(224, 189, 118, 0.2);
+
+        padding-top: 20px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        color: #9e7770;
+
+        font-size: 7px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.1em;
+      }
+
+      /* =====================================================
+       REVEAL
+    ===================================================== */
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+
+      .js-enabled .reveal {
+        opacity: 0;
+
+        transform: translateY(30px);
+
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .js-enabled .reveal.visible {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =====================================================
+       TABLET
+    ===================================================== */
+
+      @media (max-width: 1000px) {
+        .nav-links {
+          display: none;
+        }
+
+        .menu-button {
+          display: block;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-visual {
+          margin-top: 50px;
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+
+          gap: 70px;
+        }
+
+        .intro-symbol {
+          max-width: 300px;
+        }
+
+        .feature {
+          grid-template-columns: 1fr;
+        }
+
+        .reservation {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* =====================================================
+       MOBILE
+    ===================================================== */
+
+      @media (max-width: 600px) {
+        .topbar-left {
+          display: none;
+        }
+
+        .topbar {
+          justify-content: center;
+
+          font-size: 7px;
+        }
+
+        .navbar {
+          height: 75px;
+
+          padding: 0 6vw;
+        }
+
+        .logo-name {
+          font-size: 19px;
+        }
+
+        .logo-seal {
+          width: 40px;
+
+          height: 40px;
+        }
+
+        .hero {
+          padding: 70px 6vw;
+
+          min-height: auto;
+        }
+
+        .hero-title {
+          font-size: 19vw;
+        }
+
+        .hero-description {
+          font-size: 10px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+
+          align-items: stretch;
+        }
+
+        .button {
+          text-align: center;
+        }
+
+        .hero-visual {
+          height: 400px;
+
+          margin-top: 45px;
+        }
+
+        .hero-image {
+          width: 88%;
+        }
+
+        .hero-menu-card {
+          width: 120px;
+
+          right: 0;
+        }
+
+        .hero-stamp {
+          width: 90px;
+
+          height: 90px;
+
+          left: 0;
+        }
+
+        .hero-stamp strong {
+          font-size: 24px;
+        }
+
+        .intro {
+          padding: 100px 6vw;
+        }
+
+        .intro-symbol {
+          font-size: 130px;
+
+          padding: 35px;
+        }
+
+        .intro h2 {
+          font-size: 17vw;
+        }
+
+        .menu-section {
+          padding: 100px 6vw;
+        }
+
+        .menu-header {
+          display: block;
+        }
+
+        .menu-header h2 {
+          font-size: 19vw;
+
+          margin-bottom: 30px;
+        }
+
+        .menu-item {
+          grid-template-columns: 35px 1fr auto;
+
+          gap: 10px;
+        }
+
+        .menu-description {
+          display: none;
+        }
+
+        .menu-name {
+          font-size: 21px;
+        }
+
+        .feature {
+          padding: 100px 6vw;
+        }
+
+        .feature-image {
+          height: 400px;
+        }
+
+        .feature-content h2 {
+          font-size: 17vw;
+        }
+
+        .gallery {
+          padding: 100px 6vw;
+        }
+
+        .gallery-heading {
+          display: block;
+        }
+
+        .gallery-heading h2 {
+          font-size: 18vw;
+
+          margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+
+          grid-template-rows: 220px 170px 170px;
+        }
+
+        .gallery-item:first-child {
+          grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(2) {
+          grid-column: span 1;
+        }
+
+        .gallery-item:nth-child(4) {
+          grid-column: span 2;
+        }
+
+        .quote {
+          padding: 100px 6vw;
+        }
+
+        .quote blockquote {
+          font-size: 10vw;
+        }
+
+        .reservation {
+          padding: 100px 6vw;
+        }
+
+        .reservation h2 {
+          font-size: 18vw;
+        }
+
+        .reservation-form {
+          padding: 28px 20px;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+        }
+
+        .footer-logo {
+          font-size: 42px;
+        }
+
+        .footer-bottom {
+          display: block;
+
+          line-height: 2;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     TOP BAR
+====================================================== -->
+
+    <div class="topbar">
+      <div class="topbar-left">
+        <span> Traditional Kopitiam </span>
+
+        <span> Est. 1988 </span>
+      </div>
+
+      <div class="topbar-right">Open Daily · 07:00 — 22:00</div>
+    </div>
+
+    <!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+    <header class="navbar">
+      <a href="#" class="logo">
+        <div class="logo-seal">福</div>
+
+        <div class="logo-name">
+          KOPI 88
+
+          <small> CHINESE KOPITIAM & KITCHEN </small>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#story"> Story </a>
+
+        <a href="#menu"> Menu </a>
+
+        <a href="#space"> Space </a>
+
+        <a href="#contact"> Contact </a>
+
+        <a href="#reservation" class="nav-reserve"> Reserve </a>
+      </nav>
+
+      <button class="menu-button" aria-label="Menu">
+        <span></span>
+
+        <span></span>
+      </button>
+    </header>
+
+    <!-- =====================================================
+     MOBILE NAV
+====================================================== -->
+
+    <div class="mobile-nav">
+      <nav class="mobile-links">
+        <a href="#story"> Story </a>
+
+        <a href="#menu"> Menu </a>
+
+        <a href="#space"> Space </a>
+
+        <a href="#reservation"> Reserve </a>
+      </nav>
+    </div>
+
+    <!-- =====================================================
+     HERO
+====================================================== -->
+
+    <main>
+      <section class="hero">
+        <div class="hero-content reveal">
+          <div class="hero-kicker">Est. 1988 · Singapore & Malaya</div>
+
+          <h1 class="hero-title">
+            Eat well.
+
+            <em> Drink kopi. </em>
+          </h1>
+
+          <div class="hero-chinese">吃好 · 喝好 · 聚好</div>
+
+          <p class="hero-description">
+            A neighbourhood Chinese kopitiam built around good food, strong
+            coffee and even better company.
+
+            <br /><br />
+
+            Old recipes. Familiar flavours. A table waiting for you.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#menu" class="button button-gold"> View Our Menu </a>
+
+            <a href="#reservation" class="button button-outline">
+              Reserve A Table
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=90"
+              alt="Chinese restaurant food"
+            />
+          </div>
+
+          <div class="hero-stamp">
+            <strong> 福 </strong>
+
+            <span> Good fortune </span>
+          </div>
+
+          <div class="hero-menu-card">
+            <small> House Special </small>
+
+            <h3>Hainan Chicken</h3>
+
+            <p>Fragrant rice · tender chicken · ginger scallion</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="gold-divider"></div>
+
+      <!-- =================================================
+         STORY
+    ================================================== -->
+
+      <section class="intro" id="story">
+        <div class="intro-symbol reveal">福</div>
+
+        <div class="reveal">
+          <span class="section-label"> 01 — Our Story </span>
+
+          <h2>
+            More than
+
+            <span> a meal. </span>
+          </h2>
+
+          <p>
+            There was a time when every neighbourhood had a kopitiam.
+
+            <br /><br />
+
+            A place where uncles read the morning newspaper, families shared one
+            table, friends argued over football and everyone knew exactly how
+            they liked their kopi.
+
+            <br /><br />
+
+            KOPI 88 brings that feeling back — with recipes inspired by
+            Chinese-Malayan heritage and a space made for today's generation.
+          </p>
+
+          <a href="#menu" class="intro-link"> Discover Our Menu → </a>
+        </div>
+      </section>
+
+      <!-- =================================================
+         MENU
+    ================================================== -->
+
+      <section class="menu-section" id="menu">
+        <div class="menu-header reveal">
+          <div>
+            <span class="section-label"> 02 — From Our Kitchen </span>
+
+            <h2>
+              The
+
+              <span> menu. </span>
+            </h2>
+          </div>
+
+          <p>
+            Classic Chinese kopitiam favourites, prepared with honest
+            ingredients and recipes passed down through generations.
+          </p>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+
+          <button class="filter" data-filter="breakfast">Breakfast</button>
+
+          <button class="filter" data-filter="rice">Rice</button>
+
+          <button class="filter" data-filter="noodles">Noodles</button>
+
+          <button class="filter" data-filter="snacks">Snacks</button>
+
+          <button class="filter" data-filter="drinks">Kopi & Tea</button>
+        </div>
+
+        <div class="menu-list">
+          <div class="menu-item reveal" data-category="breakfast">
+            <span class="menu-no"> 壹 </span>
+
+            <h3 class="menu-name">Kaya Toast Set</h3>
+
+            <p class="menu-description">
+              Crispy toast, house-made kaya, cold butter and soft-boiled eggs.
+            </p>
+
+            <span class="menu-price"> Rp 38K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="breakfast">
+            <span class="menu-no"> 贰 </span>
+
+            <h3 class="menu-name">Chee Cheong Fun</h3>
+
+            <p class="menu-description">
+              Silky rice rolls with sesame, sweet sauce and chilli.
+            </p>
+
+            <span class="menu-price"> Rp 32K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="rice">
+            <span class="menu-no"> 叁 </span>
+
+            <h3 class="menu-name">Hainan Chicken Rice</h3>
+
+            <p class="menu-description">
+              Poached chicken, fragrant rice, ginger scallion and chilli sauce.
+            </p>
+
+            <span class="menu-price"> Rp 62K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="rice">
+            <span class="menu-no"> 肆 </span>
+
+            <h3 class="menu-name">Char Siu Rice</h3>
+
+            <p class="menu-description">
+              Honey-glazed char siu, steamed rice and pickled vegetables.
+            </p>
+
+            <span class="menu-price"> Rp 58K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="noodles">
+            <span class="menu-no"> 伍 </span>
+
+            <h3 class="menu-name">Wok Char Kway Teow</h3>
+
+            <p class="menu-description">
+              Flat rice noodles, prawns, Chinese sausage, egg and bean sprouts.
+            </p>
+
+            <span class="menu-price"> Rp 55K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="noodles">
+            <span class="menu-no"> 陆 </span>
+
+            <h3 class="menu-name">Hokkien Mee</h3>
+
+            <p class="menu-description">
+              Wok-fried noodles cooked in rich seafood stock.
+            </p>
+
+            <span class="menu-price"> Rp 52K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="snacks">
+            <span class="menu-no"> 柒 </span>
+
+            <h3 class="menu-name">Curry Puff</h3>
+
+            <p class="menu-description">
+              Flaky pastry filled with potato, chicken and curry.
+            </p>
+
+            <span class="menu-price"> Rp 22K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="drinks">
+            <span class="menu-no"> 捌 </span>
+
+            <h3 class="menu-name">Kopi O</h3>
+
+            <p class="menu-description">
+              Strong traditional black coffee with a smoky roasted aroma.
+            </p>
+
+            <span class="menu-price"> Rp 18K </span>
+          </div>
+
+          <div class="menu-item reveal" data-category="drinks">
+            <span class="menu-no"> 玖 </span>
+
+            <h3 class="menu-name">Teh Tarik</h3>
+
+            <p class="menu-description">
+              Pulled milk tea with a smooth caramel finish.
+            </p>
+
+            <span class="menu-price"> Rp 22K </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+         SIGNATURE
+    ================================================== -->
+
+      <section class="feature">
+        <div class="feature-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=90"
+            alt="Chinese dumplings"
+          />
+
+          <span class="feature-tag"> KOPI 88 Signature </span>
+        </div>
+
+        <div class="feature-content reveal">
+          <span class="section-label"> 03 — Chef's Favourite </span>
+
+          <h2>
+            Made to be
+
+            <br />
+
+            <span> shared. </span>
+          </h2>
+
+          <p>
+            Food has always been at the heart of Chinese family gatherings.
+
+            <br /><br />
+
+            Our signature platter brings together crispy dumplings, handmade
+            spring rolls, fragrant roast meat and our house chilli. Best enjoyed
+            with a big table and absolutely no rush.
+          </p>
+
+          <div class="feature-price">Rp 88K</div>
+        </div>
+      </section>
+
+      <!-- =================================================
+         SPACE
+    ================================================== -->
+
+      <section class="gallery" id="space">
+        <div class="gallery-heading reveal">
+          <div>
+            <span class="section-label"> 04 — Our Space </span>
+
+            <h2>Come in.</h2>
+          </div>
+
+          <p>
+            Red lanterns, marble tables, old photographs and the familiar sound
+            of cups meeting saucers.
+
+            <br /><br />
+
+            A little piece of the old kopitiam.
+          </p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1100&q=90"
+              alt="Chinese restaurant interior"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=90"
+              alt="Restaurant tables"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=90"
+              alt="Kopitiam atmosphere"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1100&q=90"
+              alt="Asian food"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+         QUOTE
+    ================================================== -->
+
+      <section class="quote reveal">
+        <div class="quote-symbol">茶</div>
+
+        <blockquote>
+          “Good food brings people
+          <span> together. </span>
+          ”
+        </blockquote>
+
+        <cite> The KOPI 88 philosophy </cite>
+      </section>
+
+      <!-- =================================================
+         RESERVATION
+    ================================================== -->
+
+      <section class="reservation" id="reservation">
+        <div class="reveal">
+          <span class="section-label"> 05 — Reservations </span>
+
+          <h2>
+            Your table
+
+            <br />
+
+            is <span>waiting.</span>
+          </h2>
+
+          <p class="reservation-description">
+            Whether it is breakfast with family, lunch with colleagues or dinner
+            with friends, we'll have the kopi ready.
+          </p>
+        </div>
+
+        <form class="reservation-form reveal" id="reservationForm">
+          <h3>Book a table</h3>
+
+          <div class="form-group">
+            <label> Name </label>
+
+            <input type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-group">
+            <label> Phone </label>
+
+            <input type="tel" placeholder="+62" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label> Date </label>
+
+              <input type="date" required />
+            </div>
+
+            <div class="form-group">
+              <label> Guests </label>
+
+              <select required>
+                <option value="">Select</option>
+
+                <option>2 Guests</option>
+
+                <option>3 Guests</option>
+
+                <option>4 Guests</option>
+
+                <option>5 Guests</option>
+
+                <option>6+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="submit-button" type="submit">
+            Request Reservation
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+====================================================== -->
+
+    <footer id="contact">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            KOPI 88
+
+            <span class="footer-logo-chinese"> 福 </span>
+          </div>
+
+          <p class="footer-description">
+            A Chinese kopitiam inspired by old neighbourhood coffee shops,
+            family recipes and the simple pleasure of eating together.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+
+          <a href="#story"> Our Story </a>
+
+          <a href="#menu"> Menu </a>
+
+          <a href="#space"> Our Space </a>
+
+          <a href="#reservation"> Reservations </a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Visit Us</h4>
+
+          <p>88 Jalan Senang</p>
+
+          <p>Jakarta, Indonesia</p>
+
+          <p>+62 812 8888 8888</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Opening Hours</h4>
+
+          <p>Monday — Sunday</p>
+
+          <p>07:00 — 22:00</p>
+
+          <p>Kitchen closes 21:30</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span> © 2026 KOPI 88 </span>
+
+        <span> 吃好 · 喝好 · 聚好 </span>
+
+        <span> Instagram ↗ </span>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+    <script>
+      /* =================================================
+       MOBILE MENU
+    ================================================== */
+
+      const menuButton = document.querySelector(".menu-button");
+
+      const mobileNav = document.querySelector(".mobile-nav");
+
+      const mobileLinks = document.querySelectorAll(".mobile-links a");
+
+      menuButton.addEventListener("click", () => {
+        menuButton.classList.toggle("active");
+
+        mobileNav.classList.toggle("active");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuButton.classList.remove("active");
+
+          mobileNav.classList.remove("active");
+        });
+      });
+
+      /* =================================================
+       MENU FILTER
+    ================================================== */
+
+      const filters = document.querySelectorAll(".filter");
+
+      const menuItems = document.querySelectorAll(".menu-item");
+
+      filters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+          filters.forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          filter.classList.add("active");
+
+          const category = filter.dataset.filter;
+
+          menuItems.forEach((item) => {
+            const itemCategory = item.dataset.category;
+
+            if (category === "all" || category === itemCategory) {
+              item.classList.remove("hidden");
+            } else {
+              item.classList.add("hidden");
+            }
+          });
+        });
+      });
+
+      /* =================================================
+       SCROLL REVEAL
+    ================================================== */
+
+      document.documentElement.classList.add("js-enabled");
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        },
+      );
+
+      revealElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      /* =================================================
+       RESERVATION FORM
+    ================================================== */
+
+      const reservationForm = document.querySelector("#reservationForm");
+
+      reservationForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const button = this.querySelector(".submit-button");
+
+        button.textContent = "Reservation Requested ✓";
+
+        button.style.background = "#241715";
+
+        button.style.color = "#F6EBDD";
+
+        setTimeout(() => {
+          button.textContent = "Request Reservation";
+
+          button.style.background = "";
+
+          button.style.color = "";
+        }, 3000);
+      });
+
+      /* =================================================
+       ESCAPE MOBILE MENU
+    ================================================== */
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          menuButton.classList.remove("active");
+
+          mobileNav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
