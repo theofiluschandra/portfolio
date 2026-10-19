@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Theofilus Chandra | Web Developer & Digital Marketing</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #080808;
+        color: #ffffff;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* =========================
+           NAVIGATION
+        ========================= */
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+
+        padding: 20px 6%;
+
+        background: rgba(8, 8, 8, 0.75);
+        backdrop-filter: blur(15px);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: -1px;
+      }
+
+      .logo span {
+        color: #7c5cff;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: #aaa;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #fff;
+      }
+
+      /* =========================
+           HERO
+        ========================= */
+
+      .hero {
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+
+        padding: 140px 6% 100px;
+
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 500px;
+        height: 500px;
+
+        top: -200px;
+        right: -100px;
+
+        background: #634cff;
+
+        filter: blur(180px);
+
+        opacity: 0.22;
+
+        border-radius: 50%;
+      }
+
+      .hero::after {
+        content: "";
+
+        position: absolute;
+
+        width: 400px;
+        height: 400px;
+
+        bottom: -200px;
+        left: -100px;
+
+        background: #00c8ff;
+
+        filter: blur(180px);
+
+        opacity: 0.12;
+
+        border-radius: 50%;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+
+        position: relative;
+        z-index: 2;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 8px 14px;
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        border-radius: 50px;
+
+        background: rgba(255, 255, 255, 0.04);
+
+        color: #aaa;
+
+        font-size: 13px;
+
+        margin-bottom: 25px;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+
+        background: #45e88b;
+
+        border-radius: 50%;
+
+        box-shadow: 0 0 10px #45e88b;
+      }
+
+      .hero h1 {
+        font-size: clamp(60px, 10vw, 140px);
+
+        line-height: 0.9;
+
+        letter-spacing: -7px;
+
+        margin-bottom: 35px;
+      }
+
+      .gradient {
+        background: linear-gradient(90deg, #ffffff, #9d8cff, #634cff);
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        color: transparent;
+      }
+
+      .hero-description {
+        max-width: 650px;
+
+        color: #999;
+
+        font-size: 19px;
+
+        margin-bottom: 35px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-block;
+
+        padding: 14px 22px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+      }
+
+      .button-primary {
+        background: white;
+        color: black;
+      }
+
+      .button-primary:hover {
+        background: #d8d8d8;
+        transform: translateY(-3px);
+      }
+
+      .button-secondary {
+        background: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        color: white;
+      }
+
+      .button-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+
+        transform: translateY(-3px);
+      }
+
+      /* =========================
+           SECTIONS
+        ========================= */
+
+      section {
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 110px 6%;
+      }
+
+      .label {
+        color: #806cff;
+
+        text-transform: uppercase;
+
+        letter-spacing: 3px;
+
+        font-size: 11px;
+
+        font-weight: bold;
+
+        margin-bottom: 12px;
+      }
+
+      .section-title {
+        font-size: clamp(40px, 6vw, 70px);
+
+        line-height: 1;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 18px;
+      }
+
+      .section-description {
+        color: #888;
+
+        max-width: 600px;
+
+        margin-bottom: 45px;
+      }
+
+      /* =========================
+           PORTFOLIO
+        ========================= */
+
+      .portfolio-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+      }
+
+      .portfolio-card {
+        min-height: 320px;
+
+        padding: 32px;
+
+        border-radius: 20px;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.02)
+        );
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        position: relative;
+
+        overflow: hidden;
+
+        transition: 0.35s;
+      }
+
+      .portfolio-card::before {
+        content: "";
+
+        position: absolute;
+
+        width: 200px;
+        height: 200px;
+
+        right: -100px;
+        top: -100px;
+
+        background: var(--color);
+
+        filter: blur(70px);
+
+        opacity: 0.2;
+
+        border-radius: 50%;
+      }
+
+      .portfolio-card:hover {
+        transform: translateY(-8px);
+
+        border-color: rgba(255, 255, 255, 0.25);
+      }
+
+      .card-number {
+        color: #666;
+
+        font-size: 12px;
+
+        font-weight: bold;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .card-content h3 {
+        font-size: 28px;
+
+        margin-bottom: 10px;
+
+        letter-spacing: -1px;
+      }
+
+      .card-content p {
+        color: #999;
+
+        font-size: 14px;
+
+        max-width: 450px;
+      }
+
+      .card-link {
+        position: relative;
+        z-index: 2;
+
+        margin-top: 25px;
+
+        font-size: 14px;
+
+        font-weight: bold;
+      }
+
+      .arrow {
+        display: inline-block;
+
+        transition: 0.3s;
+      }
+
+      .portfolio-card:hover .arrow {
+        transform: translateX(6px);
+      }
+
+      /* =========================
+           ABOUT
+        ========================= */
+
+      .about-box {
+        display: grid;
+
+        grid-template-columns: 1fr 1.5fr;
+
+        gap: 60px;
+
+        padding: 45px;
+
+        border-radius: 20px;
+
+        background: rgba(255, 255, 255, 0.04);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .about-name {
+        font-size: clamp(40px, 5vw, 65px);
+
+        line-height: 0.95;
+
+        letter-spacing: -3px;
+      }
+
+      .about-text {
+        color: #999;
+
+        font-size: 16px;
+      }
+
+      .about-text p {
+        margin-bottom: 18px;
+      }
+
+      .skills {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-top: 25px;
+      }
+
+      .skill {
+        padding: 8px 12px;
+
+        border-radius: 8px;
+
+        background: rgba(255, 255, 255, 0.06);
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        color: #bbb;
+
+        font-size: 12px;
+      }
+
+      /* =========================
+           CONTACT
+        ========================= */
+
+      .contact {
+        text-align: center;
+
+        padding-top: 150px;
+
+        padding-bottom: 150px;
+      }
+
+      .contact .section-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* =========================
+           FOOTER
+        ========================= */
+
+      footer {
+        max-width: 1200px;
+
+        margin: auto;
+
+        padding: 35px 6%;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+        display: flex;
+
+        justify-content: space-between;
+
+        color: #666;
+
+        font-size: 12px;
+      }
+
+      /* =========================
+           ANIMATION
+        ========================= */
+
+      .fade {
+        opacity: 0;
+
+        transform: translateY(25px);
+
+        transition: 0.8s ease;
+      }
+
+      .fade.show {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =========================
+           MOBILE
+        ========================= */
+
+      @media (max-width: 700px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 130px;
+        }
+
+        .hero h1 {
+          font-size: 65px;
+
+          letter-spacing: -4px;
+        }
+
+        .hero-description {
+          font-size: 16px;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-box {
+          grid-template-columns: 1fr;
+
+          padding: 30px;
+
+          gap: 30px;
+        }
+
+        footer {
+          flex-direction: column;
+
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+      <div class="nav-container">
+        <a href="#home" class="logo"> TC<span>.</span> </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+      <div class="hero-content fade">
+        <div class="status">
+          <span class="status-dot"></span>
+
+          Available for selected projects
+        </div>
+
+        <h1>
+          Theofilus
+
+          <br />
+
+          <span class="gradient"> Chandra. </span>
+        </h1>
+
+        <p class="hero-description">
+          Web Developer & Digital Marketing professional. I build modern
+          websites, digital experiences, and marketing strategies that help
+          ideas grow.
+        </p>
+
+        <div class="buttons">
+          <a href="#portfolio" class="button button-primary">
+            Explore My Portfolio →
+          </a>
+
+          <a href="#about" class="button button-secondary"> About Me </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PORTFOLIO
+    ========================= -->
+
+    <section id="portfolio">
+      <div class="fade">
+        <div class="label">01 — Portfolio</div>
+
+        <h2 class="section-title">Explore my work.</h2>
+
+        <p class="section-description">
+          Choose a category below to explore my work and experience.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- WEB DEVELOPMENT -->
+
+        <a
+          href="explore.html"
+          class="portfolio-card fade"
+          style="--color: #705cff"
+        >
+          <div class="card-number">01</div>
+
+          <div class="card-content">
+            <h3>Web Development</h3>
+
+            <p>
+              Websites, landing pages, responsive interfaces, web applications,
+              and digital experiences.
+            </p>
+          </div>
+
+          <div class="card-link">
+            View Web Development
+
+            <span class="arrow"> → </span>
+          </div>
+        </a>
+
+        <!-- DIGITAL MARKETING -->
+
+        <a
+          href="digital-marketing.html"
+          class="portfolio-card fade"
+          style="--color: #00c8ff"
+        >
+          <div class="card-number">02</div>
+
+          <div class="card-content">
+            <h3>Digital Marketing</h3>
+
+            <p>
+              Digital strategy, SEO, content, campaigns, social media, and
+              online growth.
+            </p>
+          </div>
+
+          <div class="card-link">
+            View Digital Marketing
+
+            <span class="arrow"> → </span>
+          </div>
+        </a>
+
+        <!-- PROJECTS -->
+
+        <a
+          href="explore.html"
+          class="portfolio-card fade"
+          style="--color: #ff795c"
+        >
+          <div class="card-number">03</div>
+
+          <div class="card-content">
+            <h3>Selected Projects</h3>
+
+            <p>
+              Explore selected websites, experiments, projects, and digital
+              work.
+            </p>
+          </div>
+
+          <div class="card-link">
+            View Projects
+
+            <span class="arrow"> → </span>
+          </div>
+        </a>
+
+        <!-- CONTACT -->
+
+        <a
+          href="http://wa.me/62895429397425"
+          target="_blank"
+          class="portfolio-card fade"
+          style="--color: #45e88b"
+        >
+          <div class="card-number">04</div>
+
+          <div class="card-content">
+            <h3>Let's Work Together</h3>
+
+            <p>
+              Have an idea, project, or opportunity? Let's build something
+              useful together.
+            </p>
+          </div>
+
+          <div class="card-link">
+            Get In Touch
+
+            <span class="arrow"> → </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+      <div class="fade">
+        <div class="label">02 — About Me</div>
+
+        <div class="about-box">
+          <div>
+            <h2 class="about-name">
+              Theofilus
+              <br />
+              Chandra
+            </h2>
+          </div>
+
+          <div class="about-text">
+            <p>
+              I'm Theofilus Chandra, a Web Developer and Digital Marketing
+              professional.
+            </p>
+
+            <p>
+              I enjoy combining technology, creativity, and marketing to create
+              useful digital experiences and meaningful results.
+            </p>
+
+            <p>
+              My focus is on building clean, modern, responsive websites while
+              understanding the marketing and business goals behind them.
+            </p>
+
+            <div class="skills">
+              <span class="skill"> Web Development </span>
+
+              <span class="skill"> HTML </span>
+
+              <span class="skill"> CSS </span>
+
+              <span class="skill"> JavaScript </span>
+
+              <span class="skill"> Responsive Design </span>
+
+              <span class="skill"> Digital Marketing </span>
+
+              <span class="skill"> SEO </span>
+
+              <span class="skill"> Content Strategy </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+      <div class="fade">
+        <div class="label">03 — Contact</div>
+
+        <h2 class="section-title">Have a project in mind?</h2>
+
+        <p class="section-description">
+          Whether you need a website, digital product, or marketing project,
+          let's talk.
+        </p>
+
+        <a
+          href="http://wa.me/62895429397425"
+          target="_blank"
+          class="button button-primary"
+        >
+          Contact Me →
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      <div>
+        ©
+        <span id="year"></span>
+        Theofilus Chandra
+      </div>
+
+      <div>Web Developer · Digital Marketing</div>
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+      /* Current year */
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      /* Scroll animation */
+
+      const elements = document.querySelectorAll(".fade");
+
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+        },
+      );
+
+      elements.forEach(function (element) {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
