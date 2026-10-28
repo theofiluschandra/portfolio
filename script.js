@@ -4,12 +4,33 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwte2-gGB2U0i_AEGijAFZ2
 let employees = [];
 let requestCounter = 0;
 
+
 const form = document.getElementById('employeeForm');
 const notice = document.getElementById('notice');
 const saveButton = document.getElementById('saveButton');
 const tableArea = document.getElementById('tableArea');
 const searchInput = document.getElementById('search');
 const countLabel = document.getElementById('count');
+const refreshButton = document.getElementById('refreshButton');
+
+// Periksa apakah semua elemen HTML yang dibutuhkan ditemukan.
+const missingElements = [];
+
+if (!form) missingElements.push('employeeForm');
+if (!notice) missingElements.push('notice');
+if (!saveButton) missingElements.push('saveButton');
+if (!tableArea) missingElements.push('tableArea');
+if (!searchInput) missingElements.push('search');
+if (!countLabel) missingElements.push('count');
+if (!refreshButton) missingElements.push('refreshButton');
+
+if (missingElements.length > 0) {
+  console.error(
+    'Elemen HTML tidak ditemukan:',
+    missingElements.join(', ')
+  );
+}
+
 
 function showNotice(message, type) {
   notice.textContent = message;
