@@ -1,116 +1,84 @@
-console.log("script.js berhasil dipanggil!");
-
-
-const API_URL =
-  'https://script.google.com/macros/s/AKfycbwte2-gGB2U0i_AEGijAFZ2_A8qu0PMZO-njL3zzp0NHk-VbmR8qZtR5Z_dQ94uQ3G6UQ/exec';
+// URL Web App Google Apps Script. Gunakan URL deployment /exec.
+const API_URL = 'https://script.google.com/macros/s/AKfycbwte2-gGB2U0i_AEGijAFZ2_A8qu0PMZO-njL3zzp0NHk-VbmR8qZtR5Z_dQ94uQ3G6UQ/exec';
 
 let employees = [];
+let requestCounter = 0;
 
-function getTableBody() {
-  return document.getElementById('employeeTableBody')
-    || document.getElementById('tableBody')
-    || document.querySelector('#employeeTable tbody')
-    || document.querySelector('#dataTable tbody');
+const form = document.getElementById('employeeForm');
+const notice = document.getElementById('notice');
+const saveButton = document.getElementById('saveButton');
+const tableArea = document.getElementById('tableArea');
+const searchInput = document.getElementById('search');
+const countLabel = document.getElementById('count');
+
+function showNotice(message, type) {
+  notice.textContent = message;
+  notice.className = type;
+  notice.style.display = 'block';
 }
 
-function setLoadingMessage(message) {
-  const element = document.getElementById('loadingMessage');
-
-  if (element) {
-    element.textContent = message;
-  }
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[ch]));
 }
 
 function renderTable() {
-  const tbody = getTableBody();
+  const query = searchInput.value.trim().toLowerCase();
+  const filtered = employees.filter(e =>
+    [e.name, e.email, e.position, e.phone, e.status]
+      .some(v => String(v || '').toLowerCase().includes(query))
+  );
 
-  if (!tbody) {
-    console.error(
-      'Tabel tidak ditemukan. Tambahkan id="employeeTableBody" pada tbody.'
-    );
-    setLoadingMessage('Error: elemen tabel tidak ditemukan.');
+  countLabel.textContent = filtered.length + ' data';
+
+  if (!filtered.length) {
+    tableArea.innerHTML = '<div class="empty">' +
+      (employees.length ? 'Tidak ada data yang cocok.' : 'Belum ada data pelamar pada tab DataKaryawan.') +
+      '</div>';
     return;
   }
 
-  tbody.replaceChildren();
-
-  if (employees.length === 0) {
-    setLoadingMessage('Belum ada data pelamar.');
-    return;
-  }
-
-  employees.forEach((employee, index) => {
-    const row = document.createElement('tr');
-
-    const values = [
-      index + 1,
-      employee.id,
-      employee.createdAt,
-      employee.name,
-      employee.email,
-      employee.phone,
-      employee.position,
-      employee.birthDate,
-      employee.gender,
-      employee.education,
-      employee.experience,
-      employee.status,
-      employee.notes
-    ];
-
-    values.forEach(value => {
-      const cell = document.createElement('td');
-      cell.textContent = value == null ? '' : String(value);
-      row.appendChild(cell);
-    });
-
-    tbody.appendChild(row);
-  });
-
-  setLoadingMessage('');
-  console.log('Tabel berhasil ditampilkan:', employees.length, 'data');
+  tableArea.innerHTML =
+    '<div class="table-wrap"><table><thead><tr>' +
+    '<th>Nama</th><th>Kontak</th><th>Posisi</th><th>Pendidikan</th>' +
+    '<th>Pengalaman</th><th>Status</th><th>Tanggal input</th>' +
+    '</tr></thead><tbody>' +
+    filtered.map(e => '<tr>' +
+      '<td><strong>' + escapeHtml(e.name) + '</strong><br><small>' + escapeHtml(e.id) + '</small></td>' +
+      '<td>' + escapeHtml(e.email) + '<br>' + escapeHtml(e.phone) + '</td>' +
+      '<td>' + escapeHtml(e.position || '-') + '</td>' +
+      '<td>' + escapeHtml(e.education || '-') + '</td>' +
+      '<td>' + escapeHtml(e.experience || '0') + ' tahun</td>' +
+      '<td><span class="pill">' + escapeHtml(e.status || 'Baru') + '</span></td>' +
+      '<td>' + escapeHtml(e.createdAt || '-') + '</td></tr>').join('') +
+    '</tbody></table></div>';
 }
 
 function loadEmployees() {
-  setLoadingMessage('Memuat data...');
-  console.log('Memulai pengambilan data pelamar...');
+  const thisRequest = ++requestCounter;
+  tableArea.innerHTML = '<div class="loading">Memuat data dari Google Sheets...</div>';
 
-  const callbackName =
-    'recruitmentCallback_' + Date.now();
-
-  let finished = false;
+  // JSONP memungkinkan pembacaan lintas domain dari GitHub Pages.
+  const callbackName = 'recruitmentCallback_' + thisRequest;
+  const scriptId = 'recruitmentApiScript_' + thisRequest;
   const script = document.createElement('script');
+  let finished = false;
 
-  const timeout = setTimeout(() => {
-    finish();
-    setLoadingMessage(
-      'Gagal memuat data: API tidak merespons. Periksa deployment Apps Script.'
-    );
-    console.error('API timeout.');
-  }, 20000);
-
-  function finish() {
+  const cleanup = () => {
     if (finished) return;
     finished = true;
-
-    clearTimeout(timeout);
     delete window[callbackName];
     script.remove();
-  }
+  };
 
   window[callbackName] = function(response) {
-    if (finished) return;
-    finish();
+    cleanup();
+    console.log('Respons API Google Apps Script:', response);
 
-    console.log('Respons Google Apps Script:', response);
-
-    if (!response || response.success !== true ||
-        !Array.isArray(response.data)) {
-      setLoadingMessage(
-        'Gagal membaca data: ' +
-        (response?.message || 'Format respons API tidak sesuai.')
-      );
-      console.error('Respons API tidak valid:', response);
+    if (!response || response.success !== true || !Array.isArray(response.data)) {
+      tableArea.innerHTML = '<div class="empty">Respons API tidak sesuai. Periksa fungsi doGet(e) dan deployment Apps Script.</div>';
+      console.error('Format respons API tidak valid:', response);
       return;
     }
 
@@ -118,23 +86,56 @@ function loadEmployees() {
     renderTable();
   };
 
+  script.id = scriptId;
+  script.src = API_URL + '?action=list&callback=' + encodeURIComponent(callbackName) + '&_=' + Date.now();
   script.onerror = function() {
-    if (finished) return;
-    finish();
-
-    setLoadingMessage(
-      'Koneksi API gagal. Periksa URL dan izin deployment Apps Script.'
-    );
-    console.error('Script API gagal dimuat.');
+    cleanup();
+    tableArea.innerHTML = '<div class="empty">Gagal menghubungi API. Periksa URL deployment, izin akses Web App, dan versi deployment.</div>';
+    console.error('Script API gagal dimuat:', script.src);
   };
 
-  script.src =
-    API_URL +
-    '?action=list&callback=' +
-    encodeURIComponent(callbackName) +
-    '&_=' + Date.now();
+  // Batas waktu agar teks "Memuat data..." tidak terus-menerus.
+  const timeoutId = window.setTimeout(() => {
+    if (!finished) {
+      cleanup();
+      tableArea.innerHTML = '<div class="empty">Permintaan API terlalu lama. Periksa deployment Apps Script dan koneksi internet.</div>';
+    }
+  }, 15000);
+
+  const originalCleanup = cleanup;
+  // Bersihkan timeout saat callback atau error menyelesaikan request.
+  window[callbackName] = function(response) {
+    window.clearTimeout(timeoutId);
+    originalCleanup();
+    console.log('Respons API Google Apps Script:', response);
+
+    if (!response || response.success !== true || !Array.isArray(response.data)) {
+      tableArea.innerHTML = '<div class="empty">Respons API tidak sesuai. Periksa fungsi doGet(e) dan deployment Apps Script.</div>';
+      console.error('Format respons API tidak valid:', response);
+      return;
+    }
+    employees = response.data;
+    renderTable();
+  };
+  script.onerror = function() {
+    window.clearTimeout(timeoutId);
+    originalCleanup();
+    tableArea.innerHTML = '<div class="empty">Gagal menghubungi API. Periksa URL deployment, izin akses Web App, dan versi deployment.</div>';
+    console.error('Script API gagal dimuat:', script.src);
+  };
 
   document.head.appendChild(script);
 }
 
-document.addEventListener('DOMContentLoaded', loadEmployees);
+searchInput.addEventListener('input', renderTable);
+document.getElementById('refreshButton').addEventListener('click', loadEmployees);
+
+// Catatan: pengiriman lintas domain dengan fetch no-cors tidak dapat membaca respons server.
+// Untuk menghindari klaim sukses palsu, tombol simpan memberi instruksi konfigurasi backend bila
+// endpoint belum mendukung metode penyimpanan lintas domain yang aman.
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+  showNotice('Formulir siap, tetapi penyimpanan lintas domain perlu diuji setelah API baca berhasil. Jangan kirim data sensitif sebelum akses API diamankan.', 'error');
+});
+
+loadEmployees();
