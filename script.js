@@ -60,4 +60,3 @@ let employees = [];
     document.getElementById('search').addEventListener('input', renderTable);
     document.getElementById('refreshButton').addEventListener('click', loadEmployees);
     loadEmployees();
-}
