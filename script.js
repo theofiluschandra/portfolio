@@ -205,23 +205,42 @@ form.addEventListener('submit', function(event) {
 
   let submitted = false;
 
-  iframe.onload = function() {
-    if (!submitted) return;
-    submitted = false;
+  
+iframe.onload = function() {
+  if (!submitted) return;
+  submitted = false;
 
-    showNotice(
-      'Permintaan penyimpanan telah dikirim. Muat ulang daftar dan periksa Google Spreadsheet untuk memastikan data benar-benar tersimpan.',
-      'success'
-    );
+  postForm.remove();
 
-    saveButton.disabled = false;
-    saveButton.textContent = 'Simpan Data';
+  // Tunggu sebentar, lalu verifikasi dengan membaca ulang data.
+  window.setTimeout(function() {
+    loadEmployees();
 
-    postForm.remove();
+    // Jangan langsung mengosongkan form sebelum data diperiksa.
+    window.setTimeout(function() {
+      const saved = employees.some(e =>
+        String(e.email || '').trim().toLowerCase() === email
+      );
 
-    // Ambil ulang daftar dari Google Sheets.
-    window.setTimeout(loadEmployees, 1500);
-  };
+      if (saved) {
+        form.reset();
+        showNotice(
+          'Data pelamar berhasil direkam. Formulir siap untuk input berikutnya.',
+          'success'
+        );
+      } else {
+        showNotice(
+          'Permintaan terkirim, tetapi data belum terverifikasi. Periksa Google Spreadsheet sebelum mencoba menyimpan ulang.',
+          'error'
+        );
+      }
+
+      saveButton.disabled = false;
+      saveButton.textContent = 'Simpan Data';
+    }, 2500);
+  }, 1000);
+};
+
 
   // Beri waktu agar iframe siap sebelum POST.
   window.setTimeout(function() {
