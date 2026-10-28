@@ -43,7 +43,7 @@ function renderTable() {
     '<div class="table-wrap"><table><thead><tr>' +
     '<th>Nama</th><th>Kontak</th><th>Posisi</th><th>Pendidikan</th>' +
     '<th>Pengalaman</th><th>Status</th><th>Tanggal input</th>' +
-    '</tr></thead><tbody>' +
+    '</tr></thead><tbody id="employeeTableBody">' +
     filtered.map(e => '<tr>' +
       '<td><strong>' + escapeHtml(e.name) + '</strong><br><small>' + escapeHtml(e.id) + '</small></td>' +
       '<td>' + escapeHtml(e.email) + '<br>' + escapeHtml(e.phone) + '</td>' +
