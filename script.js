@@ -1,3 +1,5 @@
+console.log("script.js berhasil dipanggil!");
+
 let employees = [];
     const form = document.getElementById('employeeForm');
     const notice = document.getElementById('notice');
