@@ -154,9 +154,82 @@ document.getElementById('refreshButton').addEventListener('click', loadEmployees
 // Catatan: pengiriman lintas domain dengan fetch no-cors tidak dapat membaca respons server.
 // Untuk menghindari klaim sukses palsu, tombol simpan memberi instruksi konfigurasi backend bila
 // endpoint belum mendukung metode penyimpanan lintas domain yang aman.
-form.addEventListener('submit', async event => {
+
+form.addEventListener('submit', function(event) {
   event.preventDefault();
-  showNotice('Formulir siap, tetapi penyimpanan lintas domain perlu diuji setelah API baca berhasil. Jangan kirim data sensitif sebelum akses API diamankan.', 'error');
+
+  if (!form.reportValidity()) return;
+
+  const data = new FormData(form);
+  const email = String(data.get('email') || '').trim().toLowerCase();
+
+  // Cegah duplikasi yang sudah terlihat pada daftar saat ini.
+  if (employees.some(e =>
+    String(e.email || '').trim().toLowerCase() === email
+  )) {
+    showNotice('Email tersebut sudah ada dalam daftar pelamar.', 'error');
+    return;
+  }
+
+  saveButton.disabled = true;
+  saveButton.textContent = 'Mengirim...';
+
+  const iframeName = 'saveResultFrame';
+  let iframe = document.querySelector(
+    'iframe[name="' + iframeName + '"]'
+  );
+
+  if (!iframe) {
+    iframe = document.createElement('iframe');
+    iframe.name = iframeName;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+  }
+
+  // Form POST biasa ke Apps Script melalui iframe tersembunyi.
+  const postForm = document.createElement('form');
+  postForm.method = 'POST';
+  postForm.action = API_URL;
+  postForm.target = iframeName;
+  postForm.style.display = 'none';
+
+  data.forEach((value, key) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = String(value);
+    postForm.appendChild(input);
+  });
+
+  document.body.appendChild(postForm);
+
+  let submitted = false;
+
+  iframe.onload = function() {
+    if (!submitted) return;
+    submitted = false;
+
+    showNotice(
+      'Permintaan penyimpanan telah dikirim. Muat ulang daftar dan periksa Google Spreadsheet untuk memastikan data benar-benar tersimpan.',
+      'success'
+    );
+
+    saveButton.disabled = false;
+    saveButton.textContent = 'Simpan Data';
+
+    postForm.remove();
+
+    // Ambil ulang daftar dari Google Sheets.
+    window.setTimeout(loadEmployees, 1500);
+  };
+
+  // Beri waktu agar iframe siap sebelum POST.
+  window.setTimeout(function() {
+    submitted = true;
+    postForm.submit();
+  }, 300);
+
 });
+
 
 loadEmployees();
