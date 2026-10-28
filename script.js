@@ -60,3 +60,19 @@ let employees = [];
     document.getElementById('search').addEventListener('input', renderTable);
     document.getElementById('refreshButton').addEventListener('click', loadEmployees);
     loadEmployees();
+
+//new code
+window[callbackName] = function (response) {
+  console.log('Respons API:', response);
+
+  if (response && response.success &&
+      Array.isArray(response.data)) {
+    employees = response.data;
+    console.log('Jumlah data:', employees.length);
+    renderTable();
+  } else {
+    console.error('Format respons API tidak valid:', response);
+  }
+
+  delete window[callbackName];
+};
